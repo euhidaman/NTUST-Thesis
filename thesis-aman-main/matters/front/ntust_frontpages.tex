@@ -1,0 +1,230 @@
+%
+% this file is encoded in utf-8
+% v1.7
+% do not change the content of this file
+% unless the thesis layout rule is changed
+% 無須修改本檔內容，除非校方修改了
+% 封面、書名頁、中文摘要、英文摘要、誌謝、目錄、表目錄、圖目錄、符號說明
+% 等頁之格式
+% this file is encoded in utf-8
+%v1.7
+
+% make the line spacing in effect
+\renewcommand{\baselinestretch}{\mybaselinestretch}
+\large % it needs a font size changing command to be effective
+
+ % user's names; to replace those default variable definitions
+\input{000_frontpages/00_names.tex}
+\newcommand\itsempty{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       ntust cover 封面
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{titlepage}
+% no page number
+% next page will be page 1
+
+% aligned to the center of the page
+\begin{center}
+% font size (relative to 12 pt):
+% \large (14pt) < \Large (18pt) < \LARGE (20pt) < \huge (24pt)< \Huge (24 pt)
+%
+
+
+
+\begin{figure}[htbp]
+	% \begin{minipage}[b]{5cm} 
+	\begin{minipage}[b]{.2\textwidth} 
+		\centering
+            \vfill
+		\includegraphics[width=1.1in]{matters/front/ntust_logo.eps}
+		\label{fig:ntust_logo}
+	\end{minipage}% 
+	\begin{minipage}[b]{.8\textwidth} 
+	\centering
+	\makebox[\linewidth][c]{\Huge{\univCname}}\\  %顯示中文校名
+	\vspace{0.5cm}
+	\makebox[.6\linewidth][s]{\Huge{\deptCname}}\\ %顯示中文系所名
+	\vspace{0.5cm}
+	\end{minipage}%
+\\ 
+\rule{\textwidth}{3pt}
+\end{figure}
+%\hfill
+
+
+\vspace{1cm}
+\makebox[0.5\textwidth][s]{\textbf{\Huge{\degreeCname 學位論文}}}\\ %顯示論文種類 (中文)
+\vspace{1cm}
+%
+% Set the line spacing to single for the titles (to compress the lines)
+\renewcommand{\baselinestretch}{1}   %行距 1 倍
+%\large % it needs a font size changing command to be effective
+\Large{\cTitle}\\  % 中文題目
+%
+\vspace{1cm}
+%
+\Large{\eTitle}\\ %英文題目
+% \vspace{5em}
+\vfill
+\begin{tabular}{r@{}l}
+    \makebox[.25\linewidth][s]{\Large{研究生：}} & \Large{\myCname}  % 顯示作者中文名
+    \\ [.3em]
+    %
+    \makebox[.25\linewidth][s]{\Large{學號：}} & \Large{\myStudentID}  %顯示指導教授A中文名
+    \\[1em]
+    %
+    \makebox[.25\linewidth][s]{\Large{指導教授：}} & \Large{\advisorCnameA}  %顯示指導教授A中文名
+    \\
+    \ifthenelse{\equal{\advisorCnameB}{}} % 判斷是否有共同指導的教授 B
+        {}
+        {\makebox[.25\linewidth][s]{} & \Large{\advisorCnameB}\\} % 共同指導的教授 B
+    \ifthenelse{\equal{\advisorCnameC}{}} % 判斷是否有共同指導的教授 C
+        {}
+        {\makebox[.25\linewidth][s]{} & \Large{\advisorCnameC}\\} % 共同指導的教授 C
+    
+\end{tabular}
+
+\makebox[.8\textwidth][s]{\Large{中華民國{\cYear}年{\cMonth}月{\cDay}日}}%
+%
+\end{center}
+% Resume the line spacing to the desired setting
+\renewcommand{\baselinestretch}{\mybaselinestretch}   %恢復原設定
+% it needs a font size changing command to be effective
+% restore the font size to normal
+\normalsize
+\end{titlepage}
+
+%% 從摘要到本文之前的部份以小寫羅馬數字印頁碼
+% 但是從「書名頁」(但不印頁碼) 就開始計算
+\setcounter{page}{1}
+\pagenumbering{Roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       指導教授推薦書 Recommendation Form
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% insert the printed standard form when the thesis is ready to bind
+% 在口試完成後，再將已簽名的推薦書放入以便裝訂
+% create an entry in table of contents for 推薦書
+% 目前送出空白頁
+% \newpage{\thispagestyle{empty}\addcontentsline{toc}{chapter}{\nameInnerCover}\mbox{}\clearpage}
+\addcontentsline{toc}{chapter}{\nameInnerCover}
+\includepdf[pages=-]{000_frontpages/01_recommendation_form.pdf}
+%\newpage
+
+% 判斷是否要浮水印？
+\ifx\mywatermark\undefined 
+  \thispagestyle{empty}  % 無頁碼、無 header (無浮水印)
+\else
+  \thispagestyle{EmptyWaterMarkPage} % 無頁碼、有浮水印
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       論文口試委員審定書 Qualification Form
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% insert the printed standard form when the thesis is ready to bind
+% 在口試完成後，再將已簽名的審定書放入以便裝訂
+% create an entry in table of contents for 審定書
+% 目前送出空白頁
+% \newpage{\thispagestyle{empty}\addcontentsline{toc}{chapter}{\nameCommitteeForm}\mbox{}\clearpage}
+\addcontentsline{toc}{chapter}{\nameCommitteeForm}
+\includepdf[pages=-]{000_frontpages/02_qualification_form.pdf}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              中文摘要 Chinese Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\thispagestyle{plain}  % 無 header，但在浮水印模式下會有浮水印
+% create an entry in table of contents for 中文摘要
+\addcontentsline{toc}{chapter}{\nameCabstract}
+
+% aligned to the center of the page
+\begin{center}
+% font size (relative to 12 pt):
+% \large (14pt) < \Large (18pt) < \LARGE (20pt) < \huge (24pt)< \Huge (24 pt)
+% Set the line spacing to single for the names (to compress the lines)
+\renewcommand{\baselinestretch}{1}   %行距 1 倍
+% it needs a font size changing command to be effective
+\makebox[.2\linewidth][s]{\Large{摘要}}\\
+\end{center}
+% Resume the line spacing to the desired setting
+\renewcommand{\baselinestretch}{\mybaselinestretch}   %恢復原設定
+%it needs a font size changing command to be effective
+% restore the font size to normal
+\normalsize
+%%%%%%%%%%%%%
+\input{000_frontpages/03_cabstract.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              英文摘要 English Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+%\thispagestyle{plain}  % 無 header，但在浮水印模式下會有浮水印
+\chapter*{\protect\makebox{Abstract}}
+% create an entry in table of contents for 英文摘要
+\addcontentsline{toc}{chapter}{\nameEabstract}
+
+\input{000_frontpages/04_eabstract.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                誌謝 Acknowledgements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Acknowledgment
+\newpage
+\chapter*{\protect\makebox{\nameAckn}} %\makebox{} is fragile; need protect
+\addcontentsline{toc}{chapter}{\nameAckn}
+\input{000_frontpages/05_ackn.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         目錄 Table of Contents (auto generated)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Table of contents
+\newpage
+\renewcommand{\contentsname}{\protect\makebox{\nameToc}}
+%\makebox{} is fragile; need protect
+\addcontentsline{toc}{chapter}{\nameToc}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       圖目錄 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% List of Figures
+\newpage
+\renewcommand{\listfigurename}{\protect\makebox{\nameTof}}
+%\makebox{} is fragile; need protect
+\addcontentsline{toc}{chapter}{\nameTof}
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       表目錄 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% List of Tables
+\newpage
+\renewcommand{\listtablename}{\protect\makebox{\nameLot}}
+%\makebox{} is fragile; need protect
+\addcontentsline{toc}{chapter}{\nameLot}
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       演算法目錄 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% List of Figures
+\newpage
+\renewcommand{\listalgorithmname}{\protect\makebox{\nameToa}}
+%\makebox{} is fragile; need protect
+\addcontentsline{toc}{chapter}{\nameToa}
+\listofalgorithms
+
+\newpage
+%% 論文本體頁碼回復為阿拉伯數字計頁，並從頭起算
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

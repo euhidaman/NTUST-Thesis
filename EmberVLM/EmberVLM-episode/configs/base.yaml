@@ -1,0 +1,126 @@
+# EmberVLM Base Configuration
+# Default settings for model architecture and training
+
+model:
+  # Vision encoder (RepViT from timm library)
+  # Using repvit_m0_9.dist_450e_in1k - lightweight model suitable for edge deployment
+  vision_model: "repvit_m0_9"
+  vision_pretrained: true
+  freeze_vision: true
+  num_visual_tokens: 8
+  vision_output_dim: 384
+  image_size: 224
+
+  # Language model (tinyllm/30M-0.4 from HuggingFace)
+  # Pretrained on FineWeb + SHL sensor data
+  language_hidden_size: 384  # tinyllm/30M-0.4 uses 384
+  language_num_layers: 6
+  language_num_heads: 6  # tinyllm/30M-0.4 uses 6 heads
+  language_vocab_size: 50257
+  language_max_length: 1024
+  freeze_language_base: true
+  unfreeze_last_layer: true
+
+  # Pretrained model settings
+  use_pretrained_language: true
+  pretrained_language_model: "tinyllm/30M-0.4"
+
+  # Fusion module
+  fusion_bottleneck_dim: 48
+  fusion_dropout: 0.1
+  use_qk_norm: true
+
+  # Reasoning module
+  reasoning_enabled: true
+  reasoning_hidden_dim: 192  # Reduced to match smaller language model
+  reasoning_num_layers: 2
+  reasoning_num_heads: 4
+  num_reasoning_steps: 4
+  max_plan_steps: 5
+
+  # Robot fleet
+  num_robots: 5
+  robot_names:
+    - "Drone"
+    - "Humanoid"
+    - "Wheeled"
+    - "Legged"
+    - "Underwater"
+
+  # Training
+  dropout: 0.1
+  initializer_range: 0.02
+
+training:
+  # Basic
+  seed: 42
+  output_dir: "./outputs"
+
+  # Distributed
+  distributed: true
+  backend: "nccl"
+  find_unused_parameters: false
+
+  # Precision
+  mixed_precision: "bf16"  # fp32, fp16, bf16
+  gradient_checkpointing: true
+
+  # Optimizer
+  optimizer: "adamw"
+  learning_rate: 2.0e-4
+  min_learning_rate: 2.0e-5
+  weight_decay: 0.1
+  beta1: 0.9
+  beta2: 0.95
+  eps: 1.0e-8
+
+  # Scheduler
+  scheduler: "cosine"
+  warmup_steps: 500
+  num_training_steps: 10000
+
+  # Batch
+  batch_size: 128
+  gradient_accumulation_steps: 4
+  max_grad_norm: 1.0
+
+  # Checkpointing
+  save_steps: 500
+  max_checkpoints: 1
+  save_optimizer: true
+
+  # Logging
+  log_steps: 50
+  eval_steps: 500
+
+  # HuggingFace
+  push_to_hub: false
+  hub_model_id: "embervlm"
+
+data:
+  # Image
+  image_size: 224
+
+  # Text
+  max_length: 512
+
+  # Augmentation
+  use_augmentation: true
+  augmentation:
+    use_color_jitter: true
+    use_random_crop: true
+    use_horizontal_flip: true
+    text_aug_probability: 0.3
+
+environment:
+  # Carbon tracking
+  track_emissions: true
+  emissions_output_dir: "./emissions"
+
+  # FLOPs tracking
+  track_flops: true
+
+  # Targets
+  max_training_flops: 1.0e+18
+  max_co2_kg: 50.0
+

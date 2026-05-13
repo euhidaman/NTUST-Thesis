@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(@\\(\"latex\",\"pdflatex\",\"xelatex\",\"lualatex\",\"biber\",\"bibtex\",\"tlmgr\",\"perl\",\"python\",\"git\"\\) | ForEach-Object { $p = \\(Get-Command $_ -ErrorAction SilentlyContinue\\); if \\($p\\) { \"$_ -> $\\($p.Source\\)\" } else { \"$_ -> NOT FOUND\" } })",
+      "PowerShell(code --list-extensions 2>&1)",
+      "PowerShell($env:PATH -split \";\" | Where-Object { $_ -match \"tex\" })",
+      "PowerShell(Get-ChildItem \"C:\\\\texlive\\\\2026\" -Force -ErrorAction SilentlyContinue | Measure-Object | Select-Object Count; [System.IO.Directory]::GetFileSystemEntries\\(\"C:\\\\texlive\\\\2026\"\\) | Select-Object -First 20)",
+      "PowerShell(cmd /c \"dir C:\\\\texlive\\\\2026 /a\")",
+      "PowerShell(cmd /c \"dir C:\\\\texlive\\\\2026\\\\bin /a\")",
+      "PowerShell(cmd /c \"dir C:\\\\texlive\\\\2026\\\\bin\\\\windows /a | more\" 2>&1)",
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Where-Object { $_.Name -match \"latex\" } | Select-Object Name)",
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Select-Object Name | Select-Object -First 30)"
+    ]
+  }
+}

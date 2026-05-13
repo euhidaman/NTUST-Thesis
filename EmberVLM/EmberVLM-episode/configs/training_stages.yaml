@@ -1,0 +1,147 @@
+# EmberVLM Training Stage Configurations
+
+# Stage 1: Visual-Language Alignment
+stage1:
+  name: "visual_language_alignment"
+  description: "Align RepViT features with TinyLLM text space"
+
+  epochs: 3
+  batch_size: 128
+  learning_rate: 2.0e-4
+
+  # Datasets
+  datasets:
+    - name: "coco_captions"
+      samples: 100000
+    - name: "flickr30k"
+      samples: 30000
+    - name: "cc3m_subset"
+      samples: 200000
+
+  # Loss
+  losses:
+    contrastive_weight: 0.5
+    captioning_weight: 0.5
+
+  # Sequence length
+  max_length: 256
+
+  # Metrics
+  metrics:
+    - "cider"
+    - "bleu4"
+    - "contrastive_accuracy"
+
+# Stage 2: Multimodal Instruction Tuning
+stage2:
+  name: "instruction_tuning"
+  description: "Teach task-following capabilities with distillation"
+
+  epochs: 5
+  batch_size: 64
+  learning_rate: 2.0e-4
+
+  # Datasets
+  datasets:
+    - name: "llava_instruct_150k"
+      samples: 150000
+    - name: "vqa_v2"
+      samples: 100000
+    - name: "okvqa_subset"
+      samples: 50000
+
+  # Distillation
+  distillation:
+    enabled: true
+    teacher_model: "qwen-vl-chat"
+    temperature: 2.0
+    alpha: 0.3
+    sft_weight: 0.7
+    distill_weight: 0.3
+
+  # Sequence length
+  max_length: 512
+
+  # Metrics
+  metrics:
+    - "vqa_accuracy"
+    - "instruction_following_score"
+
+# Stage 3: Robot Fleet Selection Training
+stage3:
+  name: "robot_selection_training"
+  description: "Train model for robot fleet selection based on task requirements"
+
+  # Training configuration
+  epochs: 20
+  batch_size: 32
+  learning_rate: 1.0e-4
+
+  # Datasets
+  datasets:
+    - name: "robot_selection"
+      samples: 1000  # 100 base + 10x augmentation
+
+  # Data augmentation
+  augmentation:
+    synonym_replacement: true
+    task_variation: true
+    augmentation_factor: 10
+
+  # Special tokens
+  special_tokens:
+    reasoning_start: "<|reasoning_start|>"
+    reasoning_end: "<|reasoning_end|>"
+    robot_selection: "<|robot_selection|>"
+    action_plan: "<|action_plan|>"
+
+  # Loss
+  losses:
+    cross_entropy_weight: 0.6
+    reasoning_consistency_weight: 0.4
+
+  # Metrics
+  metrics:
+    - "robot_selection_accuracy"
+    - "action_plan_coherence"
+
+# Stage 4: Chain-of-Thought Reasoning Integration
+stage4:
+  name: "cot_reasoning"
+  description: "Integrate DeepSeek-R1 style reasoning"
+
+  # Two phases
+  phase1:
+    name: "train_reasoning_heads"
+    description: "Train reasoning heads with frozen backbone"
+    epochs: 5
+    learning_rate: 1.0e-4
+    freeze_backbone: true
+
+  phase2:
+    name: "joint_finetuning"
+    description: "Joint fine-tuning with reduced learning rate"
+    epochs: 5
+    learning_rate: 5.0e-5
+    freeze_backbone: false
+
+  batch_size: 32
+
+  # Reasoning data
+  reasoning_augmentation:
+    target_samples: 50000
+    validate_reasoning: true
+    use_teacher_generation: true
+
+  # Scheduled sampling
+  scheduled_sampling:
+    enabled: true
+    initial_teacher_forcing: 1.0
+    final_teacher_forcing: 0.5
+
+  # Metrics
+  metrics:
+    - "reasoning_consistency"
+    - "step_completeness"
+    - "logical_flow_score"
+

@@ -1,0 +1,120 @@
+# EmberVLM Edge Deployment Configuration
+
+deployment:
+  # Target device
+  target_device: "raspberry_pi_zero"
+
+  # Memory constraints
+  max_memory_mb: 85
+  target_memory_mb: 80
+
+  # Latency constraints
+  max_latency_s: 5.0
+  target_latency_s: 4.0
+  max_tokens: 50
+
+  # Model format
+  output_format: "gguf"  # gguf, onnx, pytorch
+
+quantization:
+  # Method
+  method: "dynamic"  # dynamic, static, awq, gptq
+
+  # Bit width
+  bits: 8  # 4 or 8
+
+  # AWQ specific
+  awq:
+    group_size: 128
+    version: "gemm"
+
+  # GPTQ specific
+  gptq:
+    bits: 4
+    group_size: 128
+    desc_act: false
+
+  # Calibration
+  calibration:
+    num_samples: 512
+    max_seq_length: 256
+
+size_targets:
+  # Model sizes in MB
+  fp32: 140
+  fp16: 70
+  int8: 35
+  int4: 18
+
+  # Target for edge
+  edge_target: 18  # INT4 quantized
+
+accuracy_constraints:
+  # Maximum acceptable accuracy drop from FP16
+  max_accuracy_drop: 0.02
+
+  # Per-task thresholds
+  robot_selection_min_accuracy: 0.83  # 85% - 2%
+  action_plan_min_coherence: 0.78  # 8/10 - 2%
+
+runtime:
+  # Inference engine
+  engine: "llama.cpp"  # llama.cpp, onnxruntime, pytorch
+
+  # Threading
+  num_threads: 4
+
+  # Optimization
+  use_mmap: true
+  use_mlock: false
+
+  # Batching
+  batch_size: 1
+
+  # Context
+  context_size: 512
+
+gguf:
+  # GGUF conversion settings
+  output_name: "embervlm-q4_0.gguf"
+  tokenizer_name: "embervlm-tok.bin"
+
+  # Quantization type
+  quantization_type: "q4_0"  # q4_0, q4_1, q5_0, q5_1, q8_0
+
+  # Vocab
+  vocab_only: false
+
+api:
+  # REST API settings
+  host: "0.0.0.0"
+  port: 8000
+
+  # Rate limiting
+  max_requests_per_minute: 60
+
+  # Timeouts
+  request_timeout_s: 30
+
+  # Logging
+  log_requests: true
+
+demo:
+  # Streamlit demo settings
+  title: "EmberVLM Robot Selection Demo"
+  description: "Upload an incident image to get robot recommendations"
+
+  # Display options
+  show_reasoning: true
+  show_probabilities: true
+  show_action_plan: true
+
+  # Example images
+  example_images:
+    - path: "examples/earthquake.jpg"
+      description: "Earthquake damage"
+    - path: "examples/flood.jpg"
+      description: "Flood scene"
+    - path: "examples/fire.jpg"
+      description: "Fire incident"
+

@@ -1,0 +1,150 @@
+% \section*{Ablation: Episodic Memory \textbf{On} vs.\ \textbf{Off} (BitMar)}
+
+% \paragraph{Setup.}
+% We compare under the BabyLM-2025 evaluation suite (fine-tuning; zero-shot causal suite: BLiMP/EWoK/COMPS/Entity-Tracking/WUG/Reading; multimodal: VQA/Winoground; DevBench).
+
+% \paragraph{Inference efficiency (64-token decode).}
+% \begin{itemize}
+%   \item \textbf{Throughput:} 57.3 vs.\ 7.7 tok/s (\textbf{$\sim$7.5$\times$ faster}).
+%   \item \textbf{Latency/token:} 17.3 ms vs.\ 129.8 ms (\textbf{$\sim$7.5$\times$ lower}).
+%   \item \textbf{Total energy:} 1.90 J vs.\ 9.17 J (\textbf{$\sim$79\% less}).
+%   \item \textbf{RAM (peak):} 956 MB vs.\ 1{,}076 MB (\textbf{$\sim$11\% less}).
+% \end{itemize}
+% \emph{Interpretation:} a constant-size retrieved vector supplies global context each step, reducing reliance on long-range attention while preserving the low-bit compute path.
+
+% \paragraph{Zero-shot accuracy (headline deltas, percentage points).}
+% \begin{itemize}
+%   \item \textbf{Entity Tracking:} +2.9 (avg) / +4.1 (fast)
+%   \item \textbf{COMPS (property/inheritance):} +3.4
+%   \item \textbf{BLiMP (avg):} +0.6 (fast), +0.6 (filtered)
+%   \item \textbf{VQA:} +3.4
+%   \item \textbf{EWoK:} mixed (−1.6 fast / +1.0 filtered)
+%   \item \textbf{Winoground:} −1.6 (small; likely noise)
+%   \item \textbf{DevBench (Visual Vocab, TROG, THINGS):} no change
+% \end{itemize}
+
+% \paragraph{Where it regresses.}
+% \begin{itemize}
+%   \item \textbf{WUG morphology (Spearman):} −0.36 (adj), −0.16 (past)
+%   \item \textbf{Reading alignment (Eye/SPR):} lower with memory in our causal run (0.44/0.11 vs.\ 1.11/0.66)
+% \end{itemize}
+
+% \paragraph{Fine-tuning tasks.}
+% No material differences on BoolQ/MNLI/MRPC/MultiRC/QQP/RTE/WSC (acc/F1/MCC within noise), consistent with memory primarily affecting generation-time behavior rather than supervised heads.
+
+% \paragraph{Takeaways.}
+% \begin{enumerate}
+%   \item \textbf{Efficiency:} Episodic memory yields $\sim$7.5$\times$ faster decoding, $\sim$79\% lower energy, and $\sim$11\% lower RAM without sacrificing extreme quantization, enabling edge deployment.
+%   \item \textbf{Helps:} Tasks needing continuity and cross-episode integration (entity state, property reasoning, multimodal QA) see +3--4 pp gains.
+%   \item \textbf{Gate it:} Morphological productivity (WUG) and psycholinguistic surprisal alignment can degrade; down-weight or disable memory on these evaluations.
+%   \item \textbf{Overall:} A constant-size, content-addressed episodic store plus attention sinks is a practical recipe for context-aware yet ultra-efficient decoding in tiny multimodal models; task-aware gating avoids trade-offs on morphology/reading.
+% \end{enumerate}
+
+% ---------------Esteban--------------
+
+% \section*{Ablation: Episodic Memory \textbf{On} (left) vs.\ \textbf{Off} (right) }
+
+% \paragraph{Setup.}
+% Evaluated under BabyLM 2025 evaluation pipeline (fine-tuning; zero-shot: BLiMP/EWoK/COMPS/Entity-Tracking/WUG/Reading; multimodal: VQA/Winoground; DevBench).
+
+% \paragraph{Efficiency (64-token decode).}
+% \begin{itemize}
+%   \item \textbf{Throughput:} 57.3 vs.\ 7.7 tok/s (\textbf{$\sim$7.5$\times$} faster).
+%   \item \textbf{Latency/token:} 17.3 vs.\ 129.8 ms (\textbf{$\sim$7.5$\times$} slower).
+%   \item \textbf{Energy:} 1.90 vs.\ 9.17 J (\textbf{$\sim$79\% less}).
+%   \item \textbf{RAM:} 956 vs.\ 1{,}076 MB (\textbf{$\sim$11\% less}).
+% \end{itemize}
+% \emph{Interpretation:} a fixed retrieved vector supplies context each step, reducing long-range attention while keeping 1.58-bit compute.
+
+% \paragraph{Zero-shot accuracy (\underline{pp deltas}).}
+% \begin{itemize}
+%   \item \textbf{Entity Tracking (2 splits):} +2.9 / +4.1
+%   \item \textbf{COMPS:} +3.4
+%   \item \textbf{BLiMP:} +0.6
+%   \item \textbf{VQA:} +3.4
+%   \item \textbf{EWoK (2 splits):} −1.6 / +1.0
+%   \item \textbf{Winoground:} −1.6
+%   \item \textbf{DevBench:} no effect
+% \end{itemize}
+
+% \paragraph{Regressions.}
+% \begin{itemize}
+%   \item \textbf{WUG morphology:} −0.36 (adj), −0.16 (past)
+%   \item \textbf{Reading alignment:} lower with memory (0.44/0.11 vs.\ 1.11/0.66)
+% \end{itemize}
+
+% \paragraph{Fine-tuning.}
+% No significant changes on BoolQ/MNLI/MRPC/MultiRC/QQP/RTE/WSC, suggesting memory mainly affects generation, not supervised heads.
+
+% \paragraph{Takeaways.}
+% \begin{enumerate}
+%   \item \textbf{Efficiency:} $\sim$7.5$\times$ faster, 79\% less energy, 11\% less RAM, supporting edge use.  
+%   \item \textbf{Helps:} +3--4 pp on entity, property, multimodal QA.  
+%   \item \textbf{Gate it:} Morphology and psycholinguistic alignment can degrade.  
+%   \item \textbf{Overall:} A constant-size episodic store with attention sinks enables context-aware yet ultra-efficient decoding; task-aware gating mitigates regressions.  
+% \end{enumerate}
+
+% ----------------------------------------
+
+% \subsection*{Ablation: Episodic Memory \textbf{On} vs.\ \textbf{Off}}
+
+% \paragraph{Setup.}
+% Evaluated under BabyLM 2025 evaluation pipeline (fine-tuning; zero-shot: BLiMP/EWoK/COMPS/Entity-Tracking/WUG/Reading; multimodal: VQA/Winoground; DevBench).
+
+% \paragraph{Efficiency (64-token decode).}
+% \begin{table}[!htbp]
+%     \centering
+%     \begin{tabular}{lcc}
+%         \hline
+%         \textbf{Metric} & \textbf{Mem. On} & \textbf{Mem. Off} \\ 
+%         \hline
+%         Throughput (tok/s) & 57.3 & 7.7 \\
+%         Latency/token (ms) & 17.3 & 129.8 \\
+%         Energy (J) & 1.90 & 9.17 \\
+%         RAM (MB) & 956 & 1,076 \\
+%         \hline
+%     \end{tabular}
+%     \caption{Inference ablation metrics}
+% \end{table}
+% \emph{Interpretation:} a fixed retrieved vector supplies context each step, reducing long-range attention while keeping 1.58-bit compute.
+
+% \paragraph{Zero-shot accuracy (\underline{pp deltas}).}
+% \begin{table}[!htbp]
+%     \centering
+%     \begin{tabular}{lc}
+%         \hline
+%         \textbf{Task} & \textbf{Delta (pp)} \\ 
+%         \hline
+%         Entity Tracking (Split 1) & +2.9 \\
+%         Entity Tracking (Split 2) & +4.1 \\
+%         COMPS & +3.4 \\
+%         BLiMP & +0.6 \\
+%         VQA & +3.4 \\
+%         EWoK (Split 1) & $-$1.6 \\
+%         EWoK (Split 2) & +1.0 \\
+%         Winoground & $-$1.6 \\
+%         DevBench & no effect \\
+%         \hline
+%     \end{tabular}
+%     \caption{BabyLM challenge evaluation pipeline results}
+% \label{tab:ablation_results}
+% \end{table}
+
+% \paragraph{Regressions.}
+% \begin{itemize}
+%   \item \textbf{WUG morphology:} $-$0.36 (adj), $-$0.16 (past)
+%   \item \textbf{Reading alignment:} lower with memory (0.44/0.11 vs.\ 1.11/0.66)
+% \end{itemize}
+
+% \paragraph{Fine-tuning.}
+% No significant changes on BoolQ/MNLI/MRPC/MultiRC/QQP/RTE/WSC, suggesting memory mainly affects generation, not supervised heads.
+
+% \paragraph{Takeaways.}
+% \begin{enumerate}
+%   \item \textbf{Efficiency:} $\sim$7.5$\times$ faster, 79\% less energy, 11\% less RAM, supporting edge use.  
+%   \item \textbf{Helps:} +3--4 pp on entity, property, multimodal QA.  
+%   \item \textbf{Gate it:} Morphology and psycholinguistic alignment can degrade.  
+%   \item \textbf{Overall:} A constant-size episodic store with attention sinks enables context-aware yet ultra-efficient decoding; task-aware gating mitigates regressions.  
+% \end{enumerate}
+
+%ADDED IN PART 5

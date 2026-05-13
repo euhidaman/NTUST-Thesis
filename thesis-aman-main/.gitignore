@@ -1,0 +1,30 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.loa
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+
+# Compiled output — commit manually when ready to share a draft PDF
+main.pdf
+
+# Generated data files (written to disk by \begin{filecontents} in data.tex at compile time)
+*.dat
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+
+# Local tool settings (personal, not project-wide)
+.vscode/
+.claude/
+
+CLAUDE.md

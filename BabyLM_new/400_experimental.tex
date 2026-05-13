@@ -1,0 +1,148 @@
+% \section{Experimental Setup}
+% \label{sec:exp}
+
+% We formulate four questions that reflect the evidence we present: (1) Can a 14M, 1.58-bit BitMar deliver usable accuracy compared to compact/low-bit baselines~\autoref{tab:ranking_metrics}? (2) Where does it excel or lag in language and multimodal tasks~\autoref{tab:bitmar_babylm_results}? (3) Does episodic memory evolve from diffuse to structured activations indicative of learned retrieval~\autoref{fig:heatmap_comparison}? (4) Does quantization/compression effectiveness improve over training under extreme low-bit constraints~\autoref{fig:quantization}?
+
+% \subsection{Dataset}
+% Our training corpus comprises 100 million tokens, evenly divided between multimodal caption data and text-only data.
+
+% \textbf{Multimodal Captions (50M tokens)}.
+% The multimodal portion is constructed from Conceptual Captions (CC3M)~\citep{sharma-CC3M-2018} and Localized Narratives dataset~\citep{ponttuset-localized-narratives-2020}, providing high-quality image–text pairs. Each caption is perfectly aligned with precomputed DiNOv2 visual features, ensuring consistent visual–linguistic correspondence. Visual features are extracted once using a frozen DiNOv2 backbone and stored for reuse during training, eliminating the need for online vision encoding.
+
+% \textbf{Text-Only Data (50M tokens)}.
+% The text-only portion is derived from the BabyLM~\citep{Charpentier-babylm-2025} split, covering six domains: BNC Spoken, CHILDES, Gutenberg, OpenSubtitles, Simple English Wikipedia, and Switchboard. This diversity provides exposure to a range of linguistic registers, from conversational to literary and encyclopedic texts.
+
+% \textbf{Mixture and Hold-out}.
+% The final training mixture is uniformly sampled at a 50:50 ratio between multimodal and text-only sources. No dedicated validation split is used; instead, a 1M-token hold-out set is maintained to monitor cross-modal alignment (via cosine similarity metrics) and language modeling perplexity throughout training. This setup enables continual performance tracking without interrupting training for separate evaluation runs.
+
+% \textbf{Preprocessing}.
+% Text data is tokenized using the GPT-2 byte pair encoding tokenizer, with a maximum sequence length of 256 tokens. Sequences exceeding this limit are truncated, and shorter sequences are padded to maintain batch uniformity. Visual features are stored in memory-mapped "\texttt{.npy}" files and loaded with on-the-fly compression, reducing I/O overhead and memory usage while maintaining high throughput during multimodal batching.
+
+% \subsection{Training Configuration}
+% All experiments are conducted on a compute cluster equipped with 8× NVIDIA A100 GPUs. We use mixed-precision (FP16) training to reduce memory usage and accelerate computation, combined with gradient checkpointing to further lower the memory footprint in long-context training.
+
+% \textbf{Batching}. 
+% Each training step processes 64 sequences per batch, with an effective batch size of 128 achieved via gradient accumulation over 2 steps. This configuration balances GPU memory constraints with stable gradient estimates.
+
+% \textbf{Optimization}. 
+% We train the model using AdamW8bit $2 \times 10^{-4}$~\citep{ilya-sgdr-2016}, with parameters $T_0=1,000$ (initial cycle length), $T_{mult}=2$ (cycle length multiplier), and a minimum learning rate $\eta_{min}=0.1 \times lr$. We train for up to 10 epochs, without early stopping based on token count, ensuring consistent exposure to the entire dataset mixture in each epoch. The cosine-with-restarts scheduler allows the learning rate to decay smoothly within each cycle before restarting, helping the model escape shallow local minima and potentially improving generalization.
+
+% We use Weights and Biases for experiment tracking, logging every 500 steps: Primary and auxiliary loss values ($\mathcal{L}_{\text{lm}}$, $\mathcal{L}_{\text{cm}}$, $\mathcal{L}_{\text{mem}}$), Cross-modal alignment metrics, Episodic memory usage statistics, Attention maps and memory retrieval visualizations, FLOPs per step for efficiency analysis. This monitoring setup enables both quantitative tracking and qualitative inspection of the model’s behavior over training.
+
+% \subsection{Hyperparameters}
+% Table \ref{tab:hyperparams} lists the key architectural and training hyperparameters used in all experiments. The configuration reflects a trade-off between model expressiveness and efficiency, making it suitable for deployment in constrained environments. The text and vision latent dimensions are both set to 128, ensuring that cross-modal fusion can be performed without expensive projection layers. The 4-layer text encoder combined with a relatively small memory size (512 slots × 128 dimensions) keeps the computational footprint low while retaining the capacity to store and retrieve relevant context. The number of memory slots was determined experimentally, and 512 slots were found to provide optimal performance in capturing the latent space and improving episodic recall efficiency, as compared to using fewer slots.
+
+% For long-context modeling, the attention sink size (4) and sliding window size (1,020) enable the decoder to attend to persistent global anchors and recent tokens without unbounded memory growth. The cross-modal loss weight (1.5) biases optimization toward strong vision-language alignment, while the memory consistency weight (0.1) helps stabilize the episodic memory by penalizing significant updates. The adaptive training controller thresholds, including the drop threshold of 0.12, freeze duration of 1,500 steps, and minimum 800 steps between interventions, are tuned to prevent modality collapse while minimizing the frequency of disruptive interventions.
+
+% This combination of hyperparameters yields a model that maintains stable multimodal alignment, supports long-context generation, and operates efficiently within the target hardware constraints.
+
+% \begin{table}[ht]
+% \centering
+% \small
+% \begin{tabular}{l l}
+% \hline
+% \textbf{Hyperparameter} & \textbf{Value} \\
+% \hline
+% Text Encoder layers         & 4 \\
+% Text hidden dim             & 128 \\
+% Memory slots                & 512 \\
+% Memory dim                  & 128 \\
+% Sink size                   & 4 \\
+% Window size                 & 1,020 \\
+% Cross-modal loss weight     & 1.5 \\
+% Memory consistency weight   & 0.1 \\
+% Drop threshold (adaptive)   & 0.12 \\
+% Freeze duration (steps)     & 1,500 \\
+% Min steps per intervention  & 800 \\
+% \hline
+% \end{tabular}
+% \caption{Training hyperparameters for all experiments.}
+% \label{tab:hyperparams}
+% \end{table}
+
+% \subsection{Benchmarks and baselines}
+% For evaluation, we benchmarked BitMar-14M across six widely used language understanding tasks—ARC-Easy, BoolQ, HellaSwag, WinoGrande, CommonsenseQA, and MMLU—to assess reasoning, commonsense, and factual knowledge under extreme quantization constraints. All experiments used the GPT-2 tokenizer with a maximum sequence length of 256 tokens, and multimodal inputs were aligned with precomputed DiNOv2 vision features. Model outputs were scored using accuracy for each benchmark, with performance compared against a range of baselines including Bonsai 0.5B, OLMo-BitNet 1B, Falcon3-1.58bit 7B, LLaMA3-8B-1.58 8B, and BitNet b1.58 2B. In addition to benchmark accuracy, we monitored the effectiveness of quantization and compression, as well as episodic memory activations throughout training to evaluate representational efficiency and memory utilization. This multi-faceted evaluation setup allowed us to measure not only end-task performance but also the internal dynamics of quantization and memory modules, providing insights into the stability and efficiency of our design.
+
+% \section{Experimental Setup}
+% \label{sec:exp}
+
+% We address four questions: (1) Can a 14M, 1.58-bit BitMar achieve usable accuracy vs.\ compact/low-bit baselines (\autoref{tab:ranking_metrics})? (2) Where does it excel or lag across language and multimodal tasks (\autoref{tab:bitmar_babylm_results})? (3) Does episodic memory evolve from diffuse to structured activations (\autoref{fig:heatmap_comparison})? (4) Does quantization effectiveness improve during training (\autoref{fig:quantization})?
+
+\section{Experimental Setup}
+\label{sec:exp}
+
+Our experimental framework systematically evaluates the proposed 14M-parameter BitMar model across several critical dimensions. We first benchmark its performance against established compact and low-bit baselines to assess overall viability (\autoref{tab:ranking_metrics}). We then conduct an analysis of its capabilities across a suite of language understanding and multimodal tasks to identify specific strengths and limitations (\autoref{tab:bitmar_babylm_results}). Beyond task performance, we also investigate the internal dynamics of the model, examining how the episodic memory evolves from diffuse to structured activation patterns during training (\autoref{fig:heatmap_comparison}). Finally, we track the progression of quantization efficacy throughout the training process to validate our low-precision approach (\autoref{fig:quantization}).
+
+\subsection{Dataset}
+The corpus comprises 100M tokens, split evenly between multimodal captions and text-only data.  
+
+\textbf{Multimodal (50M).} From CC3M~\citep{sharma-CC3M-2018} and Localized Narratives~\citep{ponttuset-localized-narratives-2020}, aligned with precomputed DiNOv2 features (frozen backbone, reused across training).  
+
+\textbf{Text-only (50M).} From BabyLM~\citep{Charpentier-babylm-2025}, spanning six domains (BNC, CHILDES, Gutenberg, OpenSubtitles, Simple English Wikipedia, Switchboard).  
+
+\textbf{Mixture.} Uniform 50:50 sampling; a 1M-token hold-out tracks cross-modal alignment (cosine similarity) and perplexity.  
+
+\textbf{Preprocessing.} GPT-2 BPE tokenizer, max 256 tokens (truncate/pad). Visual features stored as memory-mapped ``.npy'' with on-the-fly compression for efficient batching.
+
+\subsection{Training Configuration}
+We trained on an NVIDIA A6000 GPU using FP16 and gradient checkpointing. Each step processed 64 sequences, with two-step gradient accumulation yielding an effective batch size of 128. Optimization used AdamW8bit ($2\!\times\!10^{-4}$) with cosine restarts ($T_0{=}1000$, $T_{\text{mult}}{=}2$, $\eta_{min}{=}0.1lr$) for 10 epochs. We logged to Weights \& Biases every 500 steps, including losses ($\mathcal{L}_{\text{lm}}, \mathcal{L}_{\text{cm}}, \mathcal{L}_{\text{mem}}$), cross-modal alignment metrics, episodic-memory utilization, attention maps, and FLOPs per step.
+% Experiments were run on an A5000 GPU using FP16 and gradient checkpointing.  
+
+% \textbf{Batching.} 64 sequences per step, adequate batch size 128 via 2-step accumulation.  
+
+% \textbf{Optimization.} AdamW8bit ($2\!\times\!10^{-4}$) with cosine restarts ($T_0{=}1000$, $T_{\text{mult}}{=}2$, $\eta_{min}{=}0.1lr$) for 10 epochs.  
+
+% \textbf{Monitoring.} Weights \& Biases logging every 500 steps: losses ($\mathcal{L}_{\text{lm}}, \mathcal{L}_{\text{cm}}, \mathcal{L}_{\text{mem}}$), alignment metrics, episodic usage, attention maps, and FLOPs/step.
+
+\subsection{Hyperparameters}
+% \autoref{tab:hyperparams} lists key settings.
+The model architecture employs a four-layer text encoder with 128-dimensional hidden states. The episodic memory module comprises 512 slots, each with 128 dimensions, balancing memory footprint with recall capacity. For long-context streaming, we maintain four sink tokens with a sliding window of 1020 tokens. Training utilizes weighted losses with cross-modal and memory consistency coefficients of 1.5 and 0.1, respectively. An adaptive controller triggers memory freezing when alignment metrics drop by 0.12 from their recent maximum, applying 1,500-step freezes with a minimum interval of 800 steps between interventions.
+
+
+ 
+
+% \begin{table}[ht]
+% \centering
+% \small
+% \begin{tabular}{l l}
+% \hline
+% \textbf{Hyperparameter} & \textbf{Value} \\
+% \hline
+% Text Encoder layers         & 4 \\
+% Text hidden dim             & 128 \\
+% Memory slots                & 512 \\
+% Memory dim                  & 128 \\
+% Sink size                   & 4 \\
+% Window size                 & 1,020 \\
+% Cross-modal loss weight     & 1.5 \\
+% Memory consistency weight   & 0.1 \\
+% Drop threshold (adaptive)   & 0.12 \\
+% Freeze duration (steps)     & 1,500 \\
+% Min steps per intervention  & 800 \\
+% \hline
+% \end{tabular}
+% \caption{Training hyperparameters.}
+% \label{tab:hyperparams}
+% \end{table}
+
+\subsection{Benchmarks and Baselines}
+We evaluate on six language benchmarks: \textit{ARC-Easy}, \textit{BoolQ}, \textit{HellaSwag}, \textit{WinoGrande}, \textit{CommonsenseQA}, and \textit{MMLU}, plus multimodal tasks aligned with DiNOv2 features. Outputs are evaluated by accuracy and compared against baselines (\textit{Bonsai 0.5B}, \textit{OLMo-BitNet 1B}, \textit{Falcon3-1.58bit 7B}, \textit{LLaMA3-8B-1.58}, and \textit{BitNet b1.58 2B}). Beyond benchmarks, we track the effectiveness of quantization and episodic activations to assess representational efficiency and memory use.
+
+
+% We evaluate \textbf{BitMar} on six widely used language understanding benchmarks: 
+% \textit{ARC-Easy}, \textit{BoolQ}, \textit{HellaSwag}, \textit{WinoGrande}, \textit{CommonsenseQA}, and \textit{MMLU}, 
+% along with multimodal tasks aligned with DiNOv2 visual features. 
+% Model outputs are evaluated by accuracy and compared against representative low-bit and full-precision baselines, including 
+% \textit{Bonsai 0.5B}, \textit{OLMo-BitNet 1B}, \textit{Falcon3-1.58bit 7B}, \textit{LLaMA3-8B-1.58}, and \textit{BitNet b1.58 2B}. 
+% Beyond benchmark evaluation, we also analyze quantization effectiveness and episodic-memory activation dynamics to assess 
+% representational efficiency and the contribution of memory augmentation to downstream reasoning performance.
+
+
+
+
+
+
+
+
+
+

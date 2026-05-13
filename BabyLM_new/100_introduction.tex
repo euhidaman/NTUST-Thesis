@@ -1,0 +1,59 @@
+\section{Introduction}
+\label{sec:intro}
+Visual Language Models (VLMs) have made rapid progress in recent years, excelling at tasks such as image captioning~\citep{chen-microsoftcoco-2015}, visual question answering~\citep{anderson-attentionimagecap-2018, lijunan-blip-2022}. %and grounded dialogue generation~\citep{alayrac-flamingo-2022}. 
+Large-scale architectures such as BLIP-2~\citep{lijunnan-blip2-2023}, Flamingo~\citep{alayrac-flamingo-2022}, and Kosmos-2~\citep{peng-kosmos2-2023} demonstrate that cross-attention transformers can synchronize modalities for grounded language generation. However, their full-precision, extensive backbones incur significant computational and memory expenses, which restricts their implementation on devices with resource limitations.
+
+A growing body of work targets efficient multimodal processing, such as low-bit quantization~\citep{dettmers-8bitquantization-2021, frantar-gptq-2022} and compact language models~\citep{wang-bitnet-2023}, to reduce memory/latency. Quantized ViTs~\citep{jacob-quantization-2018, stock-revisiting-2019}, and self-supervised vision encoders, such as DiNOv2~\citep{oquab-dinov2-2024}, lower the cost of vision. Multimodal fusion ranges from early concatenation~\citep{lu-vilbert-2019} to learned query transformers~\citep{lijunnan-blip2-2023} to bridge frozen vision and language models. Memory-augmented transformers~\citep{graves-dynamicexternalmemory-2016, borgeaud-trillionstokens-2022} retrieve past context to improve coherence. 
+Yet no existing tiny language model effectively unifies low-bit multimodal encoding with an episodic memory system for edge deployment.
+
+
+% A growing body of work explores efficient multimodal processing. On the language side, low-bit quantization methods~\citep{dettmers-8bitquntization-2022, frantar-gptq-2022} and compact architectures such as~\citep{wang-bitnet-2023} significantly reduce memory footprint and inference latency. For vision encoders, quantized ViT variants\citep{jacob-quantization-2018, stock-revisiting-2019} and self-supervised models like DiNOv2~\citep{oquab-dinov2-2024} enable strong visual representations at a lower cost. In multimodal fusion, approaches range from early concatenation~\citep{lu-vilbert-2019} to learned query transformers (BLIP-2) that bridge frozen vision and language models. Memory-augmented transformers\citep{graves-dynamicexternalmemory-2016, borgeaud-trillionstokens-2022} extend these designs by allowing models to store and retrieve past context, improving coherence in sequential or episodic tasks. This follows the idea of human episodic memory, where the hippocampus serves as a short-term memory store enabling rapid and context-aware interactions. Yet, currently, no tiny LLMs combine low-bit multimodal encoding with episodic memory retrieval in a unified, edge-deployable architecture.
+
+% In this work, we propose a compact multimodal generation pipeline built around four stages: two low-bit encoders → cross-modal fusion → episodic memory → BitNet decoder with per-layer memory conditioning. Both the text and vision encoders operate at 1.58-bit quantization, producing 768-dimensional latent vectors that are fused via a lightweight cross-modal interaction layer. The fused multimodal embedding queries a fixed-size episodic memory of 512 slots, retrieving contextually relevant vectors that are projected into layer-specific conditioning signals for the BitNet decoder. This design ensures that all modules operate within a consistent 768-dimensional space, simplifying integration while minimizing projection overhead. 
+
+
+
+
+
+% We suggest a small four-stage pipeline: (1) 1.58-bit text/vision encoders → (2) lightweight cross-modal fusion → (3) an episodic memory with 512 slots → (4) a BitNet decoder that works with each layer. Both encoders produce 128-dimensional latents, and we compress DiNOv2's original 768-D vision features to 128-D before fusion. 
+% The fused embedding queries a $K=512$, $C=128$ episodic memory, and the retrieved vectors condition each decoder layer, keeping all modules in a consistent 768-dimensional space to make integration easier and reduce projection overhead. Our contributions are threefold:
+
+% \begin{itemize}
+%     \item We introduce a low-bit multimodal encoding framework that combines a quantized BitNet text encoder and a quantized ViT-based vision encoder for efficient feature extraction.
+%     \item We develop a memory-augmented decoding mechanism that injects retrieved episodic context into each transformer layer via per-layer conditioning, improving contextual relevance in caption generation.
+%     \item We demonstrate competitive captioning and multimodal understanding under extreme compression, with low latency and a small footprint, making it suitable for edge deployment.%that our architecture can caption images as well as the best ones while using limited memory and having low latency, making it robust for use in edge environments.
+% \end{itemize}
+
+% We organize the rest of the paper as follows: some studies on human-centric learning for language models and neural networks in~\autoref{sec:relworks}, ~\autoref{sec:method} describes the proposed model components, ~\autoref{sec:exp} explains the experimental setup, ~\autoref{sec:result} presents and discusses the results, and ~\autoref{sec:conclusion} concludes the paper.
+
+
+
+
+
+
+
+
+
+
+To fill this gap, we propose a compact four-stage pipeline optimized for efficient on-device execution: 
+(1) \textbf{1.58-bit text and vision encoders} generate lightweight, quantized embeddings; 
+(2) \textbf{a cross-modal fusion module} aligns the modalities within a shared latent space; 
+(3) \textbf{an episodic memory} with 512 key--value slots retrieves relevant multimodal context; and 
+(4) \textbf{a BitNet-based decoder} conditions each transformer layer on the retrieved memory for context-aware generation. 
+Both encoders output 128-dimensional representations, and DiNOv2’s original 768-D vision features are compressed to 128-D before fusion. 
+The fused embedding queries an episodic memory of size $K = 512$, $C = 128$, whose retrieved vectors condition each decoder layer. 
+This architecture maintains all modules in a consistent 768-dimensional space, simplifying integration and minimizing projection overhead while ensuring low-latency, memory-efficient operation on edge hardware.
+
+
+
+Our main contributions are summarized as follows:
+\begin{itemize}
+    \item \textbf{Low-bit multimodal encoding framework.} 
+    We propose a unified architecture that integrates a 1.58-bit quantized BitNet text encoder with a quantized ViT-based vision encoder, enabling efficient and compact multimodal feature extraction.
+    
+    \item \textbf{Memory-augmented decoding mechanism.} 
+    We design a lightweight episodic memory module that retrieves contextual representations and injects them into each transformer layer through per-layer conditioning, enhancing coherence and contextual relevance during generation.
+    
+    \item \textbf{Edge-efficient multimodal reasoning.} 
+    We demonstrate that BitMar achieves competitive performance in image captioning and multimodal understanding under extreme compression, maintaining low latency and a minimal memory footprint suitable for on-device deployment.
+\end{itemize}

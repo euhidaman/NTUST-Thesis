@@ -1,0 +1,54 @@
+# EmberVLM Episode Configuration
+# Episodic memory experiment — W&B and HF isolated under EmberVLM-Episode
+
+model:
+  vision_backbone: dinov2_small
+  language_backbone: smollm_135m
+  use_episodic_memory: true
+  memory_slots: 512
+  memory_addressing: gaussian       # "gaussian" or "pseudoinverse"
+  memory_alpha: 1.0
+  memory_temperature: 0.1
+  memory_variance: 1.0
+  novelty_threshold_novel: 0.7
+  novelty_threshold_similar: 0.2
+  scope_detection_method: internal
+  enable_memory_consolidation: false  # flip to true for Stage 5
+
+training:
+  stages:
+    - name: alignment
+      max_steps: 15000
+      learning_rate: 2.0e-4
+      batch_size: 32
+
+    - name: memory_init
+      max_steps: 5000
+      learning_rate: 1.0e-4
+      batch_size: 64
+
+    - name: instruct
+      max_steps: 20000
+      learning_rate: 2.0e-4
+      batch_size: 32
+      use_memory_conditioning: true
+
+    - name: robot
+      max_steps: 20000
+      learning_rate: 1.0e-4
+      batch_size: 32
+      populate_robot_memory: true
+
+    - name: reasoning
+      max_steps: 10000
+      learning_rate: 5.0e-5
+      batch_size: 16
+      enable_memory_updates: true
+
+logging:
+  wandb:
+    enabled: true
+    project: EmberVLM-Episode
+  huggingface:
+    push_enabled: true
+    repo_name: EmberVLM-Episode

@@ -1,0 +1,257 @@
+# EmberVLM Memory-Safe Training Configuration
+# Use this configuration for training on shared GPU servers (e.g., 2x A100 80GB)
+#
+# This configuration balances MODEL QUALITY with memory safety.
+# Limits are tuned for 2x A100 (80GB) + ~500GB system RAM
+
+# ============================================================================
+# MODEL QUALITY ANALYSIS
+# ============================================================================
+#
+# EmberVLM is a 37M parameter model designed for robot selection.
+# For good VLM performance, we need sufficient diverse training data.
+#
+# Research suggests:
+# - Small VLMs (30-100M params) benefit from 1-5M vision-language samples
+# - Instruction tuning needs 100k-500k high-quality samples
+# - Robot selection (specific task) needs ~10k-50k domain samples
+#
+# Our limits provide:
+# - Stage 1: ~1M samples (good for 37M param model)
+# - Stage 2: ~200k instruction samples (LLaVA-158k + extras)
+# - Stage 3: ~17k robot samples (8k base + augmentation) - UNCHANGED
+#
+# This should produce a model with:
+# - Good vision-language alignment
+# - Solid instruction following
+# - Excellent robot selection (domain-specific fine-tuning)
+
+# ============================================================================
+# MEMORY SAFETY LIMITS (Balanced for Quality)
+# ============================================================================
+
+memory_limits:
+  # Maximum samples per individual dataset source
+  max_samples_per_dataset: 150000
+
+  # Maximum total samples for Stage 1 (Vision-Language Alignment)
+  # 1M samples is appropriate for a 37M param model
+  max_stage1_total_samples: 1000000
+
+  # Maximum total samples for Stage 2 (Instruction Tuning)
+  max_stage2_total_samples: 200000
+
+  # Maximum CC3M samples - 150k gives good image-text coverage
+  # Original 500k was excessive for this model size
+  max_cc3m_samples: 150000
+
+  # Maximum GQA samples per JSON file - GQA teaches scene reasoning
+  max_gqa_samples_per_file: 100000
+
+  # Maximum GQA files to process
+  max_gqa_files: 5
+
+  # Safe number of DataLoader workers
+  safe_num_workers: 2
+
+# ============================================================================
+# DISTRIBUTED TRAINING SETTINGS
+# ============================================================================
+
+distributed:
+  # Use NCCL backend for multi-GPU
+  backend: "nccl"
+
+  # Environment variables to prevent CPU oversubscription
+  env_vars:
+    OMP_NUM_THREADS: "1"
+    MKL_NUM_THREADS: "1"
+    TOKENIZERS_PARALLELISM: "false"
+
+# ============================================================================
+# RECOMMENDED TRAINING COMMAND
+# ============================================================================
+# For 2x A100 (80GB) system in Docker:
+#
+# torchrun --nproc_per_node=2 scripts/train_all.py \
+#   --output_dir ./outputs \
+#   --stage all \
+#   --distributed \
+#   --mixed_precision bf16 \
+#   --batch_size 16 \        # Reduced from 32 for safety
+#   --learning_rate 2e-4 \
+#   --gradient_accumulation 8 \  # Increased to compensate for smaller batch
+#   --save_steps 500 \
+#   --log_steps 50 \
+#   --stage1_data data/base_vlm \
+#   --stage2_data data/base_vlm/llava \
+#   --robot_data robot-selection-dataset \
+#   --stage1_epochs 3 \
+#   --stage2_epochs 3 \
+#   --stage3_robot_epochs 30
+
+# ============================================================================
+# STAGE 1: VISUAL-LANGUAGE ALIGNMENT (Quality-Focused)
+# ============================================================================
+
+stage1:
+  name: "visual_language_alignment"
+  description: "Align RepViT features with TinyLLM text space"
+
+  epochs: 3
+  batch_size: 16  # Safe for memory, use gradient accumulation
+  learning_rate: 2.0e-4
+  gradient_accumulation_steps: 8  # Effective batch = 16 * 8 * 2 GPUs = 256
+
+  # Expected samples with new limits (~1M total):
+  #   - CC3M: 150k (from 3M) - image-text pairs
+  #   - COCO Captions: ~150k - high-quality captions
+  #   - VQA v2: ~150k - visual QA
+  #   - GQA: ~500k (5 files × 100k) - scene reasoning
+  #   - Others (OKVQA, AOKVQA, RefCOCO, LLaVA): ~50k
+  # This provides excellent diversity for a 37M model
+
+  # DataLoader settings
+  num_workers: 2
+  persistent_workers: true
+  prefetch_factor: 2
+
+  max_length: 256
+
+# ============================================================================
+# STAGE 2: INSTRUCTION TUNING (Quality-Focused)
+# ============================================================================
+
+stage2:
+  name: "instruction_tuning"
+  description: "Task-following capabilities"
+
+  epochs: 3
+  batch_size: 8  # Instruction data has longer sequences
+  learning_rate: 2.0e-4
+  gradient_accumulation_steps: 16  # Effective batch = 8 * 16 * 2 = 256
+
+  # Expected samples: ~158k (LLaVA-Instruct-150k)
+  # This is the standard for instruction tuning small VLMs
+
+  num_workers: 2
+  persistent_workers: true
+  prefetch_factor: 2
+
+  max_length: 512
+
+# ============================================================================
+# STAGE 3: ROBOT SELECTION (Already Memory Safe)
+# ============================================================================
+
+stage3:
+  name: "robot_selection_training"
+  description: "Robot fleet selection - small dataset, no memory issues"
+
+  epochs: 30
+  batch_size: 32
+  learning_rate: 1.0e-4
+
+  # This dataset is small (~1000 samples), no memory concerns
+
+# ============================================================================
+# STAGE 4: REASONING (Memory Safe)
+# ============================================================================
+
+stage4:
+  name: "cot_reasoning"
+  description: "Chain-of-thought reasoning integration"
+
+  phase1:
+    epochs: 5
+    learning_rate: 1.0e-4
+    freeze_backbone: true
+
+  phase2:
+    epochs: 5
+    learning_rate: 5.0e-5
+    freeze_backbone: false
+
+  batch_size: 16
+  gradient_accumulation_steps: 4
+
+# ============================================================================
+# MONITORING
+# ============================================================================
+
+monitoring:
+  # Carbon tracking only on rank 0
+  carbon_tracking: true
+  carbon_tracking_rank_0_only: true
+
+  # Log memory usage
+  log_memory_usage: true
+  memory_warning_threshold_gb: 50
+
+  # Wandb logging only on rank 0
+  wandb_enabled: true
+  wandb_rank_0_only: true
+
+# ============================================================================
+# RECOVERY / CHECKPOINTING
+# ============================================================================
+
+checkpointing:
+  save_steps: 500
+  max_checkpoints: 3
+  save_optimizer: true
+
+  # Resume from last checkpoint if training was interrupted
+  auto_resume: true
+
+# ============================================================================
+# TROUBLESHOOTING
+# ============================================================================
+# If you still experience OOM issues, reduce limits IN THIS ORDER
+# (least impact on quality first):
+#
+# 1. Reduce batch_size to 8 with gradient_accumulation=16
+#    (No quality impact - same effective batch size)
+#
+# 2. Reduce SAFE_NUM_WORKERS to 1
+#    (Slower training but no quality impact)
+#
+# 3. Reduce MAX_CC3M_SAMPLES to 100000
+#    (Minor quality impact - CC3M is redundant with COCO)
+#
+# 4. Reduce MAX_GQA_FILES to 3
+#    (Some quality impact - less scene reasoning data)
+#
+# 5. Reduce MAX_STAGE1_TOTAL_SAMPLES to 750000
+#    (Quality impact - but still decent for 37M model)
+#
+# MINIMUM RECOMMENDED for decent model:
+#   MAX_CC3M_SAMPLES = 50000
+#   MAX_GQA_FILES = 3
+#   MAX_STAGE1_TOTAL_SAMPLES = 500000
+#
+# Monitor memory with:
+#   watch -n 1 nvidia-smi
+#   htop (for CPU/RAM)
+
+# ============================================================================
+# QUALITY EXPECTATIONS
+# ============================================================================
+#
+# With current limits (1M Stage 1, 200k Stage 2, 17k robot samples):
+#
+# Expected Performance:
+# - Vision-Language Alignment: Good (sufficient diverse data)
+# - Instruction Following: Good (LLaVA-158k is standard)
+# - Robot Selection: Excellent (domain-specific fine-tuning)
+#
+# Comparison to original training:
+# - Original loaded ~9M samples (wasteful, caused OOM)
+# - For 37M params, 1-2M samples is optimal
+# - More data beyond this gives diminishing returns
+#
+# The model should achieve:
+# - 85-90% robot selection accuracy (as documented)
+# - Good visual understanding
+# - Coherent chain-of-thought reasoning
+
