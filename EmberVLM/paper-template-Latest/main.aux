@@ -1,0 +1,206 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{li2022blipbootstrappinglanguageimagepretraining,alayrac2022flamingovisuallanguagemodel,radford2021learningtransferablevisualmodels}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {title}{Efficient Vision-Language Models for Resource-Constrained Edge Deployment: Top-N Robot Selection and Multimodal Reasoning}{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\authcount {1}}
+\@writefile{toc}{\contentsline {author}{Anonymous ECCV 2026{} Submission}{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\newlabel{sec:intro@cref}{{[section][1][]1}{[1][1][]1}{}{}{}}
+\@writefile{brf}{\backcite{li2022blipbootstrappinglanguageimagepretraining,alayrac2022flamingovisuallanguagemodel, radford2021learningtransferablevisualmodels}{{1}{1}{section.1}}}
+\citation{smolvlm2024}
+\citation{chu2023mobilevlm}
+\citation{chu2024mobilevlmv2}
+\citation{zhu2024llavaphi}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Tiny and Edge Vision-Language Models}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{brf}{\backcite{smolvlm2024}{{2}{2.1}{subsection.2.1}}}
+\@writefile{brf}{\backcite{chu2023mobilevlm}{{2}{2.1}{subsection.2.1}}}
+\@writefile{brf}{\backcite{chu2024mobilevlmv2}{{2}{2.1}{subsection.2.1}}}
+\citation{wang2023bitnet}
+\citation{ma2024bitnet158}
+\citation{lin2023awq}
+\citation{frantar2022gptq}
+\citation{das2024larimar}
+\citation{wu2022memorising}
+\citation{lewis2020rag}
+\citation{graves2016dnc}
+\citation{li2023pope}
+\citation{rohrbach2018hallucination}
+\citation{leng2024vcd}
+\def\@LN@column{1}
+\@writefile{brf}{\backcite{zhu2024llavaphi}{{3}{2.1}{subsection.2.1}}}
+\@writefile{brf}{\backcite{wang2023bitnet}{{3}{2.1}{subsection.2.1}}}
+\@writefile{brf}{\backcite{ma2024bitnet158}{{3}{2.1}{subsection.2.1}}}
+\@writefile{brf}{\backcite{lin2023awq}{{3}{2.1}{subsection.2.1}}}
+\@writefile{brf}{\backcite{frantar2022gptq}{{3}{2.1}{subsection.2.1}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Episodic Memory for Language and Vision-Language Models}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{brf}{\backcite{das2024larimar}{{3}{2.2}{subsection.2.2}}}
+\@writefile{brf}{\backcite{wu2022memorising}{{3}{2.2}{subsection.2.2}}}
+\@writefile{brf}{\backcite{lewis2020rag}{{3}{2.2}{subsection.2.2}}}
+\@writefile{brf}{\backcite{graves2016dnc}{{3}{2.2}{subsection.2.2}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Hallucination Detection and Control in Vision-Language Models}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{brf}{\backcite{li2023pope}{{3}{2.3}{subsection.2.3}}}
+\@writefile{brf}{\backcite{rohrbach2018hallucination}{{3}{2.3}{subsection.2.3}}}
+\@writefile{brf}{\backcite{leng2024vcd}{{3}{2.3}{subsection.2.3}}}
+\citation{oquab2024dinov2learningrobustvisual}
+\citation{allal2024SmolLM}
+\citation{kandala2024tinyllmframeworktrainingdeploying}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces EmberVLM architecture overview. We introduce both episodic memory and the VA refiner module as part of the model.}}{4}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:main}{{1}{4}{EmberVLM architecture overview. We introduce both episodic memory and the VA refiner module as part of the model}{figure.caption.2}{}}
+\newlabel{fig:main@cref}{{[figure][1][]1}{[1][4][]4}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{4}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{4}{Methodology}{section.3}{}}
+\newlabel{sec:method@cref}{{[section][3][]3}{[1][4][]4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}EmberVLM Architecture}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Base Multimodal Pipeline}{4}{section*.3}\protected@file@percent }
+\@writefile{brf}{\backcite{oquab2024dinov2learningrobustvisual}{{4}{3.1}{section*.3}}}
+\@writefile{brf}{\backcite{allal2024SmolLM}{{4}{3.1}{section*.3}}}
+\@writefile{brf}{\backcite{kandala2024tinyllmframeworktrainingdeploying}{{4}{3.1}{section*.3}}}
+\@writefile{toc}{\contentsline {paragraph}{Stable Gated Fusion}{4}{section*.4}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {paragraph}{Task-Specific Adaptation: Top-$K$ Robot Selection}{5}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Episodic Memory Module}{5}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:memory}{{3.2}{5}{Episodic Memory Module}{subsection.3.2}{}}
+\newlabel{sec:memory@cref}{{[subsection][2][3]3.2}{[1][5][]5}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Scope Detection and Readout}{5}{section*.6}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {paragraph}{Novelty Detection and Dynamic Writes}{6}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Knowledge Consolidation}{6}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Visual Absence (VA) Refiner}{6}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:refiner}{{3.3}{6}{Visual Absence (VA) Refiner}{subsection.3.3}{}}
+\newlabel{sec:refiner@cref}{{[subsection][3][3]3.3}{[1][6][]6}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Dual-View Consistency and Internal Feature Extraction}{6}{section*.9}\protected@file@percent }
+\citation{sharma-etal-2018-conceptual}
+\citation{yu2016modelingcontextreferringexpressions}
+\citation{VQA}
+\citation{lin2015microsoftcococommonobjects}
+\citation{liu2023visualinstructiontuning}
+\citation{marino2019okvqavisualquestionanswering}
+\citation{schwenk2022aokvqabenchmarkvisualquestion}
+\citation{hudson2019gqanewdatasetrealworld}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {paragraph}{Type-Aware Intervention and Burst Detection}{7}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mission Uncertainty Calibration}{7}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Training Curriculum}{7}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:training}{{3.4}{7}{Training Curriculum}{subsection.3.4}{}}
+\newlabel{sec:training@cref}{{[subsection][4][3]3.4}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Stage 1: Visual-Language Alignment}{7}{section*.13}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces EmberVLM Training Datasets Across All Stages}}{8}{table.caption.12}\protected@file@percent }
+\newlabel{tab:all_training_datasets}{{1}{8}{EmberVLM Training Datasets Across All Stages}{table.caption.12}{}}
+\newlabel{tab:all_training_datasets@cref}{{[table][1][]1}{[1][7][]8}{}{}{}}
+\@writefile{brf}{\backcite{sharma-etal-2018-conceptual}{{8}{1}{table.caption.12}}}
+\@writefile{brf}{\backcite{yu2016modelingcontextreferringexpressions}{{8}{1}{table.caption.12}}}
+\@writefile{brf}{\backcite{VQA}{{8}{1}{table.caption.12}}}
+\@writefile{brf}{\backcite{lin2015microsoftcococommonobjects}{{8}{1}{table.caption.12}}}
+\@writefile{brf}{\backcite{liu2023visualinstructiontuning}{{8}{1}{table.caption.12}}}
+\@writefile{brf}{\backcite{marino2019okvqavisualquestionanswering}{{8}{1}{table.caption.12}}}
+\@writefile{brf}{\backcite{schwenk2022aokvqabenchmarkvisualquestion}{{8}{1}{table.caption.12}}}
+\@writefile{brf}{\backcite{hudson2019gqanewdatasetrealworld}{{8}{1}{table.caption.12}}}
+\@writefile{toc}{\contentsline {subsubsection}{Stage 2: Multimodal Instruction Tuning}{8}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Stage 3: Robot Fleet Selection}{8}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Stage 4: Latent Chain-of-Thought Integration}{8}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{8}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{8}{Experiments}{section.4}{}}
+\newlabel{sec:experiments@cref}{{[section][4][]4}{[1][8][]8}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Baseline Comparisons and Generalization}{8}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:baselines}{{4.1}{8}{Baseline Comparisons and Generalization}{subsection.4.1}{}}
+\newlabel{sec:baselines@cref}{{[subsection][1][4]4.1}{[1][8][]8}{}{}{}}
+\citation{hudson2019gqanewdatasetrealworld}
+\citation{altahan2024unibenchvisualreasoningrequires}
+\citation{hsieh2023sugarcrepefixinghackablebenchmarks}
+\def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces EmberVLM evaluation on diverse multimodal tasks.}}{9}{table.caption.17}\protected@file@percent }
+\newlabel{tab:episodic_memory_gen_tasks}{{2}{9}{EmberVLM evaluation on diverse multimodal tasks}{table.caption.17}{}}
+\newlabel{tab:episodic_memory_gen_tasks@cref}{{[table][2][]2}{[1][9][]9}{}{}{}}
+\@writefile{brf}{\backcite{hudson2019gqanewdatasetrealworld}{{9}{2}{table.caption.17}}}
+\@writefile{brf}{\backcite{altahan2024unibenchvisualreasoningrequires}{{9}{2}{table.caption.17}}}
+\@writefile{brf}{\backcite{hsieh2023sugarcrepefixinghackablebenchmarks}{{9}{2}{table.caption.17}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Edge Deployment and Dynamic Memory Management}{9}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:edge_deployment}{{4.2}{9}{Edge Deployment and Dynamic Memory Management}{subsection.4.2}{}}
+\newlabel{sec:edge_deployment@cref}{{[subsection][2][4]4.2}{[1][9][]9}{}{}{}}
+\def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Training carbon emissions from CodeCarbon integration. All values are \textbf  {measured}, not estimated. Training was conducted on a dual-GPU distributed setup (2 ranks). Stages 3--4 contribute negligible emissions relative to alignment and instruction tuning.}}{10}{table.caption.18}\protected@file@percent }
+\newlabel{tab:emissions}{{3}{10}{Training carbon emissions from CodeCarbon integration. All values are \textbf {measured}, not estimated. Training was conducted on a dual-GPU distributed setup (2 ranks). Stages 3--4 contribute negligible emissions relative to alignment and instruction tuning}{table.caption.18}{}}
+\newlabel{tab:emissions@cref}{{[table][3][]3}{[1][10][]10}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Robot fleet selection ablation on the 103-sample validation split. Episodic memory adds a single $512 \times 576$ read operation per query. Abs. $\Delta $ represents the absolute metric improvement. ECE: lower is better ($\downarrow $); all others: higher is better ($\uparrow $).}}{10}{table.caption.19}\protected@file@percent }
+\newlabel{tab:robot_selection}{{4}{10}{Robot fleet selection ablation on the 103-sample validation split. Episodic memory adds a single $512 \times 576$ read operation per query. Abs. $\Delta $ represents the absolute metric improvement. ECE: lower is better ($\downarrow $); all others: higher is better ($\uparrow $)}{table.caption.19}{}}
+\newlabel{tab:robot_selection@cref}{{[table][4][]4}{[1][10][]10}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Mission Critical Evaluation}{10}{subsection.4.3}\protected@file@percent }
+\citation{choi2026better}
+\citation{danish2025geobench}
+\def\@LN@column{1}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Performance comparisons on mission-critical visual recognition benchmarks.}}{11}{table.caption.21}\protected@file@percent }
+\newlabel{tab:risk_benchmark_results}{{5}{11}{Performance comparisons on mission-critical visual recognition benchmarks}{table.caption.21}{}}
+\newlabel{tab:risk_benchmark_results@cref}{{[table][5][]5}{[1][11][]11}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Out-of-Domain Generalization}{11}{section*.20}\protected@file@percent }
+\@writefile{brf}{\backcite{choi2026better}{{11}{4.3}{section*.20}}}
+\@writefile{brf}{\backcite{danish2025geobench}{{11}{4.3}{section*.20}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Episodic Memory Module}{11}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Hallucination Mitigation and Mechanistic Analysis}{11}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:eval_hallucination}{{4.5}{11}{Hallucination Mitigation and Mechanistic Analysis}{subsection.4.5}{}}
+\newlabel{sec:eval_hallucination@cref}{{[subsection][5][4]4.5}{[1][11][]11}{}{}{}}
+\def\@LN@column{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Neuron activation heatmaps comparing visually grounded and hallucinated tokens. \textbf  {Top:} For hallucinated cases, activation patterns remain nearly identical regardless of the visual input's presence, indicating the model is generating text based entirely on language priors. \textbf  {Bottom:} For correctly grounded cases, activation patterns heavily diverge when the image is removed, demonstrating a strong structural reliance on actual visual content.}}{12}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:neuron}{{2}{12}{Neuron activation heatmaps comparing visually grounded and hallucinated tokens. \textbf {Top:} For hallucinated cases, activation patterns remain nearly identical regardless of the visual input's presence, indicating the model is generating text based entirely on language priors. \textbf {Bottom:} For correctly grounded cases, activation patterns heavily diverge when the image is removed, demonstrating a strong structural reliance on actual visual content}{figure.caption.23}{}}
+\newlabel{fig:neuron@cref}{{[figure][2][]2}{[1][12][]12}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Mechanistic Interpretability of Hallucinations}{12}{section*.22}\protected@file@percent }
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Carbon Footprint}{13}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:emissions}{{4.6}{13}{Carbon Footprint}{subsection.4.6}{}}
+\newlabel{sec:emissions@cref}{{[subsection][6][4]4.6}{[1][13][]13}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Experiment Setup}{13}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion and Limitations}{13}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{13}{Discussion and Limitations}{section.5}{}}
+\newlabel{sec:discussion@cref}{{[section][5][]5}{[1][13][]13}{}{}{}}
+\bibstyle{splncs04}
+\bibdata{main}
+\bibcite{altahan2024unibenchvisualreasoningrequires}{1}
+\bibcite{alayrac2022flamingovisuallanguagemodel}{2}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Limitations}{14}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Future Work}{14}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{14}{section.8}\protected@file@percent }
+\newlabel{sec:conclusion}{{8}{14}{Conclusion}{section.8}{}}
+\newlabel{sec:conclusion@cref}{{[section][8][]8}{[1][14][]14}{}{}{}}
+\bibcite{allal2024SmolLM}{3}
+\bibcite{VQA}{4}
+\bibcite{choi2026better}{5}
+\bibcite{chu2023mobilevlm}{6}
+\bibcite{chu2024mobilevlmv2}{7}
+\bibcite{danish2025geobench}{8}
+\bibcite{das2024larimar}{9}
+\bibcite{frantar2022gptq}{10}
+\bibcite{graves2016dnc}{11}
+\bibcite{hsieh2023sugarcrepefixinghackablebenchmarks}{12}
+\bibcite{hudson2019gqanewdatasetrealworld}{13}
+\bibcite{smolvlm2024}{14}
+\bibcite{kandala2024tinyllmframeworktrainingdeploying}{15}
+\bibcite{leng2024vcd}{16}
+\bibcite{lewis2020rag}{17}
+\bibcite{li2022blipbootstrappinglanguageimagepretraining}{18}
+\bibcite{li2023pope}{19}
+\bibcite{lin2023awq}{20}
+\def\@LN@column{1}
+\bibcite{lin2015microsoftcococommonobjects}{21}
+\bibcite{liu2023visualinstructiontuning}{22}
+\bibcite{ma2024bitnet158}{23}
+\bibcite{marino2019okvqavisualquestionanswering}{24}
+\bibcite{oquab2024dinov2learningrobustvisual}{25}
+\bibcite{radford2021learningtransferablevisualmodels}{26}
+\bibcite{rohrbach2018hallucination}{27}
+\bibcite{schwenk2022aokvqabenchmarkvisualquestion}{28}
+\bibcite{sharma-etal-2018-conceptual}{29}
+\bibcite{wang2023bitnet}{30}
+\bibcite{wu2022memorising}{31}
+\bibcite{yu2016modelingcontextreferringexpressions}{32}
+\bibcite{zhu2024llavaphi}{33}
+\def\@LN@column{1}
+\gdef \@abspage@last{16}

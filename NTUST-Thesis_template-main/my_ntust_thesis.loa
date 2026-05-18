@@ -1,0 +1,4 @@
+\contentsline {algorithm}{\numberline {1}{\ignorespaces BitMar episodic memory read/write procedure.}}{26}{}%
+\contentsline {algorithm}{\numberline {2}{\ignorespaces Adaptive Training Controller (ATC) for modality collapse prevention.}}{28}{}%
+\contentsline {algorithm}{\numberline {3}{\ignorespaces EmberVLM episodic memory: scope detection, retrieval, novelty write, and LRU-LFU eviction.}}{51}{}%
+\contentsline {algorithm}{\numberline {4}{\ignorespaces Visual Absence (VA) Refiner: per-token hallucination detection and logit intervention.}}{56}{}%

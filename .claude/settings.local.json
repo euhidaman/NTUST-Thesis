@@ -9,7 +9,38 @@
       "PowerShell(cmd /c \"dir C:\\\\texlive\\\\2026\\\\bin /a\")",
       "PowerShell(cmd /c \"dir C:\\\\texlive\\\\2026\\\\bin\\\\windows /a | more\" 2>&1)",
       "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Where-Object { $_.Name -match \"latex\" } | Select-Object Name)",
-      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Select-Object Name | Select-Object -First 30)"
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\.vscode\\\\extensions\" | Select-Object Name | Select-Object -First 30)",
+      "Bash(fc-list :lang=zh)",
+      "Bash(xelatex -interaction=nonstopmode -file-line-error my_ntust_thesis.tex)",
+      "Bash(fc-list)",
+      "Bash(find \"C:/texlive/2026/texmf-dist/fonts\" -name \"*cwtex*\" -o -name \"*cwTex*\" 2>/dev/null | head -20)",
+      "Read(//c/texlive/2026/texmf-dist/fonts/**)",
+      "Bash(kpsewhich --all \"cwTeXKai\")",
+      "Bash(kpsewhich cwTeXKai.ttf)",
+      "Bash(kpsewhich cwTeXKai.otf)",
+      "Bash(bibtex my_ntust_thesis)",
+      "Bash(Get-ChildItem -Path \"e:\\\\NTUST-Thesis\\\\NTUST-Thesis_template-main\\\\\" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 50)",
+      "Bash(kpsewhich cwTeXKaiR.ttf)",
+      "Bash(find /c/texlive/2026 -name \"*.ttf\" -path \"*kai*\" 2>/dev/null | head -10; find /c/texlive/2026 -name \"*.otf\" -path \"*kai*\" 2>/dev/null | head -10)",
+      "Read(//c/texlive/2026/**)",
+      "Bash(tlmgr info *)",
+      "Bash(xelatex -interaction=nonstopmode my_ntust_thesis.tex)",
+      "Bash(grep -n \"\\\\\\\\\\\\\\\\caption{\" 100_sections/*.tex)",
+      "Bash(grep -n \"^\\\\\\\\\\\\\\\\section\\\\|^\\\\\\\\\\\\\\\\chapter\" 100_sections/*.tex)",
+      "Bash(grep -n \"\\\\\\\\\\\\\\\\section\\\\|\\\\\\\\\\\\\\\\chapter\" 100_sections/*.tex)",
+      "Bash(grep -c \"^\\\\\\\\\\\\\\\\section{\\\\\\\\|^ *\\\\\\\\\\\\\\\\section{\\\\\\\\|^ *\\\\\\\\\\\\\\\\section\\\\[\" 100_sections/*.tex)",
+      "Bash(grep -rn \"\\\\\\\\\\\\\\\\section[{\\\\[]\" 100_sections/*.tex)",
+      "Bash(grep -rn \"\\\\\\\\\\\\\\\\section\" 100_sections/*.tex)",
+      "Bash(grep -v \"subsection\\\\|\\\\\\\\\\\\\\\\label\\\\|\\\\\\\\\\\\\\\\ref\\\\|\\\\\\\\\\\\\\\\cite\")",
+      "Bash(findstr /n \"\\\\\\\\section\" 100_sections\\\\01_introduction.tex 100_sections\\\\03_method.tex 100_sections\\\\04_experiment.tex)",
+      "Bash(findstr /v \"subsection\\\\|label\\\\|ref\\\\|cite\")",
+      "Bash(python -c ' *)",
+      "PowerShell(Get-Process | Where-Object { $_.MainWindowTitle -ne \"\" } | Select-Object Name, Id, MainWindowTitle | Where-Object { $_.MainWindowTitle -match \"thesis|ntust|pdf\" })",
+      "Bash(del /f my_ntust_thesis.aux my_ntust_thesis.toc my_ntust_thesis.lof my_ntust_thesis.lot my_ntust_thesis.loa my_ntust_thesis.out my_ntust_thesis.bbl)",
+      "Bash(rm -f \"e:/NTUST-Thesis/NTUST-Thesis_template-main/my_ntust_thesis.aux\" \"e:/NTUST-Thesis/NTUST-Thesis_template-main/my_ntust_thesis.toc\" \"e:/NTUST-Thesis/NTUST-Thesis_template-main/my_ntust_thesis.lof\" \"e:/NTUST-Thesis/NTUST-Thesis_template-main/my_ntust_thesis.lot\" \"e:/NTUST-Thesis/NTUST-Thesis_template-main/my_ntust_thesis.loa\" \"e:/NTUST-Thesis/NTUST-Thesis_template-main/my_ntust_thesis.out\" && echo \"Cleaned\")"
+    ],
+    "additionalDirectories": [
+      "e:\\NTUST-Thesis\\NTUST-Thesis_template-main"
     ]
   }
 }

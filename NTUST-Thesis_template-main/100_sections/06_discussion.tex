@@ -1,0 +1,89 @@
+\chapter{Discussion}
+\label{cha:discussion}
+
+\section{Research Progression: From BitMar to EmberVLM}
+\label{sec:disc_progression}
+
+The two contributions of this thesis represent a coherent research trajectory rather than two independent works. Table~\ref{tab:progression_comparison} summarizes the architectural evolution across key dimensions.
+
+\begin{table}[htbp]
+\centering
+\caption{\textbf{Architectural progression from BitMar to EmberVLM.}}
+\label{tab:progression_comparison}
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+\textbf{Dimension} & \textbf{BitMar} & \textbf{EmberVLM} \\
+\midrule
+Total parameters & 14M & 164M (40M trainable) \\
+Quantization & 1.58-bit weights + 8-bit activations & bf16 training \\
+Vision encoder & Frozen DiNOv2 (offline features) & Frozen DINOv2-Small (online) \\
+Language model & Custom 4-layer BitNet decoder & SmolLM-135M (135M) \\
+Fusion & Cross-modal attention & Stable Gated Fusion ($\alpha$ gate) \\
+Memory architecture & Soft writes (gradient-based, training-time) & Scope detector + Gaussian retrieval \\
+Memory capacity & $K{=}512$, $C{=}128$ (1.2 MB) & $K{=}512$, $C{=}576$ (1.2 MB) \\
+Memory updates & Backpropagation (static at deploy) & Novelty-triggered online writes \\
+Hallucination control & None & VA Refiner (logit + neuron) \\
+Primary task & Generative captioning + NLP benchmarks & Mission-critical classification \\
+Hardware target & Edge (general) & CPU-only, $<$800 MB, $<$10 ms \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Several design decisions were carried directly from BitMar to EmberVLM:
+\begin{itemize}
+    \item \textbf{Fixed-size episodic memory matrix at $K{=}512$}: empirically validated in BitMar as the optimal slot count, retained in EmberVLM.
+    \item \textbf{DiNOv2 as the frozen vision backbone}: BitMar's use of offline DiNOv2 features demonstrated that strong visual representations can be obtained without fine-tuning the vision encoder, reducing trainable parameter count.
+    \item \textbf{External episodic memory as a first-class architectural component}: BitMar validated that memory adds efficiency and accuracy; EmberVLM extends this to deployment-time adaptability.
+\end{itemize}
+
+Several design decisions were substantially revised:
+\begin{itemize}
+    \item \textbf{Quantization strategy}: 1.58-bit quantization is effective at 14M parameters but imposes ceiling effects on model expressiveness. At 164M parameters, standard bf16 training with frozen pretrained components provides better accuracy without requiring quantization-aware optimization.
+    \item \textbf{Memory update mechanism}: BitMar's gradient-based memory writes made the memory essentially static at deployment. EmberVLM's algebraic online writes enable genuine deployment-time adaptation without any weight updates.
+    \item \textbf{Hallucination control}: BitMar had no hallucination mechanism. The POPE Adversarial 29\% baseline hallucination rate in EmberVLM demonstrated that a dedicated control mechanism was necessary for mission-critical deployment.
+\end{itemize}
+
+\section{The Case for Episodic Memory at the Edge}
+\label{sec:disc_memory_case}
+
+Across both works, episodic memory demonstrates a consistent pattern: meaningful efficiency and accuracy benefits at minimal additional cost. In BitMar: $7.5\times$ throughput improvement, 79\% energy reduction, 3--4pp accuracy gains on reasoning tasks. In EmberVLM: Macro-F1 boosted from 0.035 (near-random) to 0.297 on robot selection, coherence aggregate score improved from 13.1 to 17.1, all at the cost of 1.2~MB RAM and $\sim$0.3--0.6M extra FLOPs per inference step.
+
+The quality-to-compute ratio in EmberVLM (17.1/1.03 for memory-augmented vs. 13.1/1.0 for memory-free) demonstrates that dynamic memory caching is among the most efficient strategies for scaling reasoning capability without violating edge constraints. No additional parameters need to be trained; no architectural changes are required at inference time. The memory matrix is a low-cost, high-return addition that any edge VLM architecture can incorporate.
+
+The robot selection results reveal an important failure mode that only episodic memory resolves: without memory conditioning, models collapse to single-class predictors when the training distribution is imbalanced. The NoMemory baseline achieves perfect recall for the majority class while completely failing on all minority classes. Memory conditioning provides the distributional context to break this collapse, enabling the model to discriminate across all morphology types. This finding is generalizable beyond robot selection: any multi-label classification task with class imbalance at the edge will benefit from episodic memory conditioning.
+
+\section{Hallucination as a Systems Problem}
+\label{sec:disc_hallucination_systems}
+
+The VA Refiner's uncertainty flag represents a broader architectural principle that distinguishes this work from purely generative hallucination mitigation approaches. Prior methods (VCD, grounding supervision, retraining-based calibration) treat hallucination as a generation quality problem: the goal is to produce better text output. The VA Refiner treats hallucination as a systems reliability problem: the goal is to provide downstream controllers with accurate signals about output confidence.
+
+When the VA Refiner raises an uncertainty flag, the downstream autonomous system has several options: request a secondary camera angle, slow down the decision cycle and await additional sensor input, defer to human operator judgment, or fall back to a safe default action. These options are only available if the model communicates its confidence level explicitly, rather than silently producing a potentially wrong answer with high surface fluency.
+
+This principle generalizes: every edge AI component in a safety-critical pipeline should produce outputs and communicate confidence signals to the larger system. The VA Refiner's architecture provides a template for achieving this training-free, at inference time, within the existing forward pass.
+
+\section{Cross-Architecture Transfer of the VA Refiner}
+\label{sec:disc_va_transfer}
+
+The VA Refiner's neuron-monitoring classifier is calibrated for SmolLM-135M's mid-decoder layers 10--14. The 0pp improvement for InternVL3-1B and SmolVLM-256M, and the 3.47pp improvement for SmolVLM2-256M, indicate that the Refiner is most effective for compact models where language-prior hallucination is a primary failure mode and mid-decoder layer structures are architecturally similar.
+
+This is not a limitation unique to the VA Refiner; any model-internal analysis method faces the challenge of architecture specificity. However, the methodology is transferable: for a different backbone, one would (1) identify the layers where visual-grounding modulation is strongest via ablation studies, (2) collect paired (visual, ablated) activation snapshots from those layers, and (3) train a lightweight binary classifier on the resulting data. This process requires no human annotation and no model retraining. The same methodology applied to SmolLM-135M required only automated data generation from Stage 2's frozen backbone snapshot.
+
+\section{Sustainable Edge AI}
+\label{sec:disc_sustainability}
+
+The 25.3~kg CO$_2$eq total training footprint of EmberVLM is not a coincidental byproduct of small model size. It is a direct consequence of deliberate design choices: freezing all pretrained components except the 40M-parameter fusion and adaptation modules, using a staged curriculum that exhausts simpler alignment tasks before engaging the expensive full-backbone fine-tuning of Stage 2, and completing task adaptation (Stages 3--4) in minutes rather than hours.
+
+The contrast with frontier VLMs is striking. Stage 1 alignment consumes 65.6\% of total emissions (16.65~kg) and is unavoidable for any model that lacks pretrained multimodal alignment. Stage 2 instruction tuning consumes 34.1\% (8.65~kg). Stages 3--4 together consume $<$0.05\% of total emissions, demonstrating that task adaptation at the edge is essentially free once a strong multimodal foundation exists.
+
+This decomposition suggests a practical framework for sustainable edge VLM development: invest once in a well-trained general-purpose multimodal backbone (Stages 1--2); then deploy task-specific adaptation modules (Stage 3) that are orders of magnitude cheaper. EmberVLM's architecture supports exactly this pattern, making it a viable base for future mission-critical adaptation tasks beyond robot selection.
+
+\section{Limitations}
+\label{sec:disc_limitations}
+
+Three limitations require explicit acknowledgment.
+
+\paragraph{Fixed episodic memory capacity.} The $K{=}512$ slot memory buffer is fixed at deployment time. In highly diverse or non-stationary deployments, stale episodes may degrade retrieval quality despite the LRU-LFU replacement policy. Adaptive memory management that dynamically resizes the buffer based on available device memory and novelty signals is a promising direction for future work.
+
+\paragraph{Architecture-specific VA Refiner.} The VA Refiner hooks into SmolLM-135M's mid-decoder FFN layers 10--14, and the classifier is calibrated to this specific architecture. Applying the Refiner to a different backbone requires identifying the relevant hook layers and recalibrating the classifier. The methodology is systematic, but it requires per-architecture engineering effort.
+
+\paragraph{High-resolution visual tasks.} DINOv2-Small compresses input images to only $N_v{=}8$ visual tokens, which precludes the dense, high-resolution spatial granularity required for microscopic inspection or extreme long-range visual analysis. Tasks requiring fine-grained spatial understanding (e.g., circuit board defect detection, medical imaging) would require a higher-resolution vision encoder, at the cost of increased computational overhead.

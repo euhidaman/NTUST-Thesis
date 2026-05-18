@@ -1,0 +1,44 @@
+\chapter{Conclusions and Future Work}
+\label{cha:conclusion}
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+This thesis addresses a fundamental gap in modern AI deployment: virtually all capable vision-language models are designed for cloud-hosted settings and cannot operate under the simultaneous constraints imposed by real-world edge deployments, namely sub-800~MB RAM, CPU-only inference, sub-10~ms latency, and zero tolerance for hallucinated outputs in mission-critical settings. Two original systems were designed, implemented, and evaluated to close this gap.
+
+\paragraph{BitMar.}
+BitMar is a 14M-parameter, 1.58-bit ternary-quantized multimodal model that establishes the first proof of compatibility between extreme weight quantization, cross-modal fusion, and external episodic memory conditioning in a single architecture. The core novelty is demonstrating that ternary weights at 1.58 bits per parameter are sufficient to support meaningful multimodal alignment, and that an external episodic memory matrix can be coupled with such a quantized backbone without introducing training instability. With episodic memory enabled, BitMar achieves approximately $7.5\times$ throughput improvement and 79\% energy reduction over the memory-free baseline, alongside 3--4 percentage-point zero-shot accuracy gains on entity tracking, compositional reasoning, and visual question answering. The Adaptive Training Controller, which monitors cross-modal alignment via exponential moving average and intervenes when alignment degrades, provides a practical mechanism for preventing modality collapse during low-bit multimodal training without manual schedule tuning.
+
+\paragraph{EmberVLM.}
+EmberVLM is the primary contribution of this thesis: a 164M total parameter (40M trainable) vision-language model purpose-built for mission-critical edge deployment. Three distinct novelties are introduced.
+
+The \textbf{Episodic Memory Module} is an algebraically updated, gradient-free memory system with a lightweight scope detector, Gaussian distance-based addressing, novelty-triggered online writes, and a hybrid Least Recently Used and Least Frequently Used eviction policy. It provides deployment-time contextual adaptation without any weight update, adding only 1.2~MB RAM and under 3\% additional FLOPs per inference step. It raises robot-selection Macro-F1 from 0.035 (near single-class collapse without memory) to 0.297, and contributes to the highest geospatial disaster understanding accuracy (0.72) among all evaluated sub-billion-parameter models. An optional Stage 5 knowledge consolidation distillation phase allows frequently accessed memory episodes to be ingrained into base model weights, freeing slots for continued adaptation.
+
+The \textbf{Visual Absence (VA) Refiner} is a training-free, zero-extra-forward-pass hallucination control mechanism. It fuses logit-space dual-view consistency, the discrepancy between generation probabilities with and without visual tokens, with neuron-level mid-decoder activation monitoring across layers 10 through 14 of the language backbone. A lightweight classifier trained offline on frozen activations identifies visually ungrounded tokens without any human annotation. Type-aware thresholds apply strict penalties to visually sensitive tokens and looser penalties to non-visual language tokens. A temporal burst detector escalates from soft penalty to hard block when hallucinations cluster consecutively, and a mission uncertainty flag signals the downstream autonomous controller when visual grounding is globally low-confidence. The VA Refiner reduces POPE Adversarial hallucination rate from 29\% to 22\%, an absolute reduction of 7 percentage points.
+
+The \textbf{four-stage training curriculum} with latent chain-of-thought integration allows EmberVLM to develop deductive reasoning capabilities without autoregressive CoT generation at inference time. Stage 4 aligns internal step-embeddings of the Reasoning Head with programmatically generated chain-of-thought rationales via an InfoNCE contrastive loss, gaining structured reasoning capacity with zero inference-time latency overhead.
+
+\paragraph{Overall results.}
+EmberVLM achieves the best reported performance among sub-billion-parameter models on all three mission-critical benchmarks: Top-N Robot Selection (Macro-F1 = 0.42), VERI-Emergency emergency visual recognition (Accuracy = 0.64), and GEO-Bench-VLM geospatial disaster understanding (Accuracy = 0.72). The complete inference stack, comprising the model, VA Refiner, and episodic memory, operates at 5.22~ms per sample on a CPU-only AMD Ryzen 3 4100 device with under 800~MB active RAM. Total measured training emissions across all stages are 25.3~kg CO$_2$eq, more than 21{,}000 times smaller than the estimated footprint of frontier large language model training, establishing low-carbon training as a first-class design objective rather than a byproduct of efficiency.
+
+Together, these two works demonstrate that mission-critical multimodal reasoning, with hallucination suppression, deployment-time memory adaptation, and structured reasoning, can be achieved under severe hardware constraints. The traditional assumption that capable AI requires cloud-scale infrastructure is an engineering choice, not a physical law, and this thesis provides a concrete, replicable alternative.
+
+\section{Future Work}
+\label{sec:future_work}
+
+Several directions emerge directly from the limitations and open questions identified in this thesis.
+
+\paragraph{Adaptive and hierarchical episodic memory.}
+The fixed $K{=}512$ slot capacity is the primary constraint of both memory systems. Dynamically expandable memory structures that grow in response to environmental novelty signals, within device memory budgets, would eliminate the hard eviction tradeoff. Hierarchical designs with a fast L1 cache of high-frequency episodes and a slower L2 store of rare but critical ones could better balance recency, frequency, and long-tail importance across diverse deployment environments.
+
+\paragraph{Cross-backbone VA Refiner transfer.}
+The VA Refiner methodology is architecture-agnostic: it requires only paired visual and ablated activation snapshots from mid-decoder layers. Automating the layer identification step via per-layer activation divergence analysis over a calibration set would allow plug-and-play deployment of the VA Refiner on any VLM backbone without manual layer selection, making it a general post-training hallucination control tool.
+
+\paragraph{Multi-agent verification.}
+The temporal burst detector currently escalates intervention within a single generation loop. Extending this into a multi-agent framework, where a burst event triggers a secondary lightweight verification model, could approach near-zero hallucination rates for the most safety-critical applications without requiring a full second forward pass from the primary model.
+
+\paragraph{Larger and more diverse evaluation sets.}
+The robot selection validation split contains 103 samples, with Humanoid and Legged Robot classes too rare for reliable per-class F1 estimation. Future evaluation should include larger, more morphologically diverse mission datasets and additional safety-critical domains including medical point-of-care imaging and industrial defect recognition.
+
+\paragraph{Post-training quantization for ultra-low-power deployment.}
+EmberVLM trains in bf16. Applying post-training INT8 or INT4 quantization to the trained weights could reduce memory footprint and latency by a further 2 to 4 times, potentially enabling deployment on hardware with as little as 256~MB RAM, reaching a class of embedded microcontroller platforms currently out of reach.

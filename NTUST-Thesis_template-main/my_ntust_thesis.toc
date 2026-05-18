@@ -1,0 +1,134 @@
+\contentsline {chapter}{Recommendation Form}{I}{}%
+\contentsline {chapter}{Qualification Form}{II}{}%
+\contentsline {chapter}{Abstract in Chinese}{III}{}%
+\contentsline {chapter}{Abstract in English}{IV}{}%
+\contentsline {chapter}{Acknowledgements}{VI}{}%
+\contentsline {chapter}{Contents}{VII}{}%
+\contentsline {chapter}{List of Figures}{XII}{}%
+\contentsline {chapter}{List of Tables}{XVI}{}%
+\contentsline {chapter}{List of Algorithms}{XVIII}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{}%
+\contentsline {section}{\numberline {1.1}Background and Motivation}{1}{}%
+\contentsline {section}{\numberline {1.2}Research Challenges}{3}{}%
+\contentsline {subsection}{\numberline {1.2.1}Memory and Compute Constraints}{3}{}%
+\contentsline {subsection}{\numberline {1.2.2}Hallucination at the Edge}{4}{}%
+\contentsline {subsection}{\numberline {1.2.3}Knowledge Staleness and Distributional Shift}{5}{}%
+\contentsline {section}{\numberline {1.3}Research Overview and Contributions}{6}{}%
+\contentsline {paragraph}{BitMar.}{6}{}%
+\contentsline {paragraph}{EmberVLM.}{6}{}%
+\contentsline {section}{\numberline {1.4}Thesis Organization}{8}{}%
+\contentsline {chapter}{\numberline {2}Related Work}{10}{}%
+\contentsline {section}{\numberline {2.1}Tiny and Edge-Deployable VLMs}{10}{}%
+\contentsline {section}{\numberline {2.2}Model Quantization for Efficient Inference}{12}{}%
+\contentsline {section}{\numberline {2.3}Episodic Memory in Neural Models}{13}{}%
+\contentsline {section}{\numberline {2.4}Hallucination Detection and Control in VLMs}{15}{}%
+\contentsline {section}{\numberline {2.5}Mission-Critical Visual Recognition Benchmarks}{16}{}%
+\contentsline {section}{\numberline {2.6}Low-Carbon and Sustainable AI}{18}{}%
+\contentsline {chapter}{\numberline {3}BitMar: Low-Bit Multimodal Foundation for Edge Deployment}{19}{}%
+\contentsline {section}{\numberline {3.1}Motivation and Research Goals}{19}{}%
+\contentsline {paragraph}{Why 1.58-bit?}{20}{}%
+\contentsline {section}{\numberline {3.2}BitMar Architecture Overview}{20}{}%
+\contentsline {section}{\numberline {3.3}Text Encoder}{21}{}%
+\contentsline {subsection}{\numberline {3.3.1}Architecture}{21}{}%
+\contentsline {subsection}{\numberline {3.3.2}Quantization}{23}{}%
+\contentsline {paragraph}{Weight Quantization.}{23}{}%
+\contentsline {paragraph}{Activation Quantization.}{23}{}%
+\contentsline {subsection}{\numberline {3.3.3}Attention Sinks for Long-Context Processing}{23}{}%
+\contentsline {section}{\numberline {3.4}Vision Encoder}{24}{}%
+\contentsline {section}{\numberline {3.5}Cross-Modal Fusion}{24}{}%
+\contentsline {section}{\numberline {3.6}Episodic Memory Module}{25}{}%
+\contentsline {subsection}{\numberline {3.6.1}Memory Matrix Specification}{25}{}%
+\contentsline {subsection}{\numberline {3.6.2}Writing Mechanism}{25}{}%
+\contentsline {subsection}{\numberline {3.6.3}Reading Mechanism}{25}{}%
+\contentsline {subsection}{\numberline {3.6.4}Regularization and Forgetting}{26}{}%
+\contentsline {section}{\numberline {3.7}Decoder with Attention Sinks}{26}{}%
+\contentsline {section}{\numberline {3.8}Training Objectives and Adaptive Curriculum}{27}{}%
+\contentsline {subsection}{\numberline {3.8.1}Multi-Component Objective}{27}{}%
+\contentsline {subsection}{\numberline {3.8.2}Adaptive Training Controller}{27}{}%
+\contentsline {section}{\numberline {3.9}Dataset and Training Configuration}{27}{}%
+\contentsline {section}{\numberline {3.10}Quantization Effectiveness Analysis}{28}{}%
+\contentsline {section}{\numberline {3.11}Experimental Results}{30}{}%
+\contentsline {subsection}{\numberline {3.11.1}Language Understanding Benchmarks}{30}{}%
+\contentsline {subsection}{\numberline {3.11.2}BabyLM Evaluation Suite}{32}{}%
+\contentsline {subsection}{\numberline {3.11.3}Episodic Memory Ablation}{33}{}%
+\contentsline {section}{\numberline {3.12}Implementation Details}{34}{}%
+\contentsline {subsection}{\numberline {3.12.1}Hyperparameters}{34}{}%
+\contentsline {subsection}{\numberline {3.12.2}Training Corpus}{36}{}%
+\contentsline {subsection}{\numberline {3.12.3}Tokenizer and Preprocessing}{36}{}%
+\contentsline {subsection}{\numberline {3.12.4}External Memory Offloading}{38}{}%
+\contentsline {section}{\numberline {3.13}Lessons Learned and Research Directions}{39}{}%
+\contentsline {paragraph}{Validated: episodic memory is compatible with and beneficial for quantized multimodal models.}{39}{}%
+\contentsline {paragraph}{Validated: 1.58-bit quantization is compatible with cross-modal fusion.}{39}{}%
+\contentsline {paragraph}{Open: Can episodic memory address hallucination?}{39}{}%
+\contentsline {paragraph}{Open: Can the architecture scale to mission-critical classification?}{39}{}%
+\contentsline {paragraph}{Open: Can memory be truly adaptive at deployment?}{40}{}%
+\contentsline {chapter}{\numberline {4}EmberVLM: Efficient Edge Vision-Language Model}{41}{}%
+\contentsline {section}{\numberline {4.1}Overview and Design Philosophy}{41}{}%
+\contentsline {section}{\numberline {4.2}Base Multimodal Pipeline}{42}{}%
+\contentsline {subsection}{\numberline {4.2.1}Vision Encoder}{42}{}%
+\contentsline {subsection}{\numberline {4.2.2}Language Backbone}{42}{}%
+\contentsline {subsection}{\numberline {4.2.3}Parameter Breakdown}{44}{}%
+\contentsline {section}{\numberline {4.3}Stable Gated Fusion}{45}{}%
+\contentsline {section}{\numberline {4.4}Task-Specific Adaptation: Top-$K$ Robot Selection Head}{46}{}%
+\contentsline {section}{\numberline {4.5}Episodic Memory Module}{47}{}%
+\contentsline {subsection}{\numberline {4.5.1}Overview and Distinction from BitMar}{47}{}%
+\contentsline {subsection}{\numberline {4.5.2}Memory Matrix Specification}{47}{}%
+\contentsline {subsection}{\numberline {4.5.3}Scope Detector}{48}{}%
+\contentsline {subsection}{\numberline {4.5.4}Memory Addressing and Retrieval}{48}{}%
+\contentsline {subsection}{\numberline {4.5.5}Novelty Detection and Dynamic Writes}{49}{}%
+\contentsline {subsection}{\numberline {4.5.6}Stage 5 Knowledge Consolidation}{49}{}%
+\contentsline {subsection}{\numberline {4.5.7}Complete Memory Inference Procedure}{50}{}%
+\contentsline {subsection}{\numberline {4.5.8}Memory Operating Modes}{50}{}%
+\contentsline {section}{\numberline {4.6}Visual Absence (VA) Refiner}{50}{}%
+\contentsline {subsection}{\numberline {4.6.1}Motivation}{50}{}%
+\contentsline {subsection}{\numberline {4.6.2}Dual-View Consistency Pathway}{52}{}%
+\contentsline {subsection}{\numberline {4.6.3}Neuron-Level Activation Pathway}{53}{}%
+\contentsline {subsection}{\numberline {4.6.4}Combined Visual Absence Score}{53}{}%
+\contentsline {subsection}{\numberline {4.6.5}Type-Aware Intervention}{54}{}%
+\contentsline {subsection}{\numberline {4.6.6}Temporal Burst Detection}{54}{}%
+\contentsline {subsection}{\numberline {4.6.7}Mission Uncertainty Calibration}{55}{}%
+\contentsline {subsection}{\numberline {4.6.8}Complete VA Refiner Inference Procedure}{55}{}%
+\contentsline {section}{\numberline {4.7}Four-Stage Training Curriculum}{55}{}%
+\contentsline {subsection}{\numberline {4.7.1}Stage 1: Visual-Language Alignment}{56}{}%
+\contentsline {subsection}{\numberline {4.7.2}Stage 2: Multimodal Instruction Tuning}{57}{}%
+\contentsline {subsection}{\numberline {4.7.3}Stage 3: Robot Fleet Selection}{57}{}%
+\contentsline {subsection}{\numberline {4.7.4}Stage 4: Latent Chain-of-Thought Integration}{59}{}%
+\contentsline {section}{\numberline {4.8}Dynamic Tiered Memory Management}{60}{}%
+\contentsline {section}{\numberline {4.9}Carbon Footprint Analysis}{61}{}%
+\contentsline {chapter}{\numberline {5}Experiments and Results}{63}{}%
+\contentsline {section}{\numberline {5.1}Experimental Setup}{63}{}%
+\contentsline {subsection}{\numberline {5.1.1}Hardware and Software}{63}{}%
+\contentsline {subsection}{\numberline {5.1.2}Evaluation Protocol}{63}{}%
+\contentsline {subsection}{\numberline {5.1.3}Baseline Models}{63}{}%
+\contentsline {subsection}{\numberline {5.1.4}Robot Selection Dataset}{64}{}%
+\contentsline {section}{\numberline {5.2}Mission-Critical Benchmark Results}{65}{}%
+\contentsline {subsection}{\numberline {5.2.1}Top-N Robot Selection}{65}{}%
+\contentsline {subsection}{\numberline {5.2.2}VERI-Emergency}{67}{}%
+\contentsline {subsection}{\numberline {5.2.3}GEO-Bench-VLM}{68}{}%
+\contentsline {section}{\numberline {5.3}General Multimodal Benchmarks}{69}{}%
+\contentsline {section}{\numberline {5.4}Episodic Memory Ablation}{71}{}%
+\contentsline {section}{\numberline {5.5}Visual Absence Refiner Ablation}{72}{}%
+\contentsline {section}{\numberline {5.6}Edge Deployment Latency Analysis}{74}{}%
+\contentsline {section}{\numberline {5.7}Mechanistic Analysis of Hallucinations}{75}{}%
+\contentsline {chapter}{\numberline {6}Discussion}{76}{}%
+\contentsline {section}{\numberline {6.1}Research Progression: From BitMar to EmberVLM}{76}{}%
+\contentsline {section}{\numberline {6.2}The Case for Episodic Memory at the Edge}{78}{}%
+\contentsline {section}{\numberline {6.3}Hallucination as a Systems Problem}{79}{}%
+\contentsline {section}{\numberline {6.4}Cross-Architecture Transfer of the VA Refiner}{80}{}%
+\contentsline {section}{\numberline {6.5}Sustainable Edge AI}{81}{}%
+\contentsline {section}{\numberline {6.6}Limitations}{81}{}%
+\contentsline {paragraph}{Fixed episodic memory capacity.}{82}{}%
+\contentsline {paragraph}{Architecture-specific VA Refiner.}{82}{}%
+\contentsline {paragraph}{High-resolution visual tasks.}{82}{}%
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{83}{}%
+\contentsline {section}{\numberline {7.1}Conclusions}{83}{}%
+\contentsline {paragraph}{BitMar.}{83}{}%
+\contentsline {paragraph}{EmberVLM.}{84}{}%
+\contentsline {paragraph}{Overall results.}{85}{}%
+\contentsline {section}{\numberline {7.2}Future Work}{86}{}%
+\contentsline {paragraph}{Adaptive and hierarchical episodic memory.}{86}{}%
+\contentsline {paragraph}{Cross-backbone VA Refiner transfer.}{86}{}%
+\contentsline {paragraph}{Multi-agent verification.}{87}{}%
+\contentsline {paragraph}{Larger and more diverse evaluation sets.}{87}{}%
+\contentsline {paragraph}{Post-training quantization for ultra-low-power deployment.}{87}{}%
+\contentsline {chapter}{References}{88}{}%

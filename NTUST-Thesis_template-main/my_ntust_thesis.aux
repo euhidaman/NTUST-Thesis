@@ -1,0 +1,407 @@
+\relax 
+\newlabel{fig:ntust_logo}{{\caption@xref {??}{ on input line 41}}{1}{}{}{}}
+\@writefile{toc}{\contentsline {chapter}{Recommendation Form}{I}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Qualification Form}{II}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Abstract in Chinese}{III}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Abstract in English}{IV}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Acknowledgements}{VI}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Contents}{VII}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{List of Figures}{XII}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{List of Tables}{XVI}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{List of Algorithms}{XVIII}{}\protected@file@percent }
+\citation{alayrac2022flamingo}
+\citation{li2023blip2}
+\citation{openai2023gpt4}
+\citation{team2023gemini}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:intro}{{1}{1}{}{chapter.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Background and Motivation}{1}{}\protected@file@percent }
+\newlabel{sec:intro_background}{{1.1}{1}{}{section.1.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Research Challenges}{3}{}\protected@file@percent }
+\newlabel{sec:intro_challenges}{{1.2}{3}{}{section.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Memory and Compute Constraints}{3}{}\protected@file@percent }
+\newlabel{subsec:challenge_compute}{{1.2.1}{3}{}{subsection.1.2.1}{}}
+\citation{leng2024vcd}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Hallucination at the Edge}{4}{}\protected@file@percent }
+\newlabel{subsec:challenge_hallucination}{{1.2.2}{4}{}{subsection.1.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Knowledge Staleness and Distributional Shift}{5}{}\protected@file@percent }
+\newlabel{subsec:challenge_staleness}{{1.2.3}{5}{}{subsection.1.2.3}{}}
+\citation{aman2025bitmar}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Research Overview and Contributions}{6}{}\protected@file@percent }
+\newlabel{sec:intro_contributions}{{1.3}{6}{}{section.1.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{BitMar.}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{EmberVLM.}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Thesis Organization}{8}{}\protected@file@percent }
+\newlabel{sec:intro_organization}{{1.4}{8}{}{section.1.4}{}}
+\citation{smolvlm2024}
+\citation{chu2023mobilevlm}
+\citation{chu2024mobilevlmv2}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Related Work}{10}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:related}{{2}{10}{}{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Tiny and Edge-Deployable VLMs}{10}{}\protected@file@percent }
+\newlabel{sec:related_tiny_vlm}{{2.1}{10}{}{section.2.1}{}}
+\citation{zhu2024llavaphi}
+\citation{yuan2024tinygptv}
+\citation{hu2024minicpmv}
+\citation{wang2023bitnet}
+\citation{ma2024bitnet158}
+\citation{frantar2022gptq}
+\citation{lin2023awq}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Model Quantization for Efficient Inference}{12}{}\protected@file@percent }
+\newlabel{sec:related_quant}{{2.2}{12}{}{section.2.2}{}}
+\citation{graves2016dnc}
+\citation{wu2022memorising}
+\citation{lewis2020rag}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Episodic Memory in Neural Models}{13}{}\protected@file@percent }
+\newlabel{sec:related_memory}{{2.3}{13}{}{section.2.3}{}}
+\citation{das2024larimar}
+\citation{rohrbach2018hallucination}
+\citation{li2023pope}
+\citation{leng2024vcd}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Hallucination Detection and Control in VLMs}{15}{}\protected@file@percent }
+\newlabel{sec:related_hallucination}{{2.4}{15}{}{section.2.4}{}}
+\citation{VQA}
+\citation{hudson2019gqa}
+\citation{hsieh2023sugarcrepe}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Mission-Critical Visual Recognition Benchmarks}{16}{}\protected@file@percent }
+\newlabel{sec:related_benchmarks}{{2.5}{16}{}{section.2.5}{}}
+\citation{choi2026better}
+\citation{danish2025geobench}
+\citation{strubell2019energy}
+\citation{patterson2021carbon}
+\citation{codecarbon}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Low-Carbon and Sustainable AI}{18}{}\protected@file@percent }
+\newlabel{sec:related_carbon}{{2.6}{18}{}{section.2.6}{}}
+\citation{aman2025bitmar}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}BitMar: Low-Bit Multimodal Foundation for Edge Deployment}{19}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:bitmar}{{3}{19}{}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Motivation and Research Goals}{19}{}\protected@file@percent }
+\newlabel{sec:bitmar_motivation}{{3.1}{19}{}{section.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Why 1.58-bit?}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}BitMar Architecture Overview}{20}{}\protected@file@percent }
+\newlabel{sec:bitmar_arch}{{3.2}{20}{}{section.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Text Encoder}{21}{}\protected@file@percent }
+\newlabel{sec:bitmar_text_encoder}{{3.3}{21}{}{section.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Architecture}{21}{}\protected@file@percent }
+\newlabel{RF1}{22}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf  {BitMar Architecture.} The model processes multimodal inputs: text tokens and DiNOv2-compressed image features. Quantized encoders (1.58-bit) generate compact text and vision embeddings ($z$, $v$), which are fused via cross-modal attention into shared query representations. A sliding-window attention mechanism enables long-context processing. A fixed episodic memory matrix ($K \times C$) stores and retrieves multimodal context vectors through quantized read/write weights, supporting optional SD-card offloading for edge deployment.}}{22}{}\protected@file@percent }
+\newlabel{fig:bitmar_arch}{{3.1}{22}{}{figure.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Quantization}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Weight Quantization.}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Activation Quantization.}{23}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Attention Sinks for Long-Context Processing}{23}{}\protected@file@percent }
+\citation{oquab2024dinov2}
+\citation{vaswani2017attention}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Vision Encoder}{24}{}\protected@file@percent }
+\newlabel{sec:bitmar_vision_encoder}{{3.4}{24}{}{section.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Cross-Modal Fusion}{24}{}\protected@file@percent }
+\newlabel{sec:bitmar_fusion}{{3.5}{24}{}{section.3.5}{}}
+\citation{oord2018representation}
+\citation{graves2016dnc}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Episodic Memory Module}{25}{}\protected@file@percent }
+\newlabel{sec:bitmar_memory}{{3.6}{25}{}{section.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Memory Matrix Specification}{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Writing Mechanism}{25}{}\protected@file@percent }
+\newlabel{eq:bitmar_mem_write}{{3.7}{25}{}{equation.3.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Reading Mechanism}{25}{}\protected@file@percent }
+\newlabel{eq:bitmar_mem_read}{{3.9}{25}{}{equation.3.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}Regularization and Forgetting}{26}{}\protected@file@percent }
+\newlabel{eq:bitmar_mem_reg}{{3.10}{26}{}{equation.3.10}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces BitMar episodic memory read/write procedure.}}{26}{}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{alg:bitmar_memory}{{1}{26}{}{algorithm.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Decoder with Attention Sinks}{26}{}\protected@file@percent }
+\newlabel{sec:bitmar_decoder}{{3.7}{26}{}{section.3.7}{}}
+\citation{sharma2018cc3m}
+\citation{ponttuset2020localizednarratives}
+\citation{charpentier2025babylm}
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Training Objectives and Adaptive Curriculum}{27}{}\protected@file@percent }
+\newlabel{sec:bitmar_training}{{3.8}{27}{}{section.3.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.1}Multi-Component Objective}{27}{}\protected@file@percent }
+\newlabel{eq:bitmar_total}{{3.11}{27}{}{equation.3.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8.2}Adaptive Training Controller}{27}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.9}Dataset and Training Configuration}{27}{}\protected@file@percent }
+\newlabel{sec:bitmar_dataset}{{3.9}{27}{}{section.3.9}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Adaptive Training Controller (ATC) for modality collapse prevention.}}{28}{}\protected@file@percent }
+\newlabel{alg:atc}{{2}{28}{}{algorithm.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.10}Quantization Effectiveness Analysis}{28}{}\protected@file@percent }
+\newlabel{sec:bitmar_quant_analysis}{{3.10}{28}{}{section.3.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces \textbf  {BitMar training configuration.} Key hyperparameters used during the 10-epoch training run on the 100M-token corpus.}}{29}{}\protected@file@percent }
+\newlabel{tab:bitmar_training_config}{{3.1}{29}{}{table.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf  {Quantization effectiveness over training.} $E_q$ (fraction of ternary weights set to zero) stabilizes at 42.8\%, demonstrating efficient compression without downstream performance degradation.}}{30}{}\protected@file@percent }
+\newlabel{fig:bitmar_quant}{{3.2}{30}{}{figure.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.11}Experimental Results}{30}{}\protected@file@percent }
+\newlabel{sec:bitmar_results}{{3.11}{30}{}{section.3.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.11.1}Language Understanding Benchmarks}{30}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces \textbf  {Language understanding benchmark performance.} \text  {$\mathsurround \z@ \mathchar "458$}= natively 1-bit trained. Scores are accuracy (\%). WG = WinoGrande, CQA = CommonsenseQA, ARC-E = ARC-Easy.}}{30}{}\protected@file@percent }
+\newlabel{tab:bitmar_lm_benchmarks}{{3.2}{30}{}{table.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf  {Episodic memory slot activation patterns across training checkpoints.} Each row corresponds to a different checkpoint, ranging from early training (top, Epoch 0, step 20k) to late training (bottom, Epoch 9, step 97k). Early checkpoints show scattered, weak activations with minimal slot specialization. By the final checkpoint, memory slots develop strongly differentiated activation profiles, with specific slots specializing for distinct semantic categories. This convergence confirms that the episodic memory organizes stored representations by semantic content rather than recency.}}{31}{}\protected@file@percent }
+\newlabel{fig:bitmar_heatmap}{{3.3}{31}{}{figure.3.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces \textbf  {BitMar BabyLM evaluation.} Average finetuned NLP accuracy: 60.5\%.}}{32}{}\protected@file@percent }
+\newlabel{tab:bitmar_babylm}{{3.3}{32}{}{table.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.11.2}BabyLM Evaluation Suite}{32}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.11.3}Episodic Memory Ablation}{33}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces \textbf  {Inference efficiency with and without episodic memory.}}}{33}{}\protected@file@percent }
+\newlabel{tab:bitmar_eff_ablation}{{3.4}{33}{}{table.3.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces \textbf  {Zero-shot accuracy deltas ($\Delta $ pp) with episodic memory enabled.}}}{33}{}\protected@file@percent }
+\newlabel{tab:bitmar_acc_ablation}{{3.5}{33}{}{table.3.5}{}}
+\gdef \LT@i {\LT@entry 
+    {5}{183.16168pt}\LT@entry 
+    {1}{182.71652pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.12}Implementation Details}{34}{}\protected@file@percent }
+\newlabel{sec:bitmar_impl}{{3.12}{34}{}{section.3.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.12.1}Hyperparameters}{34}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces \textbf  {BitMar architectural hyperparameters.} Full specification of the 14M-parameter ternary-quantized architecture.}}{34}{}\protected@file@percent }
+\newlabel{tab:bitmar_arch_hyperparams}{{3.6}{34}{}{table.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.12.2}Training Corpus}{36}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.12.3}Tokenizer and Preprocessing}{36}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.7}{\ignorespaces \textbf  {BitMar training hyperparameters.} Optimizer, schedule, memory, and hardware settings used across the full 10-epoch run.}}{37}{}\protected@file@percent }
+\newlabel{tab:bitmar_train_hyperparams}{{3.7}{37}{}{table.3.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.8}{\ignorespaces \textbf  {BitMar training corpus composition.} The 101M-token corpus combines 50M multimodal tokens and 50M text-only tokens, with a 1M-token stratified hold-out set.}}{38}{}\protected@file@percent }
+\newlabel{tab:bitmar_dataset_stats}{{3.8}{38}{}{table.3.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.12.4}External Memory Offloading}{38}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.13}Lessons Learned and Research Directions}{39}{}\protected@file@percent }
+\newlabel{sec:bitmar_lessons}{{3.13}{39}{}{section.3.13}{}}
+\@writefile{toc}{\contentsline {paragraph}{Validated: episodic memory is compatible with and beneficial for quantized multimodal models.}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Validated: 1.58-bit quantization is compatible with cross-modal fusion.}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Open: Can episodic memory address hallucination?}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Open: Can the architecture scale to mission-critical classification?}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Open: Can memory be truly adaptive at deployment?}{40}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}EmberVLM: Efficient Edge Vision-Language Model}{41}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:embervlm}{{4}{41}{}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Overview and Design Philosophy}{41}{}\protected@file@percent }
+\newlabel{sec:embervlm_overview}{{4.1}{41}{}{section.4.1}{}}
+\citation{oquab2024dinov2}
+\citation{allal2024smollm}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Base Multimodal Pipeline}{42}{}\protected@file@percent }
+\newlabel{sec:embervlm_base}{{4.2}{42}{}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Vision Encoder}{42}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Language Backbone}{42}{}\protected@file@percent }
+\newlabel{RF2}{43}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces \textbf  {EmberVLM architecture overview.} The system integrates a frozen DINOv2-Small vision encoder, a SmolLM-135M language backbone, a Stable Gated Fusion module, an Episodic Memory Module, and the Visual Absence (VA) Refiner. Solid arrows denote forward-pass data flow; the memory matrix is outside the gradient graph and is updated algebraically at deployment time.}}{43}{}\protected@file@percent }
+\newlabel{fig:embervlm_arch}{{4.1}{43}{}{figure.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Parameter Breakdown}{44}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces \textbf  {EmberVLM parameter distribution.} DINOv2-Small (21.1M) and the frozen layers of SmolLM-135M account for the majority of total parameters and are never updated. The 40M trainable parameters are concentrated in the Fusion Module, bottleneck adapter, and Reasoning Head.}}{44}{}\protected@file@percent }
+\newlabel{fig:embervlm_params_dist}{{4.2}{44}{}{figure.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces \textbf  {EmberVLM parameter breakdown.} Total: 164M parameters, 40M trainable.}}{44}{}\protected@file@percent }
+\newlabel{tab:embervlm_params}{{4.1}{44}{}{table.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces \textbf  {EmberVLM architectural specification.} Component-level summary of the 164M-parameter system, including encoder, backbone, memory, and VA Refiner configuration.}}{45}{}\protected@file@percent }
+\newlabel{tab:embervlm_arch_spec}{{4.2}{45}{}{table.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Stable Gated Fusion}{45}{}\protected@file@percent }
+\newlabel{sec:embervlm_fusion}{{4.3}{45}{}{section.4.3}{}}
+\newlabel{eq:embervlm_gate}{{4.1}{46}{}{equation.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Task-Specific Adaptation: Top-$K$ Robot Selection Head}{46}{}\protected@file@percent }
+\newlabel{sec:embervlm_head}{{4.4}{46}{}{section.4.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Episodic Memory Module}{47}{}\protected@file@percent }
+\newlabel{sec:embervlm_memory}{{4.5}{47}{}{section.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Overview and Distinction from BitMar}{47}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Memory Matrix Specification}{47}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Scope Detector}{48}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Memory Addressing and Retrieval}{48}{}\protected@file@percent }
+\newlabel{eq:embervlm_mem_address}{{4.3}{48}{}{equation.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.5}Novelty Detection and Dynamic Writes}{49}{}\protected@file@percent }
+\newlabel{sec:memory_novelty}{{4.5.5}{49}{}{subsection.4.5.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.6}Stage 5 Knowledge Consolidation}{49}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.7}Complete Memory Inference Procedure}{50}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.8}Memory Operating Modes}{50}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Visual Absence (VA) Refiner}{50}{}\protected@file@percent }
+\newlabel{sec:embervlm_refiner}{{4.6}{50}{}{section.4.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Motivation}{50}{}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces EmberVLM episodic memory: scope detection, retrieval, novelty write, and LRU-LFU eviction.}}{51}{}\protected@file@percent }
+\newlabel{alg:embervlm_memory}{{3}{51}{}{algorithm.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces \textbf  {EmberVLM episodic memory operating modes.} The three runtime modes control whether the memory matrix is read, written, or inactive during inference.}}{52}{}\protected@file@percent }
+\newlabel{tab:memory_modes_spec}{{4.3}{52}{}{table.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Dual-View Consistency Pathway}{52}{}\protected@file@percent }
+\newlabel{eq:va_logit}{{4.5}{52}{}{equation.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Neuron-Level Activation Pathway}{53}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.4}Combined Visual Absence Score}{53}{}\protected@file@percent }
+\newlabel{eq:va_combined}{{4.6}{53}{}{equation.4.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces \textbf  {Neuron activation heatmaps.} \textbf  {Top:} For hallucinated cases, activation patterns are nearly identical with and without the image, indicating generation from language priors. \textbf  {Bottom:} For correctly grounded cases, activations change substantially when the image is removed, demonstrating reliance on actual visual content.}}{54}{}\protected@file@percent }
+\newlabel{fig:embervlm_neuron}{{4.3}{54}{}{figure.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.5}Type-Aware Intervention}{54}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.6}Temporal Burst Detection}{54}{}\protected@file@percent }
+\citation{sharma2018cc3m}
+\citation{yu2016refcoco}
+\citation{VQA}
+\citation{lin2014coco}
+\citation{liu2023llava}
+\citation{marino2019okvqa}
+\citation{schwenk2022aokvqa}
+\citation{hudson2019gqa}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.7}Mission Uncertainty Calibration}{55}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.8}Complete VA Refiner Inference Procedure}{55}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Four-Stage Training Curriculum}{55}{}\protected@file@percent }
+\newlabel{sec:embervlm_training_curriculum}{{4.7}{55}{}{section.4.7}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Visual Absence (VA) Refiner: per-token hallucination detection and logit intervention.}}{56}{}\protected@file@percent }
+\newlabel{alg:va_refiner}{{4}{56}{}{algorithm.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Stage 1: Visual-Language Alignment}{56}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces \textbf  {EmberVLM four-stage training curriculum.} Stage~1 freezes both backbones and trains only the Fusion Module for visual-language alignment. Stage~2 unfreezes the language backbone for instruction tuning. Stage~3 re-freezes the backbone and trains the Reasoning Head for robot fleet selection. Stage~4 trains the Reasoning Head via InfoNCE contrastive loss to align internal step-embeddings with procedurally generated chain-of-thought rationales.}}{57}{}\protected@file@percent }
+\newlabel{fig:embervlm_stages}{{4.4}{57}{}{figure.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Stage 2: Multimodal Instruction Tuning}{57}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.3}Stage 3: Robot Fleet Selection}{57}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces \textbf  {EmberVLM training datasets across all stages.}}}{58}{}\protected@file@percent }
+\newlabel{tab:embervlm_datasets}{{4.4}{58}{}{table.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces \textbf  {EmberVLM training hyperparameters by stage.}}}{58}{}\protected@file@percent }
+\newlabel{tab:embervlm_hyperparams}{{4.5}{58}{}{table.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \textbf  {Representative training samples across stages.} Stage~1 alignment samples pair images with short captions. Stage~2 instruction tuning samples involve multi-turn visual dialogue. Stages~3--4 use structured robot-selection prompts with multi-label annotations and programmatic chain-of-thought rationales.}}{59}{}\protected@file@percent }
+\newlabel{fig:embervlm_stage_samples}{{4.5}{59}{}{figure.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.4}Stage 4: Latent Chain-of-Thought Integration}{59}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Dynamic Tiered Memory Management}{60}{}\protected@file@percent }
+\newlabel{sec:embervlm_tiered_memory}{{4.8}{60}{}{section.4.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \textbf  {Target edge deployment environments.} EmberVLM is designed for CPU-only hardware platforms such as the AMD Ryzen 3 4100 (3.80~GHz, 32~GB RAM, no discrete GPU), representative of resource-constrained field units used in emergency response, autonomous robotics, and remote sensing applications.}}{60}{}\protected@file@percent }
+\newlabel{fig:embervlm_edge}{{4.6}{60}{}{figure.4.6}{}}
+\citation{patterson2021carbon}
+\@writefile{toc}{\contentsline {section}{\numberline {4.9}Carbon Footprint Analysis}{61}{}\protected@file@percent }
+\newlabel{sec:embervlm_carbon}{{4.9}{61}{}{section.4.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces \textbf  {Training carbon emissions (CodeCarbon-measured).} All values are measured, not estimated. Training on 2$\times $A100 GPUs.}}{61}{}\protected@file@percent }
+\newlabel{tab:embervlm_emissions}{{4.6}{61}{}{table.4.6}{}}
+\citation{codecarbon}
+\citation{li2023pope}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Experiments and Results}{63}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:experiments}{{5}{63}{}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Experimental Setup}{63}{}\protected@file@percent }
+\newlabel{sec:exp_setup}{{5.1}{63}{}{section.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Hardware and Software}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Evaluation Protocol}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Baseline Models}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Robot Selection Dataset}{64}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf  {Robot Selection dataset statistics.} (a) Per-class label counts across train/val/test splits. Underwater Robot and Robot with Wheels are the most scarce classes, contributing to high prediction variance on the validation split. (b) Class co-occurrence matrix showing which robot types are frequently annotated together in the same scenario.}}{65}{}\protected@file@percent }
+\newlabel{fig:robot_distribution}{{5.1}{65}{}{figure.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {Robot Selection input and output statistics.} (a) Input scenario descriptions are predominantly 20--80 tokens long, well within the 256-token maximum sequence length used in Stages~3--4. (b) The single-label output class distribution confirms that multi-robot scenarios are common, validating the multi-label evaluation protocol.}}{65}{}\protected@file@percent }
+\newlabel{fig:input_distribution}{{5.2}{65}{}{figure.5.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Mission-Critical Benchmark Results}{65}{}\protected@file@percent }
+\newlabel{sec:exp_mission_critical}{{5.2}{65}{}{section.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Top-N Robot Selection}{65}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces \textbf  {Performance on mission-critical visual recognition benchmarks.} Time(s) = total wall-clock over the full evaluation set on the AMD Ryzen 3 4100 CPU. OverRx / UnderRx = over/under-reaction rates (lower UnderRx is safer).}}{66}{}\protected@file@percent }
+\newlabel{tab:mission_critical}{{5.1}{66}{}{table.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \textbf  {Distribution of required robot types per scenario.} Most scenarios require two or more robot types, confirming that single-label classification is insufficient and validating the multi-label evaluation protocol using Macro-F1 and Jaccard similarity.}}{66}{}\protected@file@percent }
+\newlabel{fig:robot_subtasks}{{5.3}{66}{}{figure.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces \textbf  {Robot fleet selection ablation.} 103-sample validation split. ECE: lower is better ($\downarrow $); all others: higher is better ($\uparrow $).}}{67}{}\protected@file@percent }
+\newlabel{tab:robot_selection_detail}{{5.2}{67}{}{table.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}VERI-Emergency}{67}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces \textbf  {Top-N Robot Selection dataset split statistics.} Per-class sample counts across train, validation, and test splits. Classes are imbalanced, with Underwater Robot and Robot with Wheels being the least frequent.}}{68}{}\protected@file@percent }
+\newlabel{tab:robot_dataset_stats}{{5.3}{68}{}{table.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}GEO-Bench-VLM}{68}{}\protected@file@percent }
+\citation{hudson2019gqa}
+\citation{altahan2024unibench}
+\citation{hsieh2023sugarcrepe}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}General Multimodal Benchmarks}{69}{}\protected@file@percent }
+\newlabel{sec:exp_general}{{5.3}{69}{}{section.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces \textbf  {General multimodal benchmarks and inference efficiency.}}}{69}{}\protected@file@percent }
+\newlabel{tab:general_benchmarks}{{5.4}{69}{}{table.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf  {Five-axis normalized benchmark radar.} EmberVLM (red, filled) leads on MC Score (${\approx }0.95$, collapsing Top-N Robot Selection, VERI-Emergency, and GEO-Bench) and dominates the Latency Efficiency axis (inverted: min\_latency/latency, so CPU-only EmberVLM = 1.0 and GPU baselines near zero). InternVL3-1B sweeps the three general-benchmark axes but scores near zero on latency efficiency, confirming it is unsuitable for the target hardware despite its higher VQA accuracy. The \textbf  {MC Score} and \textbf  {Latency Efficiency} axes directly govern edge deployment viability.}}{70}{}\protected@file@percent }
+\newlabel{fig:radar_mission}{{5.4}{70}{}{figure.5.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Episodic Memory Ablation}{71}{}\protected@file@percent }
+\newlabel{sec:exp_memory_ablation}{{5.4}{71}{}{section.5.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces \textbf  {Memory mode ablation across mission-critical benchmarks.}}}{71}{}\protected@file@percent }
+\newlabel{tab:memory_mode_ablation}{{5.5}{71}{}{table.5.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \textbf  {Per-class F1 radar chart across memory modes (Top-N Robot Selection).} READ\_ONLY achieves the broadest coverage overall. ONLINE\_UPDATE shows stronger per-class recall on the Underwater Robot axis, the scarcest class (13 validation samples), suggesting live writes partially address rare-morphology prediction.}}{72}{}\protected@file@percent }
+\newlabel{fig:radar_memory}{{5.5}{72}{}{figure.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Visual Absence Refiner Ablation}{72}{}\protected@file@percent }
+\newlabel{sec:exp_va_ablation}{{5.5}{72}{}{section.5.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces \textbf  {VA Refiner component ablation across all mission-critical benchmarks.} Memory mode = ONLINE\_UPDATE for all rows. $\downarrow $ = lower is better.}}{72}{}\protected@file@percent }
+\newlabel{tab:va_ablation}{{5.6}{72}{}{table.5.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \textbf  {VA Refiner hallucination drop on POPE Adversarial split.} Each bar shows the hallucination rate before and after VA Refiner activation. EmberVLM achieves the largest absolute reduction ($-$7pp, from 29\% to 22\%), while SmolVLM2-256M also shows a substantial improvement ($-$3.47pp). InternVL3-1B and SmolVLM-256M show no benefit, consistent with their strong internal visual grounding.}}{73}{}\protected@file@percent }
+\newlabel{fig:va_drop}{{5.6}{73}{}{figure.5.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces \textbf  {POPE hallucination rates by split.} Evaluated on the complete 9{,}000-sample POPE dataset. $\Delta \downarrow $ = absolute hallucination rate reduction; lower is better.}}{73}{}\protected@file@percent }
+\newlabel{tab:pope_results}{{5.7}{73}{}{table.5.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Edge Deployment Latency Analysis}{74}{}\protected@file@percent }
+\newlabel{sec:exp_latency}{{5.6}{74}{}{section.5.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces \textbf  {CPU-only edge inference latency} on AMD Ryzen 3 4100. Full stack = Model + VA Refiner + Memory.}}{74}{}\protected@file@percent }
+\newlabel{tab:latency}{{5.8}{74}{}{table.5.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Mechanistic Analysis of Hallucinations}{75}{}\protected@file@percent }
+\newlabel{sec:exp_mechanistic}{{5.7}{75}{}{section.5.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{76}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:discussion}{{6}{76}{}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Research Progression: From BitMar to EmberVLM}{76}{}\protected@file@percent }
+\newlabel{sec:disc_progression}{{6.1}{76}{}{section.6.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces \textbf  {Architectural progression from BitMar to EmberVLM.}}}{77}{}\protected@file@percent }
+\newlabel{tab:progression_comparison}{{6.1}{77}{}{table.6.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}The Case for Episodic Memory at the Edge}{78}{}\protected@file@percent }
+\newlabel{sec:disc_memory_case}{{6.2}{78}{}{section.6.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Hallucination as a Systems Problem}{79}{}\protected@file@percent }
+\newlabel{sec:disc_hallucination_systems}{{6.3}{79}{}{section.6.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Cross-Architecture Transfer of the VA Refiner}{80}{}\protected@file@percent }
+\newlabel{sec:disc_va_transfer}{{6.4}{80}{}{section.6.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Sustainable Edge AI}{81}{}\protected@file@percent }
+\newlabel{sec:disc_sustainability}{{6.5}{81}{}{section.6.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Limitations}{81}{}\protected@file@percent }
+\newlabel{sec:disc_limitations}{{6.6}{81}{}{section.6.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Fixed episodic memory capacity.}{82}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Architecture-specific VA Refiner.}{82}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{High-resolution visual tasks.}{82}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{83}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{cha:conclusion}{{7}{83}{}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Conclusions}{83}{}\protected@file@percent }
+\newlabel{sec:conclusions}{{7.1}{83}{}{section.7.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{BitMar.}{83}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{EmberVLM.}{84}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Overall results.}{85}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Future Work}{86}{}\protected@file@percent }
+\newlabel{sec:future_work}{{7.2}{86}{}{section.7.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Adaptive and hierarchical episodic memory.}{86}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Cross-backbone VA Refiner transfer.}{86}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Multi-agent verification.}{87}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Larger and more diverse evaluation sets.}{87}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Post-training quantization for ultra-low-power deployment.}{87}{}\protected@file@percent }
+\bibstyle{ieeetr}
+\bibdata{BIB/reference}
+\bibcite{alayrac2022flamingo}{1}
+\bibcite{li2023blip2}{2}
+\bibcite{openai2023gpt4}{3}
+\bibcite{team2023gemini}{4}
+\bibcite{leng2024vcd}{5}
+\bibcite{aman2025bitmar}{6}
+\bibcite{smolvlm2024}{7}
+\bibcite{chu2023mobilevlm}{8}
+\bibcite{chu2024mobilevlmv2}{9}
+\bibcite{zhu2024llavaphi}{10}
+\bibcite{yuan2024tinygptv}{11}
+\bibcite{hu2024minicpmv}{12}
+\bibcite{wang2023bitnet}{13}
+\bibcite{ma2024bitnet158}{14}
+\bibcite{frantar2022gptq}{15}
+\bibcite{lin2023awq}{16}
+\bibcite{graves2016dnc}{17}
+\@writefile{toc}{\contentsline {chapter}{References}{88}{}\protected@file@percent }
+\bibcite{wu2022memorising}{18}
+\bibcite{lewis2020rag}{19}
+\bibcite{das2024larimar}{20}
+\bibcite{rohrbach2018hallucination}{21}
+\bibcite{li2023pope}{22}
+\bibcite{VQA}{23}
+\bibcite{hudson2019gqa}{24}
+\bibcite{hsieh2023sugarcrepe}{25}
+\bibcite{choi2026better}{26}
+\bibcite{danish2025geobench}{27}
+\bibcite{strubell2019energy}{28}
+\bibcite{patterson2021carbon}{29}
+\bibcite{codecarbon}{30}
+\bibcite{oquab2024dinov2}{31}
+\bibcite{vaswani2017attention}{32}
+\bibcite{oord2018representation}{33}
+\bibcite{sharma2018cc3m}{34}
+\bibcite{ponttuset2020localizednarratives}{35}
+\bibcite{charpentier2025babylm}{36}
+\bibcite{allal2024smollm}{37}
+\bibcite{yu2016refcoco}{38}
+\bibcite{lin2014coco}{39}
+\bibcite{liu2023llava}{40}
+\bibcite{marino2019okvqa}{41}
+\bibcite{schwenk2022aokvqa}{42}
+\bibcite{altahan2024unibench}{43}
+\gdef \@abspage@last{109}

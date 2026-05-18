@@ -1,0 +1,6 @@
+\foreach \i in {a,b,...,z} {%
+    \edef\FileName{200_appendices/\i}%     The % here are necessary to eliminate any
+    \IfFileExists{\FileName}{%  spurious spaces that may get inserted
+       \input{\FileName}%       at these points
+    }
+}

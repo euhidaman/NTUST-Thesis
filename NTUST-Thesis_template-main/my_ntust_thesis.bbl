@@ -1,0 +1,136 @@
+\begin{thebibliography}{10}
+
+\bibitem{alayrac2022flamingo}
+J.-B. Alayrac {\em et~al.}, ``Flamingo: a visual language model for few-shot learning,'' {\em Advances in Neural Information Processing Systems}, vol.~35, 2022.
+
+\bibitem{li2023blip2}
+J.~Li, D.~Li, S.~Savarese, and S.~Hoi, ``{BLIP-2}: Bootstrapping language-image pre-training with frozen image encoders and large language models,'' {\em International Conference on Machine Learning}, 2023.
+
+\bibitem{openai2023gpt4}
+{OpenAI}, ``{GPT-4} technical report,'' 2023.
+\newblock arXiv:2303.08774.
+
+\bibitem{team2023gemini}
+{Google DeepMind Team}, ``Gemini: A family of highly capable multimodal models,'' 2023.
+\newblock arXiv:2312.11805.
+
+\bibitem{leng2024vcd}
+S.~Leng, H.~Zhang, G.~Chen, X.~Li, S.~Lu, C.~Miao, and L.~Bing, ``Mitigating object hallucinations in large vision-language models through visual contrastive decoding,'' in {\em IEEE/CVF Conference on Computer Vision and Pattern Recognition}, 2024.
+
+\bibitem{aman2025bitmar}
+E.~Aman, E.~Carlin, H.-K.~K. Pao, G.~Beltrame, G.~I.~P. Sari, and Y.-T. Chen, ``{BitMar}: Low-bit multimodal fusion with episodic memory for edge devices,'' in {\em Proceedings of the First {BabyLM} Workshop}, (Suzhou, China), pp.~147--154, Association for Computational Linguistics, 2025.
+
+\bibitem{smolvlm2024}
+{Hugging Face}, ``{SmolVLM},'' 2024.
+
+\bibitem{chu2023mobilevlm}
+X.~Chu {\em et~al.}, ``{MobileVLM}: A fast, strong and open vision language assistant for mobile devices,'' in {\em arXiv:2312.16886}, 2023.
+
+\bibitem{chu2024mobilevlmv2}
+X.~Chu {\em et~al.}, ``{MobileVLM V2}: Faster and stronger baseline for vision language model,'' in {\em arXiv:2402.03766}, 2024.
+
+\bibitem{zhu2024llavaphi}
+Y.~Zhu {\em et~al.}, ``{LLaVA-Phi}: Efficient multi-modal assistant with small language model,'' in {\em arXiv:2401.02143}, 2024.
+
+\bibitem{yuan2024tinygptv}
+Z.~Yuan {\em et~al.}, ``{TinyGPT-V}: Efficient multimodal large language model via small backbones,'' 2024.
+\newblock arXiv:2401.07571.
+
+\bibitem{hu2024minicpmv}
+S.~Hu {\em et~al.}, ``{MiniCPM-V}: A gpt-4v level mllm on your phone,'' 2024.
+\newblock arXiv:2408.01800.
+
+\bibitem{wang2023bitnet}
+H.~Wang, S.~Ma, L.~Dong, {\em et~al.}, ``{BitNet}: Scaling 1-bit transformers for large language models,'' in {\em arXiv:2310.11453}, 2023.
+
+\bibitem{ma2024bitnet158}
+S.~Ma, H.~Wang, L.~Ma, {\em et~al.}, ``The era of 1-bit {LLMs}: All large language models are in 1.58 bits,'' in {\em arXiv:2402.17764}, 2024.
+
+\bibitem{frantar2022gptq}
+E.~Frantar, S.~Ashkboos, T.~Hoefler, and D.~Alistarh, ``{GPTQ}: Accurate post-training quantization for generative pre-trained transformers,'' in {\em International Conference on Learning Representations}, 2023.
+
+\bibitem{lin2023awq}
+J.~Lin, J.~Tang, H.~Tang, {\em et~al.}, ``{AWQ}: Activation-aware weight quantization for llm compression and acceleration,'' in {\em arXiv:2306.00978}, 2023.
+
+\bibitem{graves2016dnc}
+A.~Graves, G.~Wayne, M.~Reynolds, {\em et~al.}, ``Hybrid computing using a neural network with dynamic external memory,'' in {\em Nature}, vol.~538, pp.~471--476, 2016.
+
+\bibitem{wu2022memorising}
+Y.~Wu, M.~N. Rabe, D.~Hutchins, and C.~Szegedy, ``Memorising transformers,'' in {\em International Conference on Learning Representations}, 2022.
+
+\bibitem{lewis2020rag}
+P.~Lewis {\em et~al.}, ``Retrieval-augmented generation for knowledge-intensive nlp tasks,'' in {\em Advances in Neural Information Processing Systems}, 2020.
+
+\bibitem{das2024larimar}
+P.~Das {\em et~al.}, ``{Larimar}: Large language models with episodic memory control,'' in {\em arXiv:2403.11901}, 2024.
+
+\bibitem{rohrbach2018hallucination}
+A.~Rohrbach, L.~A. Hendricks, K.~Burns, T.~Darrell, and K.~Saenko, ``Object hallucination in image captioning,'' in {\em Proceedings of the Conference on Empirical Methods in Natural Language Processing}, 2018.
+
+\bibitem{li2023pope}
+Y.~Li, Y.~Du, K.~Zhou, J.~Wang, W.~X. Zhao, and J.-R. Wen, ``Evaluating object hallucination in large vision-language models,'' in {\em Proceedings of the Conference on Empirical Methods in Natural Language Processing}, 2023.
+
+\bibitem{VQA}
+S.~Antol, A.~Agrawal, J.~Lu, M.~Mitchell, D.~Batra, C.~L. Zitnick, and D.~Parikh, ``{VQA}: Visual question answering,'' in {\em IEEE International Conference on Computer Vision}, 2015.
+
+\bibitem{hudson2019gqa}
+D.~A. Hudson and C.~D. Manning, ``{GQA}: A new dataset for real-world visual reasoning and compositional question answering,'' in {\em IEEE/CVF Conference on Computer Vision and Pattern Recognition}, 2019.
+
+\bibitem{hsieh2023sugarcrepe}
+C.-Y. Hsieh, J.~Zhang, Z.~Ma, A.~Kembhavi, and R.~Krishna, ``{SugarCrepe}: Fixing hackable benchmarks for vision-language compositionality,'' in {\em Advances in Neural Information Processing Systems}, 2023.
+
+\bibitem{choi2026better}
+J.~Choi {\em et~al.}, ``Better safe than sorry: A visual emergency recognition dataset for mission-critical deployments,'' in {\em IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)}, 2026.
+
+\bibitem{danish2025geobench}
+S.~Danish {\em et~al.}, ``{GEO-Bench-VLM}: A geospatial disaster understanding benchmark for vision-language models,'' in {\em IEEE/CVF International Conference on Computer Vision (ICCV)}, 2025.
+
+\bibitem{strubell2019energy}
+E.~Strubell, A.~Ganesh, and A.~McCallum, ``Energy and policy considerations for deep learning in {NLP},'' in {\em Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics}, 2019.
+
+\bibitem{patterson2021carbon}
+D.~Patterson {\em et~al.}, ``Carbon emissions and large neural network training,'' in {\em arXiv:2104.10350}, 2021.
+
+\bibitem{codecarbon}
+K.~Lottick {\em et~al.}, ``{CodeCarbon}: Estimate and track carbon emissions from machine learning computing.'' \url{https://codecarbon.io}, 2021.
+
+\bibitem{oquab2024dinov2}
+M.~Oquab {\em et~al.}, ``{DINOv2}: Learning robust visual features without supervision,'' in {\em Transactions on Machine Learning Research}, 2024.
+
+\bibitem{vaswani2017attention}
+A.~Vaswani, N.~Shazeer, N.~Parmar, {\em et~al.}, ``Attention is all you need,'' in {\em Advances in Neural Information Processing Systems}, vol.~30, 2017.
+
+\bibitem{oord2018representation}
+A.~van~den Oord, Y.~Li, and O.~Vinyals, ``Representation learning with contrastive predictive coding,'' in {\em arXiv:1807.03748}, 2018.
+
+\bibitem{sharma2018cc3m}
+P.~Sharma, N.~Ding, S.~Goodman, and R.~Soricut, ``Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning,'' in {\em Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics}, 2018.
+
+\bibitem{ponttuset2020localizednarratives}
+J.~Pont-Tuset {\em et~al.}, ``Connecting vision and language with localized narratives,'' in {\em European Conference on Computer Vision}, 2020.
+
+\bibitem{charpentier2025babylm}
+L.~Charpentier {\em et~al.}, ``{BabyLM} challenge: Sample-efficient pretraining on a developmentally plausible corpus,'' in {\em BabyLM Workshop, ACL 2025}, 2025.
+
+\bibitem{allal2024smollm}
+L.~B. Allal {\em et~al.}, ``{SmolLM},'' 2024.
+
+\bibitem{yu2016refcoco}
+L.~Yu, P.~Poirson, S.~Yang, A.~C. Berg, and T.~L. Berg, ``Modeling context in referring expressions,'' in {\em European Conference on Computer Vision}, 2016.
+
+\bibitem{lin2014coco}
+T.-Y. Lin {\em et~al.}, ``{Microsoft COCO}: Common objects in context,'' in {\em European Conference on Computer Vision}, 2014.
+
+\bibitem{liu2023llava}
+H.~Liu, C.~Li, Q.~Wu, and Y.~J. Lee, ``Visual instruction tuning,'' in {\em Advances in Neural Information Processing Systems}, 2023.
+
+\bibitem{marino2019okvqa}
+K.~Marino, M.~Rastegari, A.~Farhadi, and R.~Mottaghi, ``{OK-VQA}: A visual question answering benchmark requiring external knowledge,'' in {\em IEEE/CVF Conference on Computer Vision and Pattern Recognition}, 2019.
+
+\bibitem{schwenk2022aokvqa}
+D.~Schwenk {\em et~al.}, ``{A-OKVQA}: A benchmark for visual question answering using world knowledge,'' in {\em European Conference on Computer Vision}, 2022.
+
+\bibitem{altahan2024unibench}
+H.~Altahan {\em et~al.}, ``{UniBench}: Visual reasoning requires rethinking vision-language beyond scaling,'' in {\em arXiv:2408.04810}, 2024.
+
+\end{thebibliography}

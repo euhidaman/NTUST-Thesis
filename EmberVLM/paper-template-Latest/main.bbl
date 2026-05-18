@@ -1,0 +1,105 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{altahan2024unibenchvisualreasoningrequires}
+Al-Tahan, H., Garrido, Q., Balestriero, R., Bouchacourt, D., Hazirbas, C., Ibrahim, M.: Unibench: Visual reasoning requires rethinking vision-language beyond scaling (2024), \url{https://arxiv.org/abs/2408.04810}
+
+\bibitem{alayrac2022flamingovisuallanguagemodel}
+Alayrac, J.B., Donahue, J., Luc, P., Miech, A., Barr, I., Hasson, Y., Lenc, K., Mensch, A., Millican, K., Reynolds, M., Ring, R., Rutherford, E., Cabi, S., Han, T., Gong, Z., Samangooei, S., Monteiro, M., Menick, J., Borgeaud, S., Brock, A., Nematzadeh, A., Sharifzadeh, S., Binkowski, M., Barreira, R., Vinyals, O., Zisserman, A., Simonyan, K.: Flamingo: a visual language model for few-shot learning (2022), \url{https://arxiv.org/abs/2204.14198}
+
+\bibitem{allal2024SmolLM}
+Allal, L.B., Lozhkov, A., Bakouch, E., von Werra, L., Wolf, T.: Smollm - blazingly fast and remarkably powerful (2024)
+
+\bibitem{VQA}
+Antol, S., Agrawal, A., Lu, J., Mitchell, M., Batra, D., Zitnick, C.L., Parikh, D.: {VQA}: {V}isual {Q}uestion {A}nswering. In: International Conference on Computer Vision (ICCV) (2015)
+
+\bibitem{choi2026better}
+Choi, D., Lee, S., Song, Y.: Better safe than sorry? overreaction problem of vision language models in visual emergency recognition. In: Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision. pp. 4724--4732 (2026)
+
+\bibitem{chu2023mobilevlm}
+Chu, X., Qiao, L., Lin, X., Xu, S., Yang, Y., Hu, Y., Wei, F., Zhang, X., Zhang, B., Wei, X., et~al.: {MobileVLM}: A fast, reproducible and strong vision language assistant for mobile devices. arXiv preprint arXiv:2312.16886  (2023)
+
+\bibitem{chu2024mobilevlmv2}
+Chu, X., Qiao, L., Zhang, R., Xu, S., Tang, P., Liu, J., Wang, Y., Hu, Y., Wei, X., Zhang, B., et~al.: {MobileVLM} {V2}: Faster and stronger baseline for vision language model. arXiv preprint arXiv:2402.03766  (2024)
+
+\bibitem{danish2025geobench}
+Danish, M., Munir, M.A., Shah, S.R.A., Kuckreja, K., Khan, F.S., Fraccaro, P., Lacoste, A., Khan, S.: Geobench-vlm: Benchmarking vision-language models for geospatial tasks. In: Proceedings of the IEEE/CVF International Conference on Computer Vision. pp. 7132--7142 (2025)
+
+\bibitem{das2024larimar}
+Das, P., et~al.: Larimar: Large language models with episodic memory control. arXiv preprint arXiv:2403.11901  (2024)
+
+\bibitem{frantar2022gptq}
+Frantar, E., Ashkboos, S., Hoefler, T., Alistarh, D.: Gptq: Accurate post-training quantization for generative pre-trained transformers. arXiv preprint arXiv:2210.17323  (2022)
+
+\bibitem{graves2016dnc}
+Graves, A., Wayne, G., Reynolds, M., et~al.: Hybrid computing using a neural network with dynamic external memory. Nature  (2016)
+
+\bibitem{hsieh2023sugarcrepefixinghackablebenchmarks}
+Hsieh, C.Y., Zhang, J., Ma, Z., Kembhavi, A., Krishna, R.: Sugarcrepe: Fixing hackable benchmarks for vision-language compositionality (2023), \url{https://arxiv.org/abs/2306.14610}
+
+\bibitem{hudson2019gqanewdatasetrealworld}
+Hudson, D.A., Manning, C.D.: Gqa: A new dataset for real-world visual reasoning and compositional question answering (2019), \url{https://arxiv.org/abs/1902.09506}
+
+\bibitem{smolvlm2024}
+{HuggingFace}: {SmolVLM}: Redefining small and efficient multimodal models. Tech. rep., HuggingFace (2024)
+
+\bibitem{kandala2024tinyllmframeworktrainingdeploying}
+Kandala, S.V., Medaranga, P., Varshney, A.: Tinyllm: A framework for training and deploying language models at the edge computers (2024), \url{https://arxiv.org/abs/2412.15304}
+
+\bibitem{leng2024vcd}
+Leng, S., et~al.: Mitigating object hallucinations in large vision-language models through visual contrastive decoding. arXiv preprint arXiv:2402.04621  (2024)
+
+\bibitem{lewis2020rag}
+Lewis, P., Perez, E., Piktus, A., et~al.: Retrieval-augmented generation for knowledge-intensive nlp tasks. NeurIPS  (2020)
+
+\bibitem{li2022blipbootstrappinglanguageimagepretraining}
+Li, J., Li, D., Xiong, C., Hoi, S.: Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation (2022), \url{https://arxiv.org/abs/2201.12086}
+
+\bibitem{li2023pope}
+Li, Y., Du, Y., Zhou, K., et~al.: {Evaluating Object Hallucination in Large Vision-Language Models}. In: EMNLP (2023)
+
+\bibitem{lin2023awq}
+Lin, J., Tang, J., Tang, H., et~al.: {AWQ}: Activation-aware weight quantization for {LLM} compression and acceleration. In: MLSys (2024)
+
+\bibitem{lin2015microsoftcococommonobjects}
+Lin, T.Y., Maire, M., Belongie, S., Bourdev, L., Girshick, R., Hays, J., Perona, P., Ramanan, D., Zitnick, C.L., Dollár, P.: Microsoft coco: Common objects in context (2015), \url{https://arxiv.org/abs/1405.0312}
+
+\bibitem{liu2023visualinstructiontuning}
+Liu, H., Li, C., Wu, Q., Lee, Y.J.: Visual instruction tuning (2023), \url{https://arxiv.org/abs/2304.08485}
+
+\bibitem{ma2024bitnet158}
+Ma, S., Wang, H., Ma, L., Wang, L., Wang, W., Huang, S., Dong, L., Wang, R., Xue, J., Wei, F.: The era of 1-bit {LLM}s: All large language models are in 1.58 bits. arXiv preprint arXiv:2402.17764  (2024)
+
+\bibitem{marino2019okvqavisualquestionanswering}
+Marino, K., Rastegari, M., Farhadi, A., Mottaghi, R.: Ok-vqa: A visual question answering benchmark requiring external knowledge (2019), \url{https://arxiv.org/abs/1906.00067}
+
+\bibitem{oquab2024dinov2learningrobustvisual}
+Oquab, M., Darcet, T., Moutakanni, T., Vo, H., Szafraniec, M., Khalidov, V., Fernandez, P., Haziza, D., Massa, F., El-Nouby, A., Assran, M., Ballas, N., Galuba, W., Howes, R., Huang, P.Y., Li, S.W., Misra, I., Rabbat, M., Sharma, V., Synnaeve, G., Xu, H., Jegou, H., Mairal, J., Labatut, P., Joulin, A., Bojanowski, P.: Dinov2: Learning robust visual features without supervision (2024), \url{https://arxiv.org/abs/2304.07193}
+
+\bibitem{radford2021learningtransferablevisualmodels}
+Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., Krueger, G., Sutskever, I.: Learning transferable visual models from natural language supervision (2021), \url{https://arxiv.org/abs/2103.00020}
+
+\bibitem{rohrbach2018hallucination}
+Rohrbach, A., Hendricks, L.A., Burns, K., Darrell, T., Saenko, K.: Object hallucination in image captioning. In: EMNLP (2018)
+
+\bibitem{schwenk2022aokvqabenchmarkvisualquestion}
+Schwenk, D., Khandelwal, A., Clark, C., Marino, K., Mottaghi, R.: A-okvqa: A benchmark for visual question answering using world knowledge (2022), \url{https://arxiv.org/abs/2206.01718}
+
+\bibitem{sharma-etal-2018-conceptual}
+Sharma, P., Ding, N., Goodman, S., Soricut, R.: Conceptual captions: A cleaned, hypernymed, image alt-text dataset for automatic image captioning. In: Gurevych, I., Miyao, Y. (eds.) Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). pp. 2556--2565. Association for Computational Linguistics, Melbourne, Australia (Jul 2018). \doi{10.18653/v1/P18-1238}, \url{https://aclanthology.org/P18-1238/}
+
+\bibitem{wang2023bitnet}
+Wang, H., Ma, S., Dong, L., Huang, S., Wang, H., Ma, L., Yang, F., Wang, R., Wu, Y., Wei, F.: {BitNet}: Scaling 1-bit transformers for large language models. arXiv preprint arXiv:2310.11453  (2023)
+
+\bibitem{wu2022memorising}
+Wu, Y., Rabe, M., Hutchins, D., Szegedy, C.: Memorizing transformers. ICLR  (2022)
+
+\bibitem{yu2016modelingcontextreferringexpressions}
+Yu, L., Poirson, P., Yang, S., Berg, A.C., Berg, T.L.: Modeling context in referring expressions (2016), \url{https://arxiv.org/abs/1608.00272}
+
+\bibitem{zhu2024llavaphi}
+Zhu, Y., Zhu, M., Liu, N., Ou, Z., Mou, X., Tang, J.: {LLaVA-Phi}: Efficient multi-modal assistant with small language model. arXiv preprint arXiv:2401.02330  (2024)
+
+\end{thebibliography}

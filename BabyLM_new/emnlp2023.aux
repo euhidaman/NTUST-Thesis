@@ -1,0 +1,102 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{chen-microsoftcoco-2015}
+\citation{anderson-attentionimagecap-2018,lijunan-blip-2022}
+\citation{lijunnan-blip2-2023}
+\citation{alayrac-flamingo-2022}
+\citation{peng-kosmos2-2023}
+\citation{dettmers-8bitquantization-2021,frantar-gptq-2022}
+\citation{wang-bitnet-2023}
+\citation{jacob-quantization-2018,stock-revisiting-2019}
+\citation{oquab-dinov2-2024}
+\citation{lu-vilbert-2019}
+\citation{lijunnan-blip2-2023}
+\citation{graves-dynamicexternalmemory-2016,borgeaud-trillionstokens-2022}
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\newlabel{sec:intro@cref}{{[section][1][]1}{[1][1][]1}{}{}{}}
+\citation{galib-2024-h2ovlmississippivisionlanguagemodels}
+\citation{tinygpt-v-2024}
+\citation{minicpm-v-2024}
+\citation{mobilellm-2024}
+\citation{tinyllm-edge-2024}
+\citation{graves-dynamicexternalmemory-2016}
+\citation{ego-episodic-2024}
+\citation{episodic-memory-neural-2022}
+\citation{graves-dynamicexternalmemory-2016}
+\newlabel{sec:relworks}{{2}{2}{Related Work}{section.2}{}}
+\newlabel{sec:relworks@cref}{{[section][2][]2}{[1][2][]2}{}{}{}}
+\newlabel{sec:method}{{3}{2}{Method}{section.3}{}}
+\newlabel{sec:method@cref}{{[section][3][]3}{[1][2][]2}{}{}{}}
+\citation{oquab-dinov2-2024}
+\citation{vaswani2017attention}
+\citation{graves-dynamicexternalmemory-2016}
+\citation{vaswani2017attention}
+\citation{oord_representation_2018}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:bitmar}{{1}{3}{\textbf {BitMar Architecture.} The model processes multimodal inputs: text tokens and DiNOv2-compressed image features. Quantized encoders (1.58-bit) generate compact text and vision embeddings ($z$, $v$), which are fused via cross-modal attention into shared query representations ($Q$, $Q_{query}$). A sliding-window attention mechanism enables long-context processing. A fixed episodic memory matrix ($K \times C$) stores and retrieves multimodal context vectors through quantized read/write weights ($W$, $W_0$), supporting optional SD-card offloading for edge deployment}{figure.caption.1}{}}
+\newlabel{fig:bitmar@cref}{{[figure][1][]1}{[1][2][]3}{}{}{}}
+\newlabel{eq:mem_write}{{1}{3}{Writing}{equation.1}{}}
+\newlabel{eq:mem_write@cref}{{[equation][1][]1}{[1][3][]3}{}{}{}}
+\newlabel{eq:mem_read}{{2}{3}{Reading}{equation.2}{}}
+\newlabel{eq:mem_read@cref}{{[equation][2][]2}{[1][3][]3}{}{}{}}
+\newlabel{eq:mem_reg}{{3.4}{3}{Regularization}{section*.4}{}}
+\newlabel{eq:mem_reg@cref}{{[subsection][4][3]3.4}{[1][3][]3}{}{}{}}
+\citation{sharma-CC3M-2018}
+\citation{ponttuset-localized-narratives-2020}
+\citation{Charpentier-babylm-2025}
+\newlabel{eq:memory_consistent}{{3}{4}{Training Objectives}{equation.3}{}}
+\newlabel{eq:memory_consistent@cref}{{[equation][3][]3}{[1][4][]4}{}{}{}}
+\newlabel{eq:total_obj}{{4}{4}{Training Objectives}{equation.4}{}}
+\newlabel{eq:total_obj@cref}{{[equation][4][]4}{[1][4][]4}{}{}{}}
+\newlabel{sec:exp}{{4}{4}{Experimental Setup}{section.4}{}}
+\newlabel{sec:exp@cref}{{[section][4][]4}{[1][4][]4}{}{}{}}
+\newlabel{sec:result}{{5}{4}{Results and Discussion}{section.5}{}}
+\newlabel{sec:result@cref}{{[section][5][]5}{[1][4][]4}{}{}{}}
+\citation{zhu-tenary_quantization-2016}
+\newlabel{fig:heatmap_comparison}{{2}{5}{\textbf {Episodic Memory Activation Patterns.} (a) Early training shows scattered and weak activations with minimal specialization. (b) Late training exhibits stronger and more differentiated activations, reflecting the emergence of structured memory representations}{figure.caption.5}{}}
+\newlabel{fig:heatmap_comparison@cref}{{[figure][2][]2}{[1][5][]5}{}{}{}}
+\newlabel{fig:quantization}{{3}{5}{\textbf {Quantization effectiveness over training epochs.}}{figure.caption.6}{}}
+\newlabel{fig:quantization@cref}{{[figure][3][]3}{[1][5][]5}{}{}{}}
+\bibstyle{acl_natbib}
+\bibdata{bitmar}
+\bibcite{alayrac-flamingo-2022}{{1}{2022}{{Alayrac et~al.}}{{Alayrac, Donahue, Luc, Miech, Barr, Hasson, Lenc, Mensch, Millicah, Reynolds, Ring, Rutherford, Cabi, Han, Gong, Samangooei, Monteiro, Menick, Borgeaud, Brock, Nematzadeh, Sharifzadeh, Binkowski, Barreira, Vinyals, Zisserman, and Simonyan}}}
+\newlabel{tab:ranking_metrics}{{1}{6}{\textbf {Benchmark performance on language understanding tasks.} A \checkmark indicates models trained natively with 1-bit precision. All reported values correspond to task accuracy (\%), illustrating BitMar’s competitive performance under extreme compression. [WG-WinoGrande; CQA-CommonsenseQA]}{table.caption.7}{}}
+\newlabel{tab:ranking_metrics@cref}{{[table][1][]1}{[1][5][]6}{}{}{}}
+\newlabel{tab:bitmar_babylm_results}{{2}{6}{BitMar results on BabyLM evaluation tasks}{table.caption.8}{}}
+\newlabel{tab:bitmar_babylm_results@cref}{{[table][2][]2}{[1][5][]6}{}{}{}}
+\newlabel{tab:inference_ablation_metrics}{{3}{6}{\textbf {Inference ablation metrics.} Comparison of throughput, latency, energy consumption, and memory usage}{table.caption.10}{}}
+\newlabel{tab:inference_ablation_metrics@cref}{{[table][3][]3}{[1][5][]6}{}{}{}}
+\newlabel{sec:conclusion}{{6}{6}{Conclusion}{section.6}{}}
+\newlabel{sec:conclusion@cref}{{[section][6][]6}{[1][6][]6}{}{}{}}
+\newlabel{tab:ablation_results}{{4}{6}{\textbf {Ablation results on episodic memory.} Performance differences ($\Delta $, in percentage points), positive values indicate improvements when memory is enabled}{table.caption.11}{}}
+\newlabel{tab:ablation_results@cref}{{[table][4][]4}{[1][5][]6}{}{}{}}
+\bibcite{anderson-attentionimagecap-2018}{{2}{2018}{{Anderson et~al.}}{{Anderson, He, Buehler, Teney, Johnson, Gould, and Zhang}}}
+\bibcite{borgeaud-trillionstokens-2022}{{3}{2022}{{Borgeaud et~al.}}{{Borgeaud, Mensch, Hoffmann, Cai, Rutherford, Botvinick, Sifre, and Clark}}}
+\bibcite{Charpentier-babylm-2025}{{4}{2025}{{Charpentier et~al.}}{{Charpentier, Choshen, Cotterell, Gul, Hu, Jumelet, Linzen, Liu, Mueller, Ross, Shah, Warstadt, Wilcox, and Williams}}}
+\bibcite{chen-microsoftcoco-2015}{{5}{2015}{{Chen et~al.}}{{Chen, Fang, Lin, Vedantam, Gupta, Dollár, and Zitnick}}}
+\bibcite{dettmers-8bitquantization-2021}{{6}{2021}{{Dettmers et~al.}}{{Dettmers, Lewis, Shleifer, and Zettlemoyer}}}
+\bibcite{frantar-gptq-2022}{{7}{2022}{{Frantar et~al.}}{{Frantar, Ashkboos, Hoefler, and Alistarh}}}
+\bibcite{galib-2024-h2ovlmississippivisionlanguagemodels}{{8}{2024}{{Galib et~al.}}{{Galib, Wang, Xu, Pfeiffer, Chesler, Landry, and Ambati}}}
+\bibcite{graves-dynamicexternalmemory-2016}{{9}{2016}{{Graves et~al.}}{{Graves, Wayne, Reynolds, Harley, Danihelka, Grabska-Barwińska, Colmenarejo, Grefenstette, Ramalho, Agapiou, Badia, Hermann, Zwols, Ostrovski, Cain, King, Summerfield, Blunsom, Kavukcuoglu, and Hassabis}}}
+\bibcite{jacob-quantization-2018}{{10}{2018}{{Jacob et~al.}}{{Jacob, Kligys, Chen, Zhu, Tang, Howard, Adam, and Kalenichenko}}}
+\bibcite{lijunnan-blip2-2023}{{11}{2023}{{Li et~al.}}{{Li, Li, Savarese, and Hoi}}}
+\bibcite{lijunan-blip-2022}{{12}{2022}{{Li et~al.}}{{Li, Li, Xiong, and Hoi}}}
+\bibcite{mobilellm-2024}{{13}{2024}{{Liu et~al.}}{{Liu, Zhao, Iandola, Lai, Tian, Fedorov, Xiong, Chang, Shi, Krishnamoorthi et~al.}}}
+\bibcite{lu-vilbert-2019}{{14}{2019}{{Lu et~al.}}{{Lu, Batra, Parikh, and Lee}}}
+\bibcite{episodic-memory-neural-2022}{{15}{2022}{{Mattar and Daw}}{{}}}
+\bibcite{ego-episodic-2024}{{16}{2024}{{Mattar and Daw}}{{}}}
+\bibcite{oord_representation_2018}{{17}{2018}{{Oord et~al.}}{{Oord, Li, and Vinyals}}}
+\bibcite{oquab-dinov2-2024}{{18}{2024}{{Oquab et~al.}}{{Oquab, Darcet, Moutakanni, Vo, Szafraniec, Khalidov, Fernandez, Haziza, Massa, El-Nouby, Assran, Ballas, Galuba, Howes, Huang, Li, Misra, Rabbat, Sharma, Synnaeve, Xu, Jegou, Mairal, Labatut, Joulin, and Bojanowski}}}
+\bibcite{peng-kosmos2-2023}{{19}{2023}{{Peng et~al.}}{{Peng, Wang, Dong, Hao, Huang, Ma, and Wei}}}
+\bibcite{ponttuset-localized-narratives-2020}{{20}{2020}{{Pont-Tuset et~al.}}{{Pont-Tuset, Uijlings, Changpinyo, Soricut, and Ferrari}}}
+\bibcite{sharma-CC3M-2018}{{21}{2018}{{Sharma et~al.}}{{Sharma, Ding, Goodman, and Soricut}}}
+\bibcite{stock-revisiting-2019}{{22}{2019}{{Stock et~al.}}{{Stock, Joulin, Gribonval, Graham, and J{\'{e}}gou}}}
+\bibcite{vaswani2017attention}{{23}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{wang-bitnet-2023}{{24}{2023}{{Wang et~al.}}{{Wang, Ma, Dong, Huang, Wang, Ma, Yang, Wang, Wu, and Wei}}}
+\bibcite{minicpm-v-2024}{{25}{2024}{{Yao et~al.}}{{Yao, Yu, Zhang, Wang, Xu, Yuan, Wang, Liu, Wang, Yu et~al.}}}
+\bibcite{tinygpt-v-2024}{{26}{2024}{{Yuan et~al.}}{{Yuan, Ren, Feng, Zhao, Cui, and Jiang}}}
+\bibcite{tinyllm-edge-2024}{{27}{2024}{{Zhang et~al.}}{{Zhang, Liu, Chen, and Wang}}}
+\bibcite{zhu-tenary_quantization-2016}{{28}{2016}{{Zhu et~al.}}{{Zhu, Han, Mao, and Dally}}}
+\gdef \@abspage@last{8}

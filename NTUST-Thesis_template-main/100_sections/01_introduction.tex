@@ -1,0 +1,92 @@
+\chapter{Introduction}
+\label{cha:intro}
+
+\section{Background and Motivation}
+\label{sec:intro_background}
+
+Vision-Language Models (VLMs) represent one of the most transformative advances in modern artificial intelligence, enabling systems to jointly reason over visual and textual information for tasks including image captioning, visual question answering, scene understanding, and multimodal dialogue. Landmark architectures such as Flamingo~\cite{alayrac2022flamingo}, BLIP-2~\cite{li2023blip2}, GPT-4V~\cite{openai2023gpt4}, and Gemini~\cite{team2023gemini} have demonstrated that scaling model parameters alongside multimodal pretraining yields qualitative improvements in cross-modal grounding and generation. This scaling trend has continued unabated, with frontier VLMs now exceeding hundreds of billions of parameters.
+
+However, this impressive progress carries a critical structural dependency: virtually all state-of-the-art VLMs are designed for and evaluated in \emph{cloud-hosted} settings. They assume access to GPU clusters, high-bandwidth internet connectivity, centralized storage, and milliseconds-to-seconds latency budgets that are acceptable only when a remote server handles inference. This assumption is so deeply embedded in the design of modern VLMs that it is rarely articulated as a limitation, yet it categorically excludes an important and growing class of real-world deployment scenarios.
+
+Consider the following concrete deployment contexts:
+\begin{itemize}
+    \item \textbf{Disaster response robotics.} Following earthquakes, floods, or structural collapses, autonomous robots must navigate rubble, classify environments, and select appropriate robotic assets for deployment. Network infrastructure is typically destroyed, and round-trip latency to a cloud server is unacceptable when a robot is making split-second decisions in a life-critical zone.
+    \item \textbf{Aerial surveillance drones.} Unmanned aerial vehicles conducting reconnaissance or border monitoring in remote terrain operate beyond cellular or satellite connectivity windows. They must perform real-time scene classification and anomaly detection entirely on-device.
+    \item \textbf{Autonomous vehicles.} Road safety systems require sub-50ms visual reasoning to detect obstacles, pedestrians, and road conditions. Transmitting raw sensor data to a cloud server and waiting for a response is physically impossible at highway speeds.
+    \item \textbf{Industrial inspection.} Facilities handling hazardous materials or electromagnetic-sensitive equipment frequently operate in radio-frequency-silent zones. Visual inspection AI must run locally on embedded hardware.
+    \item \textbf{Medical edge devices.} Point-of-care diagnostic devices in low-resource clinical settings lack reliable internet and must perform visual analysis (e.g., dermatological screening, wound assessment) on battery-powered hardware.
+\end{itemize}
+
+All of these scenarios impose hard, simultaneous constraints: limited VRAM or SRAM (often under 1~GB), CPU-only inference (no discrete GPU), zero-tolerance for hallucinated outputs in safety-critical decisions, and complete independence from network connectivity. These constraints are not engineering inconveniences to be addressed incrementally; they are categorical requirements that current VLMs cannot meet.
+
+The central challenge of this thesis is therefore not merely ``making models smaller.'' Smaller models have existed for some time (SmolVLM-256M, MobileVLM, LLaVA-Phi), yet none are designed for simultaneous CPU-only inference, sub-10ms latency, under 800~MB RAM, and zero-hallucination tolerance in mission-critical classification tasks. The research gap is this: \textbf{achieving reliable, hallucination-suppressed, contextually aware multimodal reasoning under simultaneous constraints of parameter budget, memory footprint, computational budget, and connectivity independence.}
+
+\section{Research Challenges}
+\label{sec:intro_challenges}
+
+This thesis identifies three primary, interconnected challenges that any viable edge VLM must address.
+
+\subsection{Memory and Compute Constraints}
+\label{subsec:challenge_compute}
+
+Even sub-billion-parameter VLMs impose memory and latency requirements that exceed the capabilities of commodity edge hardware. SmolVLM-256M, one of the smallest publicly available VLMs, requires a discrete GPU for practical inference and achieves 941~ms per sample even in that configuration. InternVL3-1B requires 1,978~MB VRAM and achieves 1,566~ms per sample on the target CPU-only deployment hardware used in this thesis (AMD Ryzen 3 4100). These numbers are not competitive for real-time edge deployment where latency budgets are in the tens of milliseconds and no discrete GPU is available.
+
+The fundamental technical mismatch arises from the full-precision floating-point arithmetic and large activation tensors that current VLMs require, combined with transformer attention complexity that scales quadratically with sequence length. Even architectures specifically marketed as ``efficient'' have not been designed for the specific combination of CPU-only inference, sub-800~MB RAM, and sub-10ms latency that defines practical edge deployment.
+
+\subsection[Hallucination at the Edge]{Hallucination in Mission-Critical Settings}
+\label{subsec:challenge_hallucination}
+
+Hallucination, the generation of tokens unsupported by visual evidence in the input image, is a fundamental and well-documented failure mode in all current VLMs. A model may confidently describe an object that is absent from the image, or assign incorrect attributes to present objects, purely by relying on statistical language priors from pretraining.
+
+In cloud-based consumer applications, hallucination is a quality issue. In mission-critical edge settings, it is a safety failure. If a robot selection system hallucinates the presence of a ``Drone'' when the scene actually shows a flooded corridor requiring an ``Underwater Robot,'' the wrong asset is deployed and the mission fails. If an emergency recognition system hallucinates that a burning structure is a ``normal building,'' emergency response resources are not dispatched.
+
+Existing hallucination mitigation strategies are largely infeasible at the edge. Methods based on grounding supervision or retraining require annotated data and compute that are not available during deployment. Visual Contrastive Decoding (VCD)~\cite{leng2024vcd}, while effective, requires an extra forward pass with perturbed visual input, doubling inference cost, which is unacceptable at the latency budgets required. What is needed is a training-free, zero-extra-forward-pass mechanism that operates within the model's existing inference graph.
+
+\subsection{Knowledge Staleness and Distributional Shift}
+\label{subsec:challenge_staleness}
+
+Edge VLMs are typically frozen after deployment: their parametric weights do not change in the field. Yet the environments they encounter are dynamic and may differ substantially from the training distribution. Novel robot morphologies, previously unseen disaster scenarios, or unfamiliar terrain types may appear after deployment.
+
+Without a mechanism for incorporating new contextual knowledge, models collapse under distributional shift. This is starkly demonstrated by the EmberVLM NoMemory baseline evaluated in this thesis: without episodic memory conditioning, the model degrades into a near single-class predictor on the robot selection task, achieving validation accuracy of 0.097 and macro-F1 of 0.035. It over-indexes on the most frequent class while entirely failing on minority classes. The episodic memory mechanism must therefore be more than a retrieval cache: it must provide a principled way to accumulate new deployment-time knowledge without catastrophic forgetting, without retraining, and without violating the memory budget of the target hardware.
+
+\section{Research Overview and Contributions}
+\label{sec:intro_contributions}
+
+This thesis presents a unified research trajectory toward addressing these three challenges simultaneously, structured around two complementary research contributions.
+
+\paragraph{BitMar.}
+BitMar~\cite{aman2025bitmar} is the first published contribution of this thesis research. BitMar is a 14M-parameter, 1.58-bit ternary-quantized multimodal model that establishes the foundational proof-of-concept for the thesis. It demonstrates that (i) aggressive ternary quantization ({$-$1, 0, +1} weights at 1.58 bits/parameter) is compatible with cross-modal multimodal fusion, (ii) an external episodic memory module provides measurable efficiency and accuracy benefits in the quantized multimodal setting, and (iii) the combination of quantization, cross-modal fusion, and episodic memory can co-exist in a 14M-parameter architecture. BitMar validated the core thesis proposition before the larger EmberVLM system was built.
+
+\paragraph{EmberVLM.}
+EmberVLM is the primary architectural contribution of this thesis. It is a 164M total parameter (40M trainable) tiny VLM purpose-built for mission-critical edge deployment. EmberVLM introduces two novel modules: an Episodic Memory Module with scope detection, Gaussian-addressed retrieval, novelty-triggered online writes, and knowledge consolidation distillation; and a Visual Absence (VA) Refiner combining logit-space dual-view consistency with neuron-level mid-decoder activation monitoring. EmberVLM achieves the best reported performance among sub-billion-parameter models on three mission-critical benchmarks, at 5.22~ms per sample on CPU-only hardware with under 800~MB RAM.
+
+The specific contributions of this thesis are:
+
+\begin{enumerate}
+    \item \textbf{BitMar}: The first architecture to jointly integrate 1.58-bit multimodal encoding with an external episodic memory for edge deployment. BitMar achieves approximately $7.5\times$ throughput improvement and 79\% energy reduction versus the memory-free baseline, delivering 3--4 percentage-point gains on entity tracking, compositional reasoning, and visual question answering at 14M parameters.
+
+    \item \textbf{EmberVLM architecture}: A tiny VLM (164M total parameters, 40M trainable) employing a four-stage training curriculum (visual-language alignment, multimodal instruction tuning, task adaptation, and latent chain-of-thought integration), achieving competitive mission-critical performance against models $5\text{--}10\times$ larger.
+
+    \item \textbf{Episodic Memory Module}: A dynamically loadable memory system with fixed overhead (1.2~MB RAM, $<$3\% extra FLOPs per inference step), a lightweight scope detector, Gaussian distance-based addressing, novelty-triggered online writes with a hybrid LRU-LFU eviction policy, and an optional Stage~5 knowledge consolidation distillation phase. The module boosts robot-selection macro-F1 from 0.035 to 0.297.
+
+    \item \textbf{Visual Absence (VA) Refiner}: A training-free plug-in hallucination control mechanism fusing dual-view logit discrepancy with neuron-level mid-decoder activation monitoring (layers 10--14 of SmolLM-135M), applied via type-aware thresholds and temporal burst detection. The VA Refiner reduces POPE Adversarial hallucination rate from 29\% to 22\%, an absolute reduction of 7 percentage points.
+
+    \item \textbf{Comprehensive mission-critical evaluation}: State-of-the-art results for sub-billion-parameter models on Top-N Robot Selection (Macro-F1~=~0.42), VERI-Emergency (Accuracy~=~0.64), and GEO-Bench-VLM (Accuracy~=~0.72); inference at 5.22~ms per sample on CPU-only hardware with $<$800~MB RAM; total measured training emissions of 25.3~kg~CO$_2$eq.
+\end{enumerate}
+
+\section{Thesis Organization}
+\label{sec:intro_organization}
+
+The remainder of this thesis is structured as follows.
+
+Chapter~\ref{cha:related} surveys related work across five areas: tiny and edge-deployable VLMs, model quantization, episodic memory in language and multimodal systems, hallucination detection and control, and mission-critical visual recognition benchmarks.
+
+Chapter~\ref{cha:bitmar} presents BitMar in full detail, including its architecture, training objectives, dataset, and experimental results. This chapter also identifies the open questions that motivated the design of EmberVLM.
+
+Chapter~\ref{cha:embervlm} presents the EmberVLM architecture, covering the base multimodal pipeline, the Episodic Memory Module, the Visual Absence Refiner, and the four-stage training curriculum. Chapter~\ref{cha:experiments} presents experimental results for both BitMar and EmberVLM, including mission-critical benchmark evaluations, ablation studies, edge deployment latency, and mechanistic interpretability of hallucinations.
+
+Chapter~\ref{cha:discussion} synthesizes findings across both works, discussing the research progression from BitMar to EmberVLM, the empirical case for episodic memory at the edge, hallucination as a systems-level problem, and implications for sustainable AI development.
+
+Chapter~\ref{cha:conclusion} concludes the thesis and outlines directions for future research.
+
+Section~\ref{sec:bitmar_impl} in Chapter~\ref{cha:bitmar} provides complete hyperparameter tables, corpus statistics, and preprocessing details for BitMar. Section~\ref{sec:embervlm_carbon} in Chapter~\ref{cha:embervlm} provides the full architectural specification and carbon tracking methodology for EmberVLM.

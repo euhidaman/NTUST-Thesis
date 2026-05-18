@@ -1,0 +1,30 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces \textbf {BitMar training configuration.} Key hyperparameters used during the 10-epoch training run on the 100M-token corpus.}}{29}{}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces \textbf {Language understanding benchmark performance.} \text {$\mathsurround \z@ \mathchar "458$}= natively 1-bit trained. Scores are accuracy (\%). WG = WinoGrande, CQA = CommonsenseQA, ARC-E = ARC-Easy.}}{30}{}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces \textbf {BitMar BabyLM evaluation.} Average finetuned NLP accuracy: 60.5\%.}}{32}{}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces \textbf {Inference efficiency with and without episodic memory.}}}{33}{}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces \textbf {Zero-shot accuracy deltas ($\Delta $ pp) with episodic memory enabled.}}}{33}{}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces \textbf {BitMar architectural hyperparameters.} Full specification of the 14M-parameter ternary-quantized architecture.}}{34}{}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces \textbf {BitMar training hyperparameters.} Optimizer, schedule, memory, and hardware settings used across the full 10-epoch run.}}{37}{}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces \textbf {BitMar training corpus composition.} The 101M-token corpus combines 50M multimodal tokens and 50M text-only tokens, with a 1M-token stratified hold-out set.}}{38}{}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces \textbf {EmberVLM parameter breakdown.} Total: 164M parameters, 40M trainable.}}{44}{}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces \textbf {EmberVLM architectural specification.} Component-level summary of the 164M-parameter system, including encoder, backbone, memory, and VA Refiner configuration.}}{45}{}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces \textbf {EmberVLM episodic memory operating modes.} The three runtime modes control whether the memory matrix is read, written, or inactive during inference.}}{52}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces \textbf {EmberVLM training datasets across all stages.}}}{58}{}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces \textbf {EmberVLM training hyperparameters by stage.}}}{58}{}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces \textbf {Training carbon emissions (CodeCarbon-measured).} All values are measured, not estimated. Training on 2$\times $A100 GPUs.}}{61}{}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces \textbf {Performance on mission-critical visual recognition benchmarks.} Time(s) = total wall-clock over the full evaluation set on the AMD Ryzen 3 4100 CPU. OverRx / UnderRx = over/under-reaction rates (lower UnderRx is safer).}}{66}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces \textbf {Robot fleet selection ablation.} 103-sample validation split. ECE: lower is better ($\downarrow $); all others: higher is better ($\uparrow $).}}{67}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces \textbf {Top-N Robot Selection dataset split statistics.} Per-class sample counts across train, validation, and test splits. Classes are imbalanced, with Underwater Robot and Robot with Wheels being the least frequent.}}{68}{}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces \textbf {General multimodal benchmarks and inference efficiency.}}}{69}{}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces \textbf {Memory mode ablation across mission-critical benchmarks.}}}{71}{}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces \textbf {VA Refiner component ablation across all mission-critical benchmarks.} Memory mode = ONLINE\_UPDATE for all rows. $\downarrow $ = lower is better.}}{72}{}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces \textbf {POPE hallucination rates by split.} Evaluated on the complete 9{,}000-sample POPE dataset. $\Delta \downarrow $ = absolute hallucination rate reduction; lower is better.}}{73}{}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces \textbf {CPU-only edge inference latency} on AMD Ryzen 3 4100. Full stack = Model + VA Refiner + Memory.}}{74}{}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces \textbf {Architectural progression from BitMar to EmberVLM.}}}{77}{}%
+\addvspace {10\p@ }

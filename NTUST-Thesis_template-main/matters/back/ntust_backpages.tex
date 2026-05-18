@@ -1,0 +1,18 @@
+%
+% this file is encoded in utf-8
+% v1.7
+% \input{200_backpages/appendix_setting}
+
+%%% 參考文獻
+\newpage
+\addcontentsline{toc}{chapter}{\nameRef}
+\renewcommand{\bibname}{\protect\makebox[5cm][s]{\nameRef}}
+%  \makebox{} is fragile; need protect
+\bibliographystyle{ieeetr}  % 使用 IEEE Trans 期刊格式
+{\footnotesize
+    \bibliography{BIB/reference}  %reference 所需的bib檔
+}
+
+%%% 附錄
+\appendix
+\input{matters/back/appendix}
