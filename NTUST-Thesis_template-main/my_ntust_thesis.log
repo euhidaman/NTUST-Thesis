@@ -1,14 +1,14 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.15)  19 MAY 2026 00:21
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.15)  19 MAY 2026 23:54
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**e:/NTUST-Thesis/NTUST-Thesis_template-main/my_ntust_thesis
-(e:/NTUST-Thesis/NTUST-Thesis_template-main/my_ntust_thesis.tex
+**my_ntust_thesis.tex
+(./my_ntust_thesis.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
 (./ntust_report.cls
-Document Class: ntust_report 2005/03/16 v0.1 Modified Standard LaTeX document class
+Document Class: ntust_report 2005/03/16 v0.1 Modified Standard LaTeX document c
+lass
 (c:/texlive/2026/texmf-dist/tex/latex/extsizes/size14.clo
 File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 )
@@ -24,9 +24,13 @@ File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen150
-) (c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty (c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(c:/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(c:/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2026-04-28 L3 programming layer (loader) 
- (c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2026-02-18 L3 backend support: XeTeX
 \g__graphics_track_int=\count281
 \g__pdfannot_backend_int=\count282
@@ -35,8 +39,10 @@ File: l3backend-xetex.def 2026-02-18 L3 backend support: XeTeX
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
- (c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
+X
 \l__fontspec_script_int=\count284
 \l__fontspec_language_int=\count285
 \l__fontspec_strnum_int=\count286
@@ -51,13 +57,18 @@ Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpa_dim=\dimen151
 \l__fontspec_tmpb_dim=\dimen152
 \l__fontspec_tmpc_dim=\dimen153
- (c:/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
- (c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
-) (c:/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2025-10-09 L3 Experimental prototype document functions
 )
 \l__xeCJK_tmp_int=\count295
@@ -120,7 +131,8 @@ LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
 \g__xeCJK_fam_allocation_int=\count305
 \l__xeCJK_verb_case_int=\count306
 \l__xeCJK_verb_exspace_skip=\skip57
- (c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
 ))
 
@@ -135,22 +147,27 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
 (fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
-(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
 (fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
 (fontspec)             New
-(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
 (fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
 (fontspec)             <->"Times New
-(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
 (fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
 (fontspec)             <->"Times New
-(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
 
 
 Package fontspec Info: 
@@ -183,25 +200,33 @@ Package fontspec Info:
 (fontspec)             - 'italic' (m/it) with NFSS spec.: <->"AR PL KaitiM
 (fontspec)             Big5/OT:script=hani;language=dflt;"
 
- (c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.sty (c:/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.sty
+(c:/texlive/2026/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count307
 \l__lipsum_a_int=\count308
 \l__lipsum_b_int=\count309
- (c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./common_env.tex (c:/texlive/2026/texmf-dist/tex/latex/cite/cite.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./common_env.tex
+(c:/texlive/2026/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count310
@@ -216,39 +241,50 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen187
 \Gm@layoutvoffset=\dimen188
 \Gm@dimlist=\toks18
-) (c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 106.
- (c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen189
 \Gin@req@width=\dimen190
-) (c:/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-) (c:/texlive/2026/texmf-dist/tex/latex/algorithms/algorithm.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/algorithms/algorithm.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
- (c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count313
 \float@exts=\toks19
 \float@box=\box55
 \@float@everytoks=\toks20
 \@floatcapt=\box56
-) (c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks21
 \c@algorithm=\count314
-) (c:/texlive/2026/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -273,14 +309,17 @@ Package: amsmath 2025/07/09 v2.17z AMS math features
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
- (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
 \ex@=\dimen191
-)) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen192
-) (c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count322
@@ -330,19 +369,23 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-) (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (c:/texlive/2026/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
-) (c:/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count334
 \lst@gtempboxa=\box59
 \lst@token=\toks27
@@ -355,18 +398,22 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \lst@newlines=\count338
 \lst@lineno=\count339
 \lst@maxwidth=\dimen259
- (c:/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-) (c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 \c@lstnumber=\count340
 \lst@skipnumbers=\count341
 \lst@framebox=\box60
-) (c:/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+)
+(c:/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
- (c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+
+(c:/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count342
 \l__xeCJK_listings_flag_int=\count343
@@ -380,8 +427,10 @@ Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
 (c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (c:/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip64
 \f@nch@offset@elh=\skip65
 \f@nch@offset@erh=\skip66
@@ -397,7 +446,8 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip76
 \f@nch@widthR=\skip77
 \@temptokenb=\toks28
-)) (c:/texlive/2026/texmf-dist/tex/latex/tools/bm.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
 \symboldletters=\mathgroup8
@@ -407,9 +457,11 @@ Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-) (c:/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
- (c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen260
 \ar@mcellbox=\box61
@@ -426,16 +478,20 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \TX@delta=\dimen266
 \TX@cols=\count344
 \TX@ftn=\toks30
-) (c:/texlive/2026/texmf-dist/tex/latex/comment/comment.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write3
- Excluding comment 'comment') (c:/texlive/2026/texmf-dist/tex/latex/graphics/rotating.sty
+
+Excluding comment 'comment')
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
 \c@r@tfl@t=\count345
 \rotFPtop=\skip80
 \rotFPbot=\skip81
 \rot@float@box=\box63
 \rot@mess@toks=\toks31
-) (c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen267
 \lightrulewidth=\dimen268
@@ -454,12 +510,15 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count348
 \@lastruleclass=\count349
 \@thisrulewidth=\dimen279
-) (c:/texlive/2026/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box64
-) (c:/texlive/2026/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2026/03/30 v0.6h Insert pages of external PDF documents (AM)
- (c:/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count350
 \calc@Bcount=\count351
@@ -471,17 +530,21 @@ LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count352
 \calc@Cskip=\skip84
-) (c:/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
 \ESO@tempdima=\dimen282
 \ESO@tempdimb=\dimen283
- (c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 274.
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `RGB' extended on input line 1365.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
@@ -490,14 +553,16 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)) (c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+))
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count353
 )
 \AM@pagewidth=\dimen284
 \AM@pageheight=\dimen285
 \AM@fboxrule=\dimen286
- (c:/texlive/2026/texmf-dist/tex/latex/pdfpages/ppxetex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/pdfpages/ppxetex.def
 File: ppxetex.def 2026/03/30 v0.6h Pdfpages driver for XeTeX (AM)
 )
 \pdfpages@includegraphics@status=\count354
@@ -508,13 +573,15 @@ File: ppxetex.def 2026/03/30 v0.6h Pdfpages driver for XeTeX (AM)
 \AM@lof@heading=\toks34
 \c@AM@survey=\count356
 \AM@templatesizebox=\box66
-) (c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip85
 \multirow@cntb=\count357
 \multirow@dima=\skip86
 \bigstrutjot=\dimen287
-) (c:/texlive/2026/texmf-dist/tex/latex/tools/multicol.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@tracingmulticols=\count358
 \mult@box=\box67
@@ -584,12 +651,15 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \colbreak@box=\box112
 \mc@col@check@num=\count367
 \g__mc_curr_col_int=\count368
-) (c:/texlive/2026/texmf-dist/tex/latex/tools/enumerate.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \@enLab=\toks35
-) (c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen297
 \captionmargin=\dimen298
@@ -607,13 +677,15 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: threeparttable package is loaded.
-) (c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count371
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count372
-) (c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip89
 \enit@outerparindent=\dimen305
@@ -621,15 +693,18 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box113
 \enit@count@id=\count373
 \enitdp@description=\count374
-) (c:/texlive/2026/texmf-dist/tex/latex/preprint/balance.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/preprint/balance.sty
 Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen306
-) (c:/texlive/2026/texmf-dist/tex/latex/makecell/makecell.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen307
 \c@nlinenum=\count375
 \TeXr@lab=\toks37
-) (c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip90
 \LTright=\skip91
@@ -647,7 +722,8 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count379
 \c@LT@chunks=\count380
 \LT@p@ftn=\toks38
-) (c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
 \MT@toks=\toks39
 \MT@tempbox=\box119
@@ -661,18 +737,21 @@ LaTeX Info: Redefining \textls on input line 1449.
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count382
- (c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def
+
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype-xetex.def
 File: microtype-xetex.def 2026/03/01 v3.2d Definitions specific to xetex (RS)
 LaTeX Info: Redefining \lsstyle on input line 443.
 LaTeX Info: Redefining \lslig on input line 451.
 \MT@outer@space=\skip94
 )
 Package microtype Info: Loading configuration file microtype.cfg.
- (c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
+
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
-) (c:/texlive/2026/texmf-dist/tex/latex/tocloft/tocloft.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip95
@@ -711,24 +790,39 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforetabskip=\skip126
 \cfttabindent=\skip127
 \cfttabnumwidth=\skip128
-) (c:/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2025/08/14 v1.18.2 Data Visualization (1.18.2)
- (c:/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks41
 \pgfutil@tempdima=\dimen310
 \pgfutil@tempdimb=\dimen311
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box120
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks42
 \pgfkeys@temptoks=\toks43
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
+de.tex
 \pgfkeys@tmptoks=\toks44
 ))
 \pgf@x=\dimen312
@@ -755,32 +849,61 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-xetex.def
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
 File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
 File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )
 \pgfsys@objnum=\count390
-))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+)))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfsyssoftpath@smallbuffer@items=\count391
 \pgfsyssoftpath@bigbuffer@items=\count392
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen322
 \pgfmath@count=\count393
 \pgfmath@box=\box121
 \pgfmath@toks=\toks48
 \pgfmath@stack@operand=\toks49
 \pgfmath@stack@operation=\toks50
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count394
-)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@picminx=\dimen323
 \pgf@picmaxx=\dimen324
@@ -796,75 +919,109 @@ File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@yy=\dimen334
 \pgf@zx=\dimen335
 \pgf@zy=\dimen336
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@path@lastx=\dimen337
 \pgf@path@lasty=\dimen338
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@shorten@end@additional=\dimen339
 \pgf@shorten@start@additional=\dimen340
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box122
 \pgf@hbox=\box123
 \pgf@layerbox@main=\box124
 \pgf@picture@serial@count=\count395
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgflinewidth=\dimen341
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@pt@x=\dimen342
 \pgf@pt@y=\dimen343
 \pgf@pt@temp=\dimen344
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowsep=\dimen345
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen346
 \pgf@sys@shading@range@num=\count396
 \pgf@shadingcount=\count397
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfexternal@startupbox=\box125
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (c:/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodeparttextbox=\box126
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@nodesepstart=\dimen347
 \pgf@nodesepend=\dimen348
-) (c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+)
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen349
 \pgffor@skip=\dimen350
 \pgffor@stack=\toks51
 \pgffor@toks=\toks52
-)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count398
 \pgfplotmarksize=\dimen351
@@ -885,32 +1042,89 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikznumberofchildren=\count400
 \tikznumberofcurrentchild=\count401
 \tikz@fig@count=\count402
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmatrixcurrentrow=\count403
 \pgfmatrixcurrentcolumn=\count404
 \pgf@matrix@numberofcolumns=\count405
 )
 \tikz@expandcount=\count406
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+)))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks53
 \t@pgfplots@tokb=\toks54
 \t@pgfplots@tokc=\toks55
 \pgfplots@tmpa=\dimen360
 \c@pgfplots@coordindex=\count407
 \c@pgfplots@scanlineindex=\count408
- (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.te
+x))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_loader.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfs
+upp_pgfutil-common-lists.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+cture.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststru
+ctureext.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.co
+de.tex
 \c@pgfplotsarray@tmp=\count409
-) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.c
+ode.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.c
+ode.tex
 \c@pgfplotstable@counta=\count410
 \t@pgfplotstable@a=\toks56
-) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.co
+de.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.
+tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.te
+x)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfsh
+ading.code.tex
 \c@pgfplotslibrarysurf@no=\count411
- (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-xetex.def (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-xetex.def
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfsha
+ding.pgfsys-dvipdfmx.def
 \c@pgfplotslibrarysurf@streamlen=\count412
-)))) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+))))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.t
+ex
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
+))) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.t
+ex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.t
+ex
 \pgfdecoratedcompleteddistance=\dimen361
 \pgfdecoratedremainingdistance=\dimen362
 \pgfdecoratedinputsegmentcompleteddistance=\dimen363
@@ -922,7 +1136,16 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 \tikz@lib@dec@box=\box131
 )
-(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathmorphing.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathmorphing.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarydecorations.pathreplacing.code.tex
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
+orations.pathreplacing.code.tex))
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.conto
+urlua.code.tex)
 \pgfplots@numplots=\count414
 \pgfplots@xmin@reg=\dimen368
 \pgfplots@xmax@reg=\dimen369
@@ -930,19 +1153,33 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfplots@ymax@reg=\dimen371
 \pgfplots@zmin@reg=\dimen372
 \pgfplots@zmax@reg=\dimen373
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.
+tex
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+)))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
- (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.g
+eometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)) (c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+))
+(c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.groupplots.code.tex
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.group
+plots.code.tex
 \pgfplots@group@current@plot=\count415
 \pgfplots@group@current@row=\count416
 \pgfplots@group@current@column=\count417
@@ -998,26 +1235,34 @@ LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 116.
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 116.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 116.
+
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 116.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 1
+16.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `bold' on input line 116.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 116.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+116.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 116.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 116.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 116.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
+116.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 116.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 116.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
+input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 116.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
+e 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 116.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
@@ -1060,16 +1305,21 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 \c@lstlisting=\count418
 (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
- (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
-Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PDF (HO)
- (c:/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PD
+F (HO)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
- (c:/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
+
+(c:/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
@@ -1108,7 +1358,8 @@ Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 (./chinese_trans.tex) (./matters/front/ntust_frontpages.tex
 Package microtype Info: Character `textendash ' is missing
@@ -1129,7 +1380,8 @@ Package microtype Info: Character `textquotedblleft ' is missing
 Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/m/n/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
- (./000_frontpages/00_names.tex)
+
+(./000_frontpages/00_names.tex)
 File: matters/front/ntust_logo.eps Graphic file (type eps)
 <matters/front/ntust_logo.eps>
 Package microtype Info: Character `textendash ' is missing
@@ -1228,22 +1480,31 @@ Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+
 (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
+)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
- (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
+)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 70.
- (c:/texlive/2026/texmf-dist/tex/latex/jknapltx/ursfs.fd
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 70
+.
+
+(c:/texlive/2026/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) (c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
 )
 Underfull \hbox (badness 10000) detected at line 71
 \TU/ARPLKaitiMBig5(0)/m/n/20.74 研 究 生：| 
@@ -1431,32 +1692,39 @@ Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
  (./000_frontpages/04_eabstract.tex
 Overfull \hbox (11.50699pt too wide) in paragraph at lines 2--3
-\TU/TimesNewRoman(0)/m/n/14.4 privacy-sensitive deployment scenarios. This thesis develops compact VLMs
+\TU/TimesNewRoman(0)/m/n/14.4 privacy-sensitive deployment scenarios. This thes
+is develops compact VLMs
  []
 
 
 Overfull \hbox (1.27814pt too wide) in paragraph at lines 2--3
-\TU/TimesNewRoman(0)/m/n/14.4 for on-device inference under simultaneous hard constraints: under 800 MB
+\TU/TimesNewRoman(0)/m/n/14.4 for on-device inference under simultaneous hard c
+onstraints: under 800 MB
  []
 
 
 Overfull \hbox (10.91724pt too wide) in paragraph at lines 4--5
-[]\TU/TimesNewRoman(0)/m/n/14.4 Two systems are presented. \TU/TimesNewRoman(0)/b/n/14.4 BitMar \TU/TimesNewRoman(0)/m/n/14.4 is a 14M-parameter, 1.58-bit ternary-
+[]\TU/TimesNewRoman(0)/m/n/14.4 Two systems are presented. \TU/TimesNewRoman(0)
+/b/n/14.4 BitMar \TU/TimesNewRoman(0)/m/n/14.4 is a 14M-parameter, 1.58-bit ter
+nary-
  []
 
 
 Overfull \hbox (25.02908pt too wide) in paragraph at lines 4--5
-\TU/TimesNewRoman(0)/m/n/14.4 79% energy reduction over the memory-free baseline, alongside 3–4 percentage-
+\TU/TimesNewRoman(0)/m/n/14.4 79% energy reduction over the memory-free baselin
+e, alongside 3–4 percentage-
  []
 
 
 Overfull \hbox (24.02194pt too wide) in paragraph at lines 6--7
-[]\TU/TimesNewRoman(0)/m/n/14.4 EmberVLM achieves the best reported results among sub-billion-parameter
+[]\TU/TimesNewRoman(0)/m/n/14.4 EmberVLM achieves the best reported results amo
+ng sub-billion-parameter
  []
 
 
 Overfull \hbox (13.07993pt too wide) in paragraph at lines 6--7
-\TU/TimesNewRoman(0)/m/n/14.4 models on three mission-critical benchmarks: Top-N Robot Selection (Macro-
+\TU/TimesNewRoman(0)/m/n/14.4 models on three mission-critical benchmarks: Top-
+N Robot Selection (Macro-
  []
 
 [4
@@ -1502,7 +1770,8 @@ Package microtype Info: Character `textquotedblleft ' is missing
 Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
- [9] [10])
+
+[9] [10])
 \tf@toc=\write5
 \openout5 = `my_ntust_thesis.toc'.
 
@@ -1510,39 +1779,43 @@ Package microtype Info: Character `textquotedblright ' is missing
 
 ]
 Overfull \hbox (1.90259pt too wide) in paragraph at lines 12--12
- \TU/TimesNewRoman(0)/m/n/12 robot-selection prompts with multi-label annotations and programmatic 
+ \TU/TimesNewRoman(0)/m/n/12 robot-selection prompts with multi-label annotatio
+ns and programmatic 
  []
 
 [13]
-Overfull \hbox (9.93285pt too wide) in paragraph at lines 13--13
- \TU/TimesNewRoman(0)/m/n/12 CPU-only hardware platforms such as the AMD Ryzen 3 4100 (3.80 GHz, 
+Overfull \hbox (9.93285pt too wide) in paragraph at lines 14--14
+ \TU/TimesNewRoman(0)/m/n/12 CPU-only hardware platforms such as the AMD Ryzen 
+3 4100 (3.80 GHz, 
  []
 
 [14]
-Overfull \hbox (10.98167pt too wide) in paragraph at lines 19--19
- \TU/TimesNewRoman(0)/m/n/12 LINE_UPDATE shows stronger per-class recall on the Underwater Robot 
+Overfull \hbox (10.98167pt too wide) in paragraph at lines 20--20
+ \TU/TimesNewRoman(0)/m/n/12 LINE_UPDATE shows stronger per-class recall on the
+ Underwater Robot 
  []
 
 )
 \tf@lof=\write6
 \openout6 = `my_ntust_thesis.lof'.
 
- [15] (./my_ntust_thesis.lot [16
+ [15] [16] (./my_ntust_thesis.lot [17
 
 ]
 Overfull \hbox (5.54337pt too wide) in paragraph at lines 22--22
- [][] []\TU/TimesNewRoman(0)/b/n/12 Top-N Robot Selection dataset split statistics. \TU/TimesNewRoman(0)/m/n/12 Per-class sample counts 
+ [][] []\TU/TimesNewRoman(0)/b/n/12 Top-N Robot Selection dataset split statist
+ics. \TU/TimesNewRoman(0)/m/n/12 Per-class sample counts 
  []
 
 )
 \tf@lot=\write7
 \openout7 = `my_ntust_thesis.lot'.
 
- [17] (./my_ntust_thesis.loa)
+ [18] (./my_ntust_thesis.loa)
 \tf@loa=\write8
 \openout8 = `my_ntust_thesis.loa'.
 
- [18
+ [19
 
 ]) (./100_sections/01_introduction.tex
 Chapter 1.
@@ -1566,7 +1839,8 @@ Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 Overfull \hbox (5.3628pt too wide) in paragraph at lines 7--8
-\TU/TimesNewRoman(0)/m/n/14.4 mative advances in modern artificial intelligence, enabling systems to jointly
+\TU/TimesNewRoman(0)/m/n/14.4 mative advances in modern artificial intelligence
+, enabling systems to jointly
  []
 
 Package microtype Info: Character `textendash ' is missing
@@ -1589,84 +1863,100 @@ Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 Overfull \hbox (4.7591pt too wide) in paragraph at lines 9--10
-\TU/TimesNewRoman(0)/m/it/14.4 cloud-hosted \TU/TimesNewRoman(0)/m/n/14.4 settings. They assume access to GPU clusters, high-bandwidth
+\TU/TimesNewRoman(0)/m/it/14.4 cloud-hosted \TU/TimesNewRoman(0)/m/n/14.4 setti
+ngs. They assume access to GPU clusters, high-bandwidth
  []
 
 [1
 
 ]
 Overfull \hbox (10.9104pt too wide) in paragraph at lines 14--15
-\TU/TimesNewRoman(0)/m/n/14.4 real-time scene classification and anomaly detection entirely on-device. 
+\TU/TimesNewRoman(0)/m/n/14.4 real-time scene classification and anomaly detect
+ion entirely on-device. 
  []
 
 
 Overfull \hbox (36.21387pt too wide) in paragraph at lines 16--17
-\TU/TimesNewRoman(0)/m/n/14.4 electromagnetic-sensitive equipment frequently operate in radio-frequency-
+\TU/TimesNewRoman(0)/m/n/14.4 electromagnetic-sensitive equipment frequently op
+erate in radio-frequency-
  []
 
 
 Overfull \hbox (17.87025pt too wide) in paragraph at lines 17--18
-[]\TU/TimesNewRoman(0)/b/n/14.4 Medical edge devices. \TU/TimesNewRoman(0)/m/n/14.4 Point-of-care diagnostic devices in low-resource
+[]\TU/TimesNewRoman(0)/b/n/14.4 Medical edge devices. \TU/TimesNewRoman(0)/m/n/
+14.4 Point-of-care diagnostic devices in low-resource
  []
 
 [2]
 Overfull \hbox (1.07173pt too wide) in paragraph at lines 32--33
-[]\TU/TimesNewRoman(0)/m/n/14.4 Even sub-billion-parameter VLMs impose memory and latency require-
+[]\TU/TimesNewRoman(0)/m/n/14.4 Even sub-billion-parameter VLMs impose memory a
+nd latency require-
  []
 
 
 Overfull \hbox (2.66628pt too wide) in paragraph at lines 32--33
-\TU/TimesNewRoman(0)/m/n/14.4 ments that exceed the capabilities of commodity edge hardware. SmolVLM-
+\TU/TimesNewRoman(0)/m/n/14.4 ments that exceed the capabilities of commodity e
+dge hardware. SmolVLM-
  []
 
 
 Overfull \hbox (24.31909pt too wide) in paragraph at lines 32--33
-\TU/TimesNewRoman(0)/m/n/14.4 configuration. InternVL3-1B requires 1,978 MB VRAM and achieves 1,566 ms
+\TU/TimesNewRoman(0)/m/n/14.4 configuration. InternVL3-1B requires 1,978 MB VRA
+M and achieves 1,566 ms
  []
 
 
 Overfull \hbox (21.85141pt too wide) in paragraph at lines 34--35
-[]\TU/TimesNewRoman(0)/m/n/14.4 The fundamental technical mismatch arises from the full-precision floating-
+[]\TU/TimesNewRoman(0)/m/n/14.4 The fundamental technical mismatch arises from 
+the full-precision floating-
  []
 
 [3] [4] [5]
 Overfull \hbox (2.29877pt too wide) in paragraph at lines 61--62
- \TU/TimesNewRoman(0)/b/n/14.4 EmberVLM.[] \TU/TimesNewRoman(0)/m/n/14.4 EmberVLM is the primary architectural contribution of this
+ \TU/TimesNewRoman(0)/b/n/14.4 EmberVLM.[] \TU/TimesNewRoman(0)/m/n/14.4 EmberV
+LM is the primary architectural contribution of this
  []
 
 
 Overfull \hbox (2.65141pt too wide) in paragraph at lines 61--62
-\TU/TimesNewRoman(0)/m/n/14.4 space dual-view consistency with neuron-level mid-decoder activation mon-
+\TU/TimesNewRoman(0)/m/n/14.4 space dual-view consistency with neuron-level mid
+-decoder activation mon-
  []
 
 [6]
 Overfull \hbox (4.09529pt too wide) in paragraph at lines 66--67
-[]\TU/TimesNewRoman(0)/b/n/14.4 BitMar\TU/TimesNewRoman(0)/m/n/14.4 : The first architecture to jointly integrate 1.58-bit multimodal
+[]\TU/TimesNewRoman(0)/b/n/14.4 BitMar\TU/TimesNewRoman(0)/m/n/14.4 : The first
+ architecture to jointly integrate 1.58-bit multimodal
  []
 
 
 Overfull \hbox (15.32733pt too wide) in paragraph at lines 68--69
-\TU/TimesNewRoman(0)/m/n/14.4 and latent chain-of-thought integration), achieving competitive mission-
+\TU/TimesNewRoman(0)/m/n/14.4 and latent chain-of-thought integration), achievi
+ng competitive mission-
  []
 
 
 Overfull \hbox (4.27573pt too wide) in paragraph at lines 74--75
-[]\TU/TimesNewRoman(0)/b/n/14.4 Comprehensive mission-critical evaluation\TU/TimesNewRoman(0)/m/n/14.4 : State-of-the-art results
+[]\TU/TimesNewRoman(0)/b/n/14.4 Comprehensive mission-critical evaluation\TU/Ti
+mesNewRoman(0)/m/n/14.4 : State-of-the-art results
  []
 
 [7]
 Overfull \hbox (18.84688pt too wide) in paragraph at lines 82--83
-[]\TU/TimesNewRoman(0)/m/n/14.4 Chapter 2[] surveys related work across five areas: tiny and edge-deployable
+[]\TU/TimesNewRoman(0)/m/n/14.4 Chapter 2[] surveys related work across five ar
+eas: tiny and edge-deployable
  []
 
 
 Overfull \hbox (17.4664pt too wide) in paragraph at lines 88--89
-\TU/TimesNewRoman(0)/m/n/14.4 search progression from BitMar to EmberVLM, the empirical case for episodic
+\TU/TimesNewRoman(0)/m/n/14.4 search progression from BitMar to EmberVLM, the e
+mpirical case for episodic
  []
 
 [8]) (./100_sections/02_related_work.tex
 Overfull \hbox (5.02803pt too wide) in paragraph at lines 92--1
-\TU/TimesNewRoman(0)/m/n/14.4 ter 4[] provides the full architectural specification and carbon tracking method-
+\TU/TimesNewRoman(0)/m/n/14.4 ter 4[] provides the full architectural specifica
+tion and carbon tracking method-
  []
 
 [9]
@@ -1680,37 +1970,44 @@ Overfull \hbox (5.9537pt too wide) in paragraph at lines 6--6
 
 ]
 Overfull \hbox (1.58957pt too wide) in paragraph at lines 13--14
-\TU/TimesNewRoman(0)/m/n/14.4 CLIP vision encoder, showing that 2.7B-parameter instruction-tuned VLMs
+\TU/TimesNewRoman(0)/m/n/14.4 CLIP vision encoder, showing that 2.7B-parameter 
+instruction-tuned VLMs
  []
 
 
 Overfull \hbox (0.79141pt too wide) in paragraph at lines 13--14
-\TU/TimesNewRoman(0)/m/n/14.4 can approach much larger models at substantially lower inference cost. This
+\TU/TimesNewRoman(0)/m/n/14.4 can approach much larger models at substantially 
+lower inference cost. This
  []
 
 
 Overfull \hbox (2.73804pt too wide) in paragraph at lines 15--16
-\TU/TimesNewRoman(0)/m/n/14.4 simultaneously targets CPU-only inference, under 800 MB RAM, sub-10ms
+\TU/TimesNewRoman(0)/m/n/14.4 simultaneously targets CPU-only inference, under 
+800 MB RAM, sub-10ms
  []
 
 [11]
 Overfull \hbox (9.39406pt too wide) in paragraph at lines 26--27
-\TU/TimesNewRoman(0)/m/n/14.4 stream fusion, memory, and decoder projections operate under ternary weight
+\TU/TimesNewRoman(0)/m/n/14.4 stream fusion, memory, and decoder projections op
+erate under ternary weight
  []
 
 
 Overfull \hbox (1.51563pt too wide) in paragraph at lines 26--27
-\TU/TimesNewRoman(0)/m/n/14.4 constraints. This is a direct extension of BitNet b1.58’s quantization scheme
+\TU/TimesNewRoman(0)/m/n/14.4 constraints. This is a direct extension of BitNet
+ b1.58’s quantization scheme
  []
 
 [12]
 Overfull \hbox (4.5987pt too wide) in paragraph at lines 33--34
-\TU/TimesNewRoman(0)/m/n/14.4 pairs improves long-context modeling without changing core model weights.
+\TU/TimesNewRoman(0)/m/n/14.4 pairs improves long-context modeling without chan
+ging core model weights.
  []
 
 [13]
 Overfull \hbox (10.54875pt too wide) in paragraph at lines 39--40
-\TU/TimesNewRoman(0)/m/n/14.4 server-scale RAG or database-backed retrieval: both BitMar and EmberVLM
+\TU/TimesNewRoman(0)/m/n/14.4 server-scale RAG or database-backed retrieval: bo
+th BitMar and EmberVLM
  []
 
 
@@ -1720,17 +2017,20 @@ Overfull \hbox (18.18372pt too wide) in paragraph at lines 41--41
 
 
 Overfull \hbox (47.67885pt too wide) in paragraph at lines 44--45
-\TU/TimesNewRoman(0)/m/n/14.4 put image, has been extensively documented and benchmarked. Rohrbach et al. [21]
+\TU/TimesNewRoman(0)/m/n/14.4 put image, has been extensively documented and be
+nchmarked. Rohrbach et al. [21]
  []
 
 [14]
 Overfull \hbox (1.06914pt too wide) in paragraph at lines 46--47
-\TU/TimesNewRoman(0)/m/n/14.4 asked whether specific objects are present. POPE includes adversarial splits
+\TU/TimesNewRoman(0)/m/n/14.4 asked whether specific objects are present. POPE 
+includes adversarial splits
  []
 
 [15] [16] [17]) (./100_sections/03_method.tex
 Overfull \hbox (9.73882pt too wide) in paragraph at lines 72--1
-\TU/TimesNewRoman(0)/m/n/14.4 stages on a dual-A100 setup in approximately 90 hours, EmberVLM achieves
+\TU/TimesNewRoman(0)/m/n/14.4 stages on a dual-A100 setup in approximately 90 h
+ours, EmberVLM achieves
  []
 
 [18]
@@ -1739,22 +2039,26 @@ Chapter 3.
 
 ]
 Overfull \hbox (13.70512pt too wide) in paragraph at lines 17--18
-\TU/TimesNewRoman(0)/m/n/14.4 regime, ensuring consistent hardware efficiency across the entire model. 
+\TU/TimesNewRoman(0)/m/n/14.4 regime, ensuring consistent hardware efficiency a
+cross the entire model. 
  []
 
 
 Overfull \hbox (7.72093pt too wide) in paragraph at lines 19--20
-[]\TU/TimesNewRoman(0)/b/n/14.4 External episodic memory without parametric overhead\TU/TimesNewRoman(0)/m/n/14.4 : the mem-
+[]\TU/TimesNewRoman(0)/b/n/14.4 External episodic memory without parametric ove
+rhead\TU/TimesNewRoman(0)/m/n/14.4 : the mem-
  []
 
 [20]
 Overfull \hbox (21.2972pt too wide) in paragraph at lines 28--29
-[]\TU/TimesNewRoman(0)/b/n/14.4 Cross-modal fusion\TU/TimesNewRoman(0)/m/n/14.4 : A lightweight cross-attention module (text queries,
+[]\TU/TimesNewRoman(0)/b/n/14.4 Cross-modal fusion\TU/TimesNewRoman(0)/m/n/14.4
+ : A lightweight cross-attention module (text queries,
  []
 
 
 Overfull \hbox (29.57043pt too wide) in paragraph at lines 28--29
-\TU/TimesNewRoman(0)/m/n/14.4 vision keys/ values) fuses the two modalities into a shared 128-dimensional
+\TU/TimesNewRoman(0)/m/n/14.4 vision keys/ values) fuses the two modalities int
+o a shared 128-dimensional
  []
 
 File: ../BabyLM_new/FIG/BitMar-Architecture.png Graphic file (type bmp)
@@ -1866,12 +2170,14 @@ Package fontspec Info:
 
 
 Overfull \hbox (9.01668pt too wide) in paragraph at lines 187--188
-\TU/TimesNewRoman(0)/m/n/14.4 ning BNC, CHILDES, Gutenberg, OpenSubtitles, Simple English Wikipedia,
+\TU/TimesNewRoman(0)/m/n/14.4 ning BNC, CHILDES, Gutenberg, OpenSubtitles, Simp
+le English Wikipedia,
  []
 
 [27]
 Overfull \hbox (8.16592pt too wide) in paragraph at lines 220--221
-[]\TU/TimesNewRoman(0)/m/n/14.4 The quantization effectiveness metric $\OML/cmm/m/it/14.4 E[]$ \TU/TimesNewRoman(0)/m/n/14.4 measures the fraction of ternary
+[]\TU/TimesNewRoman(0)/m/n/14.4 The quantization effectiveness metric $\OML/cmm
+/m/it/14.4 E[]$ \TU/TimesNewRoman(0)/m/n/14.4 measures the fraction of ternary
  []
 
 [28]
@@ -1891,63 +2197,77 @@ Underfull \hbox (badness 1152) in paragraph at lines 389--390
 
 
 ignored: Infinite glue shrinkage found in box being split [34]
-ignored: Infinite glue shrinkage found in box being split [35] [36] [37] [38]
+ignored: Infinite glue shrinkage fo
+und in box being split [35] [36] [37] [38]
 Overfull \hbox (6.4061pt too wide) in paragraph at lines 490--491
- \TU/TimesNewRoman(0)/b/n/14.4 Open: Can the architecture scale to mission-critical classification?[] \TU/TimesNewRoman(0)/m/n/14.4 Bit-
+ \TU/TimesNewRoman(0)/b/n/14.4 Open: Can the architecture scale to mission-crit
+ical classification?[] \TU/TimesNewRoman(0)/m/n/14.4 Bit-
  []
 
 
 Overfull \hbox (0.43839pt too wide) in paragraph at lines 490--491
-\TU/TimesNewRoman(0)/m/n/14.4 Mar’s evaluation is primarily generative. Whether memory-augmented tiny
+\TU/TimesNewRoman(0)/m/n/14.4 Mar’s evaluation is primarily generative. Whether
+ memory-augmented tiny
  []
 
 [39]) (./100_sections/04_experiment.tex [40]
 Chapter 4.
 
 Overfull \hbox (10.27768pt too wide) in paragraph at lines 9--10
-[]\TU/TimesNewRoman(0)/m/n/14.4 Figure 4.1[] illustrates the complete EmberVLM architecture. EmberVLM
+[]\TU/TimesNewRoman(0)/m/n/14.4 Figure 4.1[] illustrates the complete EmberVLM 
+architecture. EmberVLM
  []
 
 
 Overfull \hbox (4.46086pt too wide) in paragraph at lines 12--13
-[]\TU/TimesNewRoman(0)/b/n/14.4 Compositional efficiency\TU/TimesNewRoman(0)/m/n/14.4 : separate frozen pretrained representations
+[]\TU/TimesNewRoman(0)/b/n/14.4 Compositional efficiency\TU/TimesNewRoman(0)/m/
+n/14.4 : separate frozen pretrained representations
  []
 
 [41
 
 ]
-File: ../EmberVLM/paper-template-Latest/figures/main_diagram.pdf Graphic file (type pdf)
+File: ../EmberVLM/paper-template-Latest/figures/main_diagram.pdf Graphic file (
+type pdf)
 <use ../EmberVLM/paper-template-Latest/figures/main_diagram.pdf>
 
 Overfull \hbox (1.11478pt too wide) in paragraph at lines 31--32
-\TU/TimesNewRoman(0)/m/n/14.4 modeling backbone (135M parameters). SmolLM-135M is frozen in Stages
+\TU/TimesNewRoman(0)/m/n/14.4 modeling backbone (135M parameters). SmolLM-135M 
+is frozen in Stages
  []
 
 [42] [43]
-File: ../EmberVLM/paper-template-Latest/figures/embervlm_param_distribution.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/embervlm_param_distribution.png
+ Graphic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/embervlm_param_distribution.png>
  [44] [45]
 Overfull \hbox (0.9074pt too wide) in paragraph at lines 108--109
-[]\TU/TimesNewRoman(0)/m/n/14.4 While EmberVLM supports standard autoregressive generation, autore-
+[]\TU/TimesNewRoman(0)/m/n/14.4 While EmberVLM supports standard autoregressive
+ generation, autore-
  []
 
 [46]
 Overfull \hbox (3.9188pt too wide) in paragraph at lines 122--123
-[]\TU/TimesNewRoman(0)/b/n/14.4 Updatable online at deployment\TU/TimesNewRoman(0)/m/n/14.4 : in ONLINE_UPDATE mode, new
+[]\TU/TimesNewRoman(0)/b/n/14.4 Updatable online at deployment\TU/TimesNewRoman
+(0)/m/n/14.4 : in ONLINE_UPDATE mode, new
  []
 
 [47] [48] [49]
 Overfull \hbox (0.54958pt too wide) in paragraph at lines 158--159
-\TU/TimesNewRoman(0)/m/n/14.4 at each inference step, unifying scope detection, Gaussian retrieval, novelty-
+\TU/TimesNewRoman(0)/m/n/14.4 at each inference step, unifying scope detection,
+ Gaussian retrieval, novelty-
  []
 
 [50] [51] [52]
-File: ../EmberVLM/paper-template-Latest/figures/va_ablation_neuron_heatmap.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/va_ablation_neuron_heatmap.png 
+Graphic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/va_ablation_neuron_heatmap.png>
  [53] [54]
-File: ../EmberVLM/paper-template-Latest/figures/fig_training_stages.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/fig_training_stages.png Graphic
+ file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/fig_training_stages.png>
-File: ../EmberVLM/paper-template-Latest/figures/embervlm_stage_samples.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/embervlm_stage_samples.png Grap
+hic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/embervlm_stage_samples.png>
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/m/it/10'.
@@ -1985,70 +2305,93 @@ Package microtype Info: Character `textquotedblleft ' is missing
 Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/m/it/7'.
 (microtype)             Ignoring protrusion settings for this character.
- [55] [56] [57] [58] [59]
-Overfull \hbox (3.11984pt too wide) in paragraph at lines 386--387
-[]\TU/TimesNewRoman(0)/m/n/14.4 Figure 4.6[] shows the edge deployment scenario targeted by EmberVLM.
+ [55] [56]
+File: heatmap_stage1.png Graphic file (type bmp)
+<heatmap_stage1.png>
+ [57] [58] [59]
+
+LaTeX Warning: Text page 60 contains only floats.
+
+[60]
+Overfull \hbox (3.11984pt too wide) in paragraph at lines 395--396
+[]\TU/TimesNewRoman(0)/m/n/14.4 Figure 4.7[] shows the edge deployment scenario
+ targeted by EmberVLM.
  []
 
-File: ../EmberVLM/paper-template-Latest/figures/fig_edge_targets.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/fig_edge_targets.png Graphic fi
+le (type bmp)
 <../EmberVLM/paper-template-Latest/figures/fig_edge_targets.png>
-[60] [61]) (./100_sections/05_conclusion.tex [62]
+[61] [62]) (./100_sections/05_conclusion.tex [63]
 Chapter 5.
 
 Overfull \hbox (4.32889pt too wide) in paragraph at lines 8--9
-[]\TU/TimesNewRoman(0)/m/n/14.4 All EmberVLM training runs are conducted on 2$\OMS/cmsy/m/n/14.4 ^^B$\TU/TimesNewRoman(0)/m/n/14.4 NVIDIA A100 GPUs
+[]\TU/TimesNewRoman(0)/m/n/14.4 All EmberVLM training runs are conducted on 2$\
+OMS/cmsy/m/n/14.4 ^^B$\TU/TimesNewRoman(0)/m/n/14.4 NVIDIA A100 GPUs
  []
 
 
 Overfull \hbox (16.53096pt too wide) in paragraph at lines 11--12
-[]\TU/TimesNewRoman(0)/m/n/14.4 For classification benchmarks (Top-N Robot Selection, VERI-Emergency,
+[]\TU/TimesNewRoman(0)/m/n/14.4 For classification benchmarks (Top-N Robot Sele
+ction, VERI-Emergency,
  []
 
 
 Overfull \hbox (16.13509pt too wide) in paragraph at lines 16--17
-[]\TU/TimesNewRoman(0)/b/n/14.4 InternVL3-1B \TU/TimesNewRoman(0)/m/n/14.4 (938.2M parameters): requires discrete GPU, 1,978 MB
+[]\TU/TimesNewRoman(0)/b/n/14.4 InternVL3-1B \TU/TimesNewRoman(0)/m/n/14.4 (938
+.2M parameters): requires discrete GPU, 1,978 MB
  []
 
-[63
+[64
 
 ]
-File: ../EmberVLM/paper-template-Latest/figures/fig_multi_robot_distribution.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/fig_multi_robot_distribution.pn
+g Graphic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/fig_multi_robot_distribution.png>
-File: ../EmberVLM/paper-template-Latest/figures/fig_robot_cooccurrence.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/fig_robot_cooccurrence.png Grap
+hic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/fig_robot_cooccurrence.png>
-File: ../EmberVLM/paper-template-Latest/figures/fig_input_length_distribution.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/fig_input_length_distribution.p
+ng Graphic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/fig_input_length_distribution.png>
-File: ../EmberVLM/paper-template-Latest/figures/fig_single_output_distribution.png Graphic file (type bmp)
+File: ../EmberVLM/paper-template-Latest/figures/fig_single_output_distribution.
+png Graphic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/fig_single_output_distribution.png>
- [64]
+ [65]
 Overfull \vbox (69.86218pt too high) has occurred while \output is active []
 
- [65]
-File: ../EmberVLM/paper-template-Latest/figures/fig_subtask_count_distribution.png Graphic file (type bmp)
+
+[66]
+File: ../EmberVLM/paper-template-Latest/figures/fig_subtask_count_distribution.
+png Graphic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/fig_subtask_count_distribution.png>
 
 Overfull \hbox (5.38051pt too wide) in paragraph at lines 95--96
-\TU/TimesNewRoman(0)/m/n/14.4 degrades into a near single-class predictor (Exact Accuracy = 0.0960, Macro-
- []
-
-[66]
-Overfull \hbox (5.87146pt too wide) in paragraph at lines 139--140
-\TU/TimesNewRoman(0)/m/n/14.4 racy (0.6400) and a competitive UnderRx of 0.1400. InternVL3-1B achieves
+\TU/TimesNewRoman(0)/m/n/14.4 degrades into a near single-class predictor (Exac
+t Accuracy = 0.0960, Macro-
  []
 
 [67]
-Overfull \hbox (16.71912pt too wide) in paragraph at lines 141--142
-[]\TU/TimesNewRoman(0)/m/n/14.4 SmolVLM and SmolVLM2 achieve very low OverRx ($\OMS/cmsy/m/n/14.4 ^^T$\TU/TimesNewRoman(0)/m/n/14.4 0.01) but achieve
+Overfull \hbox (5.87146pt too wide) in paragraph at lines 139--140
+\TU/TimesNewRoman(0)/m/n/14.4 racy (0.6400) and a competitive UnderRx of 0.1400
+. InternVL3-1B achieves
  []
 
 [68]
-Overfull \hbox (0.32654pt too wide) in paragraph at lines 171--172
-\TU/TimesNewRoman(0)/m/n/14.4 quality-to-compute ratio of 17.1/1.03 versus 13.1/1.0 confirms that episodic
+Overfull \hbox (16.71912pt too wide) in paragraph at lines 141--142
+[]\TU/TimesNewRoman(0)/m/n/14.4 SmolVLM and SmolVLM2 achieve very low OverRx ($
+\OMS/cmsy/m/n/14.4 ^^T$\TU/TimesNewRoman(0)/m/n/14.4 0.01) but achieve
  []
 
 [69]
+Overfull \hbox (0.32654pt too wide) in paragraph at lines 171--172
+\TU/TimesNewRoman(0)/m/n/14.4 quality-to-compute ratio of 17.1/1.03 versus 13.1
+/1.0 confirms that episodic
+ []
+
+[70]
 Overfull \hbox (5.10052pt too wide) in paragraph at lines 173--174
-\TU/TimesNewRoman(0)/m/n/14.4 the fastest model on CPU). InternVL3-1B leads the three general-benchmark
+\TU/TimesNewRoman(0)/m/n/14.4 the fastest model on CPU). InternVL3-1B leads the
+ three general-benchmark
  []
 
 Package microtype Info: Character `textendash ' is missing
@@ -2105,20 +2448,24 @@ Package microtype Info: Character `textquotedblleft ' is missing
 Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/b/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
-[70] [71]
+[71] [72]
 Overfull \hbox (15.2947pt too wide) in paragraph at lines 349--350
-\TU/TimesNewRoman(0)/m/n/14.4 fect on the robot selection classification head, which uses a non-autoregressive
+\TU/TimesNewRoman(0)/m/n/14.4 fect on the robot selection classification head, 
+which uses a non-autoregressive
  []
 
-[72]
-File: ../EmberVLM/paper-template-Latest/figures/va_ablation_hallucination_drop.png Graphic file (type bmp)
+[73]
+File: ../EmberVLM/paper-template-Latest/figures/va_ablation_hallucination_drop.
+png Graphic file (type bmp)
 <../EmberVLM/paper-template-Latest/figures/va_ablation_hallucination_drop.png>
 
 Overfull \hbox (46.49506pt too wide) in paragraph at lines 379--380
-\TU/TimesNewRoman(0)/m/n/14.4 reduction for EmberVLM is robust across all three splits (Adversarial: 29% $\OMS/cmsy/m/n/14.4 !$ \TU/TimesNewRoman(0)/m/n/14.4 22%;
+\TU/TimesNewRoman(0)/m/n/14.4 reduction for EmberVLM is robust across all three
+ splits (Adversarial: 29% $\OMS/cmsy/m/n/14.4 !$ \TU/TimesNewRoman(0)/m/n/14.4 
+22%;
  []
 
-[73] [74]) (./100_sections/06_discussion.tex [75]
+[74] [75]) (./100_sections/06_discussion.tex [76]
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--29
@@ -2137,12 +2484,16 @@ Underfull \hbox (badness 4981) in paragraph at lines 29--29
 
 
 Underfull \hbox (badness 2617) in paragraph at lines 29--29
-[]|$\OML/cmm/m/it/14.4 K[]\OT1/cmr/m/n/14.4 512$\TU/TimesNewRoman(0)/m/n/14.4 , $\OML/cmm/m/it/14.4 C[]\OT1/cmr/m/n/14.4 128$ \TU/TimesNewRoman(0)/m/n/14.4 (1.2
+[]|$\OML/cmm/m/it/14.4 K[]\OT1/cmr/m/n/14.4 512$\TU/TimesNewRoman(0)/m/n/14.4 ,
+ $\OML/cmm/m/it/14.4 C[]\OT1/cmr/m/n/14.4 128$ \TU/TimesNewRoman(0)/m/n/14.4 (1
+.2
  []
 
 
 Underfull \hbox (badness 2617) in paragraph at lines 29--29
-[]|$\OML/cmm/m/it/14.4 K[]\OT1/cmr/m/n/14.4 512$\TU/TimesNewRoman(0)/m/n/14.4 , $\OML/cmm/m/it/14.4 C[]\OT1/cmr/m/n/14.4 576$ \TU/TimesNewRoman(0)/m/n/14.4 (1.2
+[]|$\OML/cmm/m/it/14.4 K[]\OT1/cmr/m/n/14.4 512$\TU/TimesNewRoman(0)/m/n/14.4 ,
+ $\OML/cmm/m/it/14.4 C[]\OT1/cmr/m/n/14.4 576$ \TU/TimesNewRoman(0)/m/n/14.4 (1
+.2
  []
 
 
@@ -2172,118 +2523,142 @@ Underfull \hbox (badness 1953) in paragraph at lines 29--29
 
 
 Underfull \hbox (badness 1082) in paragraph at lines 29--29
-[]|\TU/TimesNewRoman(0)/m/n/14.4 CPU-only, $\OML/cmm/m/it/14.4 <$\TU/TimesNewRoman(0)/m/n/14.4 800 MB,
+[]|\TU/TimesNewRoman(0)/m/n/14.4 CPU-only, $\OML/cmm/m/it/14.4 <$\TU/TimesNewRo
+man(0)/m/n/14.4 800 MB,
  []
 
 
 Overfull \hbox (18.27025pt too wide) in paragraph at lines 32--34
-[]\TU/TimesNewRoman(0)/m/n/14.4 Several design decisions were carried directly from BitMar to EmberVLM: 
+[]\TU/TimesNewRoman(0)/m/n/14.4 Several design decisions were carried directly 
+from BitMar to EmberVLM: 
  []
 
 
 Overfull \hbox (9.05464pt too wide) in paragraph at lines 41--42
-\TU/TimesNewRoman(0)/m/n/14.4 ponents provides better accuracy without requiring quantization-aware
+\TU/TimesNewRoman(0)/m/n/14.4 ponents provides better accuracy without requirin
+g quantization-aware
  []
 
 
 Overfull \hbox (13.86403pt too wide) in paragraph at lines 42--43
-[]\TU/TimesNewRoman(0)/b/n/14.4 Memory update mechanism\TU/TimesNewRoman(0)/m/n/14.4 : BitMar’s gradient-based memory writes
+[]\TU/TimesNewRoman(0)/b/n/14.4 Memory update mechanism\TU/TimesNewRoman(0)/m/n
+/14.4 : BitMar’s gradient-based memory writes
  []
 
-[76
+[77
 
-] [77]
+] [78]
 Overfull \hbox (5.08748pt too wide) in paragraph at lines 43--44
-[]\TU/TimesNewRoman(0)/b/n/14.4 Hallucination control\TU/TimesNewRoman(0)/m/n/14.4 : BitMar had no hallucination mechanism. The
+[]\TU/TimesNewRoman(0)/b/n/14.4 Hallucination control\TU/TimesNewRoman(0)/m/n/1
+4.4 : BitMar had no hallucination mechanism. The
  []
 
-[78]
+[79]
 Overfull \hbox (23.76329pt too wide) in paragraph at lines 58--59
-\TU/TimesNewRoman(0)/m/n/14.4 mitigation approaches. Prior methods (VCD, grounding supervision, retraining-
+\TU/TimesNewRoman(0)/m/n/14.4 mitigation approaches. Prior methods (VCD, ground
+ing supervision, retraining-
  []
 
 
 Overfull \hbox (1.23006pt too wide) in paragraph at lines 62--63
-[]\TU/TimesNewRoman(0)/m/n/14.4 This principle generalizes: every edge AI component in a safety-critical
- []
-
-[79]
-Overfull \hbox (9.36978pt too wide) in paragraph at lines 67--68
-[]\TU/TimesNewRoman(0)/m/n/14.4 The VA Refiner’s neuron-monitoring classifier is calibrated for SmolLM-
+[]\TU/TimesNewRoman(0)/m/n/14.4 This principle generalizes: every edge AI compo
+nent in a safety-critical
  []
 
 [80]
+Overfull \hbox (9.36978pt too wide) in paragraph at lines 67--68
+[]\TU/TimesNewRoman(0)/m/n/14.4 The VA Refiner’s neuron-monitoring classifier i
+s calibrated for SmolLM-
+ []
+
+[81]
 Overfull \hbox (0.33594pt too wide) in paragraph at lines 76--77
-\TU/TimesNewRoman(0)/m/n/14.4 sumes 65.6% of total emissions (16.65 kg) and is unavoidable for any model
+\TU/TimesNewRoman(0)/m/n/14.4 sumes 65.6% of total emissions (16.65 kg) and is 
+unavoidable for any model
  []
 
 
 Overfull \hbox (2.68436pt too wide) in paragraph at lines 78--79
-[]\TU/TimesNewRoman(0)/m/n/14.4 This decomposition suggests a practical framework for sustainable edge
+[]\TU/TimesNewRoman(0)/m/n/14.4 This decomposition suggests a practical framewo
+rk for sustainable edge
  []
 
-[81]) (./100_sections/07_conclusions.tex [82]
+[82]) (./100_sections/07_conclusions.tex [83]
 Chapter 7.
-[83
+[84
 
 ]
 Overfull \hbox (21.7514pt too wide) in paragraph at lines 15--16
-\TU/TimesNewRoman(0)/m/n/14.4 cently Used and Least Frequently Used eviction policy. It provides deployment-
+\TU/TimesNewRoman(0)/m/n/14.4 cently Used and Least Frequently Used eviction po
+licy. It provides deployment-
  []
 
 
 Overfull \hbox (10.36574pt too wide) in paragraph at lines 15--16
-\TU/TimesNewRoman(0)/m/n/14.4 optional Stage 5 knowledge consolidation distillation phase allows frequently
+\TU/TimesNewRoman(0)/m/n/14.4 optional Stage 5 knowledge consolidation distilla
+tion phase allows frequently
  []
 
 
 Overfull \hbox (6.48793pt too wide) in paragraph at lines 17--18
-[]\TU/TimesNewRoman(0)/m/n/14.4 The \TU/TimesNewRoman(0)/b/n/14.4 Visual Absence (VA) Refiner \TU/TimesNewRoman(0)/m/n/14.4 is a training-free, zero-extra-forward-
+[]\TU/TimesNewRoman(0)/m/n/14.4 The \TU/TimesNewRoman(0)/b/n/14.4 Visual Absenc
+e (VA) Refiner \TU/TimesNewRoman(0)/m/n/14.4 is a training-free, zero-extra-for
+ward-
  []
 
-[84]
+[85]
 Overfull \hbox (15.58781pt too wide) in paragraph at lines 22--23
- \TU/TimesNewRoman(0)/b/n/14.4 Overall results.[] \TU/TimesNewRoman(0)/m/n/14.4 EmberVLM achieves the best reported performance among
+ \TU/TimesNewRoman(0)/b/n/14.4 Overall results.[] \TU/TimesNewRoman(0)/m/n/14.4
+ EmberVLM achieves the best reported performance among
  []
 
 
 Overfull \hbox (3.46704pt too wide) in paragraph at lines 22--23
-\TU/TimesNewRoman(0)/m/n/14.4 sub-billion-parameter models on all three mission-critical benchmarks: Top-
+\TU/TimesNewRoman(0)/m/n/14.4 sub-billion-parameter models on all three mission
+-critical benchmarks: Top-
  []
 
 
 Overfull \hbox (2.57045pt too wide) in paragraph at lines 24--25
-[]\TU/TimesNewRoman(0)/m/n/14.4 Together, these two works demonstrate that mission-critical multimodal
+[]\TU/TimesNewRoman(0)/m/n/14.4 Together, these two works demonstrate that miss
+ion-critical multimodal
  []
 
-[85]
+[86]
 Overfull \hbox (0.6523pt too wide) in paragraph at lines 38--39
- \TU/TimesNewRoman(0)/b/n/14.4 Multi-agent verification.[] \TU/TimesNewRoman(0)/m/n/14.4 The temporal burst detector currently escalates
+ \TU/TimesNewRoman(0)/b/n/14.4 Multi-agent verification.[] \TU/TimesNewRoman(0)
+/m/n/14.4 The temporal burst detector currently escalates
  []
 
-[86]) (./matters/back/ntust_backpages.tex
+[87]) (./matters/back/ntust_backpages.tex
 Overfull \hbox (19.96947pt too wide) in paragraph at lines 44--5
- \TU/TimesNewRoman(0)/b/n/14.4 Post-training quantization for ultra-low-power deployment.[] \TU/TimesNewRoman(0)/m/n/14.4 EmberVLM
+ \TU/TimesNewRoman(0)/b/n/14.4 Post-training quantization for ultra-low-power d
+eployment.[] \TU/TimesNewRoman(0)/m/n/14.4 EmberVLM
  []
 
-[87] (./my_ntust_thesis.bbl
+[88] (./my_ntust_thesis.bbl
 Underfull \hbox (badness 10000) detected at line 1
 \TU/TimesNewRoman(0)/b/n/24.88 References
  []
 
 
 Underfull \hbox (badness 1694) in paragraph at lines 14--16
-[]\TU/TimesNewRoman(0)/m/n/10 Google DeepMind Team, “Gemini: A family of highly capable multimodal models,” 2023.
+[]\TU/TimesNewRoman(0)/m/n/10 Google DeepMind Team, “Gemini: A family of highly
+ capable multimodal models,” 2023.
  []
 
 
 Underfull \hbox (badness 1377) in paragraph at lines 33--34
-[]\TU/TimesNewRoman(0)/m/n/10 Y. Zhu \TU/TimesNewRoman(0)/m/it/10 et al.\TU/TimesNewRoman(0)/m/n/10 , “LLaVA-Phi: Efficient multi-modal assistant with small language model,” in
+[]\TU/TimesNewRoman(0)/m/n/10 Y. Zhu \TU/TimesNewRoman(0)/m/it/10 et al.\TU/Tim
+esNewRoman(0)/m/n/10 , “LLaVA-Phi: Efficient multi-modal assistant with small l
+anguage model,” in
  []
 
-[88
+[89
 
-] [89]) (./matters/back/appendix.tex (./200_appendices/a.tex) (./200_appendices/b.tex) (./200_appendices/c.tex))) [90] (./my_ntust_thesis.aux)
+] [90]) (./matters/back/appendix.tex (./200_appendices/a.tex)
+(./200_appendices/b.tex) (./200_appendices/c.tex))) [91] (./my_ntust_thesis.aux
+)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
@@ -2294,12 +2669,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 38038 strings out of 467984
- 953982 string characters out of 5432911
- 1607871 words of memory out of 5000000
- 66174 multiletter control sequences out of 15000+600000
+ 38047 strings out of 467984
+ 954085 string characters out of 5432911
+ 1607873 words of memory out of 5000000
+ 66183 multiletter control sequences out of 15000+600000
  646847 words of font info for 168 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,17n,108p,1369b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,108p,1330b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on my_ntust_thesis.pdf (109 pages).
+Output written on my_ntust_thesis.pdf (111 pages).

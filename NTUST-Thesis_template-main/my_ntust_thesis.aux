@@ -7,8 +7,8 @@
 \@writefile{toc}{\contentsline {chapter}{Acknowledgements}{VI}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{Contents}{VII}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{List of Figures}{XII}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{List of Tables}{XVI}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{List of Algorithms}{XVIII}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{List of Tables}{XVII}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{List of Algorithms}{XIX}{}\protected@file@percent }
 \citation{alayrac2022flamingo}
 \citation{li2023blip2}
 \citation{openai2023gpt4}
@@ -246,118 +246,120 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces \textbf  {EmberVLM four-stage training curriculum.} Stage~1 freezes both backbones and trains only the Fusion Module for visual-language alignment. Stage~2 unfreezes the language backbone for instruction tuning. Stage~3 re-freezes the backbone and trains the Reasoning Head for robot fleet selection. Stage~4 trains the Reasoning Head via InfoNCE contrastive loss to align internal step-embeddings with procedurally generated chain-of-thought rationales.}}{57}{}\protected@file@percent }
 \newlabel{fig:embervlm_stages}{{4.4}{57}{}{figure.4.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Stage 2: Multimodal Instruction Tuning}{57}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.3}Stage 3: Robot Fleet Selection}{57}{}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces \textbf  {EmberVLM training datasets across all stages.}}}{58}{}\protected@file@percent }
 \newlabel{tab:embervlm_datasets}{{4.4}{58}{}{table.4.4}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces \textbf  {EmberVLM training hyperparameters by stage.}}}{58}{}\protected@file@percent }
 \newlabel{tab:embervlm_hyperparams}{{4.5}{58}{}{table.4.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \textbf  {Representative training samples across stages.} Stage~1 alignment samples pair images with short captions. Stage~2 instruction tuning samples involve multi-turn visual dialogue. Stages~3--4 use structured robot-selection prompts with multi-label annotations and programmatic chain-of-thought rationales.}}{59}{}\protected@file@percent }
 \newlabel{fig:embervlm_stage_samples}{{4.5}{59}{}{figure.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.3}Stage 3: Robot Fleet Selection}{59}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.7.4}Stage 4: Latent Chain-of-Thought Integration}{59}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Dynamic Tiered Memory Management}{60}{}\protected@file@percent }
-\newlabel{sec:embervlm_tiered_memory}{{4.8}{60}{}{section.4.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \textbf  {Target edge deployment environments.} EmberVLM is designed for CPU-only hardware platforms such as the AMD Ryzen 3 4100 (3.80~GHz, 32~GB RAM, no discrete GPU), representative of resource-constrained field units used in emergency response, autonomous robotics, and remote sensing applications.}}{60}{}\protected@file@percent }
-\newlabel{fig:embervlm_edge}{{4.6}{60}{}{figure.4.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \textbf  {Text-to-patch attention progression during Stage 1 alignment training.} Each row shows a training checkpoint (early, mid, late). The left column shows the input image with its associated caption; the right column shows the corresponding text-to-patch attention heatmap. Warm colors (red/yellow) indicate high attention weight on image patches. As training progresses, diffuse initial attention concentrates onto the semantically relevant regions of the scene, demonstrating the Fusion Module's acquisition of cross-modal visual grounding.}}{60}{}\protected@file@percent }
+\newlabel{fig:stage1_heatmap}{{4.6}{60}{}{figure.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Dynamic Tiered Memory Management}{61}{}\protected@file@percent }
+\newlabel{sec:embervlm_tiered_memory}{{4.8}{61}{}{section.4.8}{}}
 \citation{patterson2021carbon}
-\@writefile{toc}{\contentsline {section}{\numberline {4.9}Carbon Footprint Analysis}{61}{}\protected@file@percent }
-\newlabel{sec:embervlm_carbon}{{4.9}{61}{}{section.4.9}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces \textbf  {Training carbon emissions (CodeCarbon-measured).} All values are measured, not estimated. Training on 2$\times $A100 GPUs.}}{61}{}\protected@file@percent }
-\newlabel{tab:embervlm_emissions}{{4.6}{61}{}{table.4.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces \textbf  {Target edge deployment environments.} EmberVLM is designed for CPU-only hardware platforms such as the AMD Ryzen 3 4100 (3.80~GHz, 32~GB RAM, no discrete GPU), representative of resource-constrained field units used in emergency response, autonomous robotics, and remote sensing applications.}}{62}{}\protected@file@percent }
+\newlabel{fig:embervlm_edge}{{4.7}{62}{}{figure.4.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.9}Carbon Footprint Analysis}{62}{}\protected@file@percent }
+\newlabel{sec:embervlm_carbon}{{4.9}{62}{}{section.4.9}{}}
 \citation{codecarbon}
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces \textbf  {Training carbon emissions (CodeCarbon-measured).} All values are measured, not estimated. Training on 2$\times $A100 GPUs.}}{63}{}\protected@file@percent }
+\newlabel{tab:embervlm_emissions}{{4.6}{63}{}{table.4.6}{}}
 \citation{li2023pope}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Experiments and Results}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Experiments and Results}{64}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cha:experiments}{{5}{63}{}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Experimental Setup}{63}{}\protected@file@percent }
-\newlabel{sec:exp_setup}{{5.1}{63}{}{section.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Hardware and Software}{63}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Evaluation Protocol}{63}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Baseline Models}{63}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Robot Selection Dataset}{64}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf  {Robot Selection dataset statistics.} (a) Per-class label counts across train/val/test splits. Underwater Robot and Robot with Wheels are the most scarce classes, contributing to high prediction variance on the validation split. (b) Class co-occurrence matrix showing which robot types are frequently annotated together in the same scenario.}}{65}{}\protected@file@percent }
-\newlabel{fig:robot_distribution}{{5.1}{65}{}{figure.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {Robot Selection input and output statistics.} (a) Input scenario descriptions are predominantly 20--80 tokens long, well within the 256-token maximum sequence length used in Stages~3--4. (b) The single-label output class distribution confirms that multi-robot scenarios are common, validating the multi-label evaluation protocol.}}{65}{}\protected@file@percent }
-\newlabel{fig:input_distribution}{{5.2}{65}{}{figure.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Mission-Critical Benchmark Results}{65}{}\protected@file@percent }
-\newlabel{sec:exp_mission_critical}{{5.2}{65}{}{section.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Top-N Robot Selection}{65}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces \textbf  {Performance on mission-critical visual recognition benchmarks.} Time(s) = total wall-clock over the full evaluation set on the AMD Ryzen 3 4100 CPU. OverRx / UnderRx = over/under-reaction rates (lower UnderRx is safer).}}{66}{}\protected@file@percent }
-\newlabel{tab:mission_critical}{{5.1}{66}{}{table.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \textbf  {Distribution of required robot types per scenario.} Most scenarios require two or more robot types, confirming that single-label classification is insufficient and validating the multi-label evaluation protocol using Macro-F1 and Jaccard similarity.}}{66}{}\protected@file@percent }
-\newlabel{fig:robot_subtasks}{{5.3}{66}{}{figure.5.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces \textbf  {Robot fleet selection ablation.} 103-sample validation split. ECE: lower is better ($\downarrow $); all others: higher is better ($\uparrow $).}}{67}{}\protected@file@percent }
-\newlabel{tab:robot_selection_detail}{{5.2}{67}{}{table.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}VERI-Emergency}{67}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces \textbf  {Top-N Robot Selection dataset split statistics.} Per-class sample counts across train, validation, and test splits. Classes are imbalanced, with Underwater Robot and Robot with Wheels being the least frequent.}}{68}{}\protected@file@percent }
-\newlabel{tab:robot_dataset_stats}{{5.3}{68}{}{table.5.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}GEO-Bench-VLM}{68}{}\protected@file@percent }
+\newlabel{cha:experiments}{{5}{64}{}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Experimental Setup}{64}{}\protected@file@percent }
+\newlabel{sec:exp_setup}{{5.1}{64}{}{section.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Hardware and Software}{64}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Evaluation Protocol}{64}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Baseline Models}{64}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Robot Selection Dataset}{65}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces \textbf  {Robot Selection dataset statistics.} (a) Per-class label counts across train/val/test splits. Underwater Robot and Robot with Wheels are the most scarce classes, contributing to high prediction variance on the validation split. (b) Class co-occurrence matrix showing which robot types are frequently annotated together in the same scenario.}}{66}{}\protected@file@percent }
+\newlabel{fig:robot_distribution}{{5.1}{66}{}{figure.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \textbf  {Robot Selection input and output statistics.} (a) Input scenario descriptions are predominantly 20--80 tokens long, well within the 256-token maximum sequence length used in Stages~3--4. (b) The single-label output class distribution confirms that multi-robot scenarios are common, validating the multi-label evaluation protocol.}}{66}{}\protected@file@percent }
+\newlabel{fig:input_distribution}{{5.2}{66}{}{figure.5.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Mission-Critical Benchmark Results}{66}{}\protected@file@percent }
+\newlabel{sec:exp_mission_critical}{{5.2}{66}{}{section.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Top-N Robot Selection}{66}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces \textbf  {Performance on mission-critical visual recognition benchmarks.} Time(s) = total wall-clock over the full evaluation set on the AMD Ryzen 3 4100 CPU. OverRx / UnderRx = over/under-reaction rates (lower UnderRx is safer).}}{67}{}\protected@file@percent }
+\newlabel{tab:mission_critical}{{5.1}{67}{}{table.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \textbf  {Distribution of required robot types per scenario.} Most scenarios require two or more robot types, confirming that single-label classification is insufficient and validating the multi-label evaluation protocol using Macro-F1 and Jaccard similarity.}}{67}{}\protected@file@percent }
+\newlabel{fig:robot_subtasks}{{5.3}{67}{}{figure.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces \textbf  {Robot fleet selection ablation.} 103-sample validation split. ECE: lower is better ($\downarrow $); all others: higher is better ($\uparrow $).}}{68}{}\protected@file@percent }
+\newlabel{tab:robot_selection_detail}{{5.2}{68}{}{table.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}VERI-Emergency}{68}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces \textbf  {Top-N Robot Selection dataset split statistics.} Per-class sample counts across train, validation, and test splits. Classes are imbalanced, with Underwater Robot and Robot with Wheels being the least frequent.}}{69}{}\protected@file@percent }
+\newlabel{tab:robot_dataset_stats}{{5.3}{69}{}{table.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}GEO-Bench-VLM}{69}{}\protected@file@percent }
 \citation{hudson2019gqa}
 \citation{altahan2024unibench}
 \citation{hsieh2023sugarcrepe}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}General Multimodal Benchmarks}{69}{}\protected@file@percent }
-\newlabel{sec:exp_general}{{5.3}{69}{}{section.5.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces \textbf  {General multimodal benchmarks and inference efficiency.}}}{69}{}\protected@file@percent }
-\newlabel{tab:general_benchmarks}{{5.4}{69}{}{table.5.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf  {Five-axis normalized benchmark radar.} EmberVLM (red, filled) leads on MC Score (${\approx }0.95$, collapsing Top-N Robot Selection, VERI-Emergency, and GEO-Bench) and dominates the Latency Efficiency axis (inverted: min\_latency/latency, so CPU-only EmberVLM = 1.0 and GPU baselines near zero). InternVL3-1B sweeps the three general-benchmark axes but scores near zero on latency efficiency, confirming it is unsuitable for the target hardware despite its higher VQA accuracy. The \textbf  {MC Score} and \textbf  {Latency Efficiency} axes directly govern edge deployment viability.}}{70}{}\protected@file@percent }
-\newlabel{fig:radar_mission}{{5.4}{70}{}{figure.5.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Episodic Memory Ablation}{71}{}\protected@file@percent }
-\newlabel{sec:exp_memory_ablation}{{5.4}{71}{}{section.5.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces \textbf  {Memory mode ablation across mission-critical benchmarks.}}}{71}{}\protected@file@percent }
-\newlabel{tab:memory_mode_ablation}{{5.5}{71}{}{table.5.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \textbf  {Per-class F1 radar chart across memory modes (Top-N Robot Selection).} READ\_ONLY achieves the broadest coverage overall. ONLINE\_UPDATE shows stronger per-class recall on the Underwater Robot axis, the scarcest class (13 validation samples), suggesting live writes partially address rare-morphology prediction.}}{72}{}\protected@file@percent }
-\newlabel{fig:radar_memory}{{5.5}{72}{}{figure.5.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Visual Absence Refiner Ablation}{72}{}\protected@file@percent }
-\newlabel{sec:exp_va_ablation}{{5.5}{72}{}{section.5.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces \textbf  {VA Refiner component ablation across all mission-critical benchmarks.} Memory mode = ONLINE\_UPDATE for all rows. $\downarrow $ = lower is better.}}{72}{}\protected@file@percent }
-\newlabel{tab:va_ablation}{{5.6}{72}{}{table.5.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \textbf  {VA Refiner hallucination drop on POPE Adversarial split.} Each bar shows the hallucination rate before and after VA Refiner activation. EmberVLM achieves the largest absolute reduction ($-$7pp, from 29\% to 22\%), while SmolVLM2-256M also shows a substantial improvement ($-$3.47pp). InternVL3-1B and SmolVLM-256M show no benefit, consistent with their strong internal visual grounding.}}{73}{}\protected@file@percent }
-\newlabel{fig:va_drop}{{5.6}{73}{}{figure.5.6}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces \textbf  {POPE hallucination rates by split.} Evaluated on the complete 9{,}000-sample POPE dataset. $\Delta \downarrow $ = absolute hallucination rate reduction; lower is better.}}{73}{}\protected@file@percent }
-\newlabel{tab:pope_results}{{5.7}{73}{}{table.5.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Edge Deployment Latency Analysis}{74}{}\protected@file@percent }
-\newlabel{sec:exp_latency}{{5.6}{74}{}{section.5.6}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces \textbf  {CPU-only edge inference latency} on AMD Ryzen 3 4100. Full stack = Model + VA Refiner + Memory.}}{74}{}\protected@file@percent }
-\newlabel{tab:latency}{{5.8}{74}{}{table.5.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Mechanistic Analysis of Hallucinations}{75}{}\protected@file@percent }
-\newlabel{sec:exp_mechanistic}{{5.7}{75}{}{section.5.7}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{76}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}General Multimodal Benchmarks}{70}{}\protected@file@percent }
+\newlabel{sec:exp_general}{{5.3}{70}{}{section.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces \textbf  {General multimodal benchmarks and inference efficiency.}}}{70}{}\protected@file@percent }
+\newlabel{tab:general_benchmarks}{{5.4}{70}{}{table.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \textbf  {Five-axis normalized benchmark radar.} EmberVLM (red, filled) leads on MC Score (${\approx }0.95$, collapsing Top-N Robot Selection, VERI-Emergency, and GEO-Bench) and dominates the Latency Efficiency axis (inverted: min\_latency/latency, so CPU-only EmberVLM = 1.0 and GPU baselines near zero). InternVL3-1B sweeps the three general-benchmark axes but scores near zero on latency efficiency, confirming it is unsuitable for the target hardware despite its higher VQA accuracy. The \textbf  {MC Score} and \textbf  {Latency Efficiency} axes directly govern edge deployment viability.}}{71}{}\protected@file@percent }
+\newlabel{fig:radar_mission}{{5.4}{71}{}{figure.5.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Episodic Memory Ablation}{72}{}\protected@file@percent }
+\newlabel{sec:exp_memory_ablation}{{5.4}{72}{}{section.5.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces \textbf  {Memory mode ablation across mission-critical benchmarks.}}}{72}{}\protected@file@percent }
+\newlabel{tab:memory_mode_ablation}{{5.5}{72}{}{table.5.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces \textbf  {Per-class F1 radar chart across memory modes (Top-N Robot Selection).} READ\_ONLY achieves the broadest coverage overall. ONLINE\_UPDATE shows stronger per-class recall on the Underwater Robot axis, the scarcest class (13 validation samples), suggesting live writes partially address rare-morphology prediction.}}{73}{}\protected@file@percent }
+\newlabel{fig:radar_memory}{{5.5}{73}{}{figure.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Visual Absence Refiner Ablation}{73}{}\protected@file@percent }
+\newlabel{sec:exp_va_ablation}{{5.5}{73}{}{section.5.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces \textbf  {VA Refiner component ablation across all mission-critical benchmarks.} Memory mode = ONLINE\_UPDATE for all rows. $\downarrow $ = lower is better.}}{73}{}\protected@file@percent }
+\newlabel{tab:va_ablation}{{5.6}{73}{}{table.5.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \textbf  {VA Refiner hallucination drop on POPE Adversarial split.} Each bar shows the hallucination rate before and after VA Refiner activation. EmberVLM achieves the largest absolute reduction ($-$7pp, from 29\% to 22\%), while SmolVLM2-256M also shows a substantial improvement ($-$3.47pp). InternVL3-1B and SmolVLM-256M show no benefit, consistent with their strong internal visual grounding.}}{74}{}\protected@file@percent }
+\newlabel{fig:va_drop}{{5.6}{74}{}{figure.5.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces \textbf  {POPE hallucination rates by split.} Evaluated on the complete 9{,}000-sample POPE dataset. $\Delta \downarrow $ = absolute hallucination rate reduction; lower is better.}}{74}{}\protected@file@percent }
+\newlabel{tab:pope_results}{{5.7}{74}{}{table.5.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Edge Deployment Latency Analysis}{75}{}\protected@file@percent }
+\newlabel{sec:exp_latency}{{5.6}{75}{}{section.5.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces \textbf  {CPU-only edge inference latency} on AMD Ryzen 3 4100. Full stack = Model + VA Refiner + Memory.}}{75}{}\protected@file@percent }
+\newlabel{tab:latency}{{5.8}{75}{}{table.5.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Mechanistic Analysis of Hallucinations}{76}{}\protected@file@percent }
+\newlabel{sec:exp_mechanistic}{{5.7}{76}{}{section.5.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{77}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cha:discussion}{{6}{76}{}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Research Progression: From BitMar to EmberVLM}{76}{}\protected@file@percent }
-\newlabel{sec:disc_progression}{{6.1}{76}{}{section.6.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces \textbf  {Architectural progression from BitMar to EmberVLM.}}}{77}{}\protected@file@percent }
-\newlabel{tab:progression_comparison}{{6.1}{77}{}{table.6.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}The Case for Episodic Memory at the Edge}{78}{}\protected@file@percent }
-\newlabel{sec:disc_memory_case}{{6.2}{78}{}{section.6.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Hallucination as a Systems Problem}{79}{}\protected@file@percent }
-\newlabel{sec:disc_hallucination_systems}{{6.3}{79}{}{section.6.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Cross-Architecture Transfer of the VA Refiner}{80}{}\protected@file@percent }
-\newlabel{sec:disc_va_transfer}{{6.4}{80}{}{section.6.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Sustainable Edge AI}{81}{}\protected@file@percent }
-\newlabel{sec:disc_sustainability}{{6.5}{81}{}{section.6.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.6}Limitations}{81}{}\protected@file@percent }
-\newlabel{sec:disc_limitations}{{6.6}{81}{}{section.6.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Fixed episodic memory capacity.}{82}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Architecture-specific VA Refiner.}{82}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{High-resolution visual tasks.}{82}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{83}{}\protected@file@percent }
+\newlabel{cha:discussion}{{6}{77}{}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Research Progression: From BitMar to EmberVLM}{77}{}\protected@file@percent }
+\newlabel{sec:disc_progression}{{6.1}{77}{}{section.6.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces \textbf  {Architectural progression from BitMar to EmberVLM.}}}{78}{}\protected@file@percent }
+\newlabel{tab:progression_comparison}{{6.1}{78}{}{table.6.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}The Case for Episodic Memory at the Edge}{79}{}\protected@file@percent }
+\newlabel{sec:disc_memory_case}{{6.2}{79}{}{section.6.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Hallucination as a Systems Problem}{80}{}\protected@file@percent }
+\newlabel{sec:disc_hallucination_systems}{{6.3}{80}{}{section.6.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Cross-Architecture Transfer of the VA Refiner}{81}{}\protected@file@percent }
+\newlabel{sec:disc_va_transfer}{{6.4}{81}{}{section.6.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Sustainable Edge AI}{82}{}\protected@file@percent }
+\newlabel{sec:disc_sustainability}{{6.5}{82}{}{section.6.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Limitations}{82}{}\protected@file@percent }
+\newlabel{sec:disc_limitations}{{6.6}{82}{}{section.6.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Fixed episodic memory capacity.}{83}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Architecture-specific VA Refiner.}{83}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{High-resolution visual tasks.}{83}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{84}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{cha:conclusion}{{7}{83}{}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Conclusions}{83}{}\protected@file@percent }
-\newlabel{sec:conclusions}{{7.1}{83}{}{section.7.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{BitMar.}{83}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{EmberVLM.}{84}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Overall results.}{85}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Future Work}{86}{}\protected@file@percent }
-\newlabel{sec:future_work}{{7.2}{86}{}{section.7.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{Adaptive and hierarchical episodic memory.}{86}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Cross-backbone VA Refiner transfer.}{86}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Multi-agent verification.}{87}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Larger and more diverse evaluation sets.}{87}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Post-training quantization for ultra-low-power deployment.}{87}{}\protected@file@percent }
+\newlabel{cha:conclusion}{{7}{84}{}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Conclusions}{84}{}\protected@file@percent }
+\newlabel{sec:conclusions}{{7.1}{84}{}{section.7.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{BitMar.}{84}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{EmberVLM.}{85}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Overall results.}{86}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Future Work}{87}{}\protected@file@percent }
+\newlabel{sec:future_work}{{7.2}{87}{}{section.7.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Adaptive and hierarchical episodic memory.}{87}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Cross-backbone VA Refiner transfer.}{87}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Multi-agent verification.}{88}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Larger and more diverse evaluation sets.}{88}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Post-training quantization for ultra-low-power deployment.}{88}{}\protected@file@percent }
 \bibstyle{ieeetr}
 \bibdata{BIB/reference}
 \bibcite{alayrac2022flamingo}{1}
@@ -377,7 +379,7 @@
 \bibcite{frantar2022gptq}{15}
 \bibcite{lin2023awq}{16}
 \bibcite{graves2016dnc}{17}
-\@writefile{toc}{\contentsline {chapter}{References}{88}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{References}{89}{}\protected@file@percent }
 \bibcite{wu2022memorising}{18}
 \bibcite{lewis2020rag}{19}
 \bibcite{das2024larimar}{20}
@@ -404,4 +406,4 @@
 \bibcite{marino2019okvqa}{41}
 \bibcite{schwenk2022aokvqa}{42}
 \bibcite{altahan2024unibench}{43}
-\gdef \@abspage@last{109}
+\gdef \@abspage@last{111}

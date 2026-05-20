@@ -359,6 +359,15 @@ EmberVLM is trained through four supervised stages, each targeting a distinct ca
 \subsection{Stage 1: Visual-Language Alignment}
 Vision and language backbones remain frozen; only the Fusion Module is actively trained. The model learns to map raw DINOv2 visual features into meaningful linguistic token space by predicting captions and answering standard visual queries across eight diverse datasets. This stage establishes the multimodal grounding capability without modifying the pretrained language or vision representations.
 
+Figure~\ref{fig:stage1_heatmap} visualizes how text-to-patch attention evolves across training checkpoints during Stage 1. At the start of training (top row), attention is diffuse and unstructured. By mid-training (middle row), the model begins concentrating attention on semantically relevant regions consistent with the caption. By the end of Stage 1 (bottom row), attention is sharply localized to the salient scene elements described in the caption, confirming that the Fusion Module has learned to ground linguistic concepts in specific image patches.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.85\linewidth]{heatmap_stage1.png}
+    \caption{\textbf{Text-to-patch attention progression during Stage 1 alignment training.} Each row shows a training checkpoint (early, mid, late). The left column shows the input image with its associated caption; the right column shows the corresponding text-to-patch attention heatmap. Warm colors (red/yellow) indicate high attention weight on image patches. As training progresses, diffuse initial attention concentrates onto the semantically relevant regions of the scene, demonstrating the Fusion Module's acquisition of cross-modal visual grounding.}
+    \label{fig:stage1_heatmap}
+\end{figure}
+
 \subsection{Stage 2: Multimodal Instruction Tuning}
 The vision encoder remains frozen, but both the Fusion Module and the Language Backbone are fully unfrozen and fine-tuned end-to-end on LLaVA Instruct 150K. This enables the model to interpret nuanced human instructions and engage in multi-turn visual dialogue grounded in image content. Unfreezing the backbone in Stage 2 is the primary source of adaptable capacity in EmberVLM's training.
 

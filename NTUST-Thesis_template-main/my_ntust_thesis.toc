@@ -5,8 +5,8 @@
 \contentsline {chapter}{Acknowledgements}{VI}{}%
 \contentsline {chapter}{Contents}{VII}{}%
 \contentsline {chapter}{List of Figures}{XII}{}%
-\contentsline {chapter}{List of Tables}{XVI}{}%
-\contentsline {chapter}{List of Algorithms}{XVIII}{}%
+\contentsline {chapter}{List of Tables}{XVII}{}%
+\contentsline {chapter}{List of Algorithms}{XIX}{}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{}%
 \contentsline {section}{\numberline {1.1}Background and Motivation}{1}{}%
 \contentsline {section}{\numberline {1.2}Research Challenges}{3}{}%
@@ -91,44 +91,44 @@
 \contentsline {section}{\numberline {4.7}Four-Stage Training Curriculum}{55}{}%
 \contentsline {subsection}{\numberline {4.7.1}Stage 1: Visual-Language Alignment}{56}{}%
 \contentsline {subsection}{\numberline {4.7.2}Stage 2: Multimodal Instruction Tuning}{57}{}%
-\contentsline {subsection}{\numberline {4.7.3}Stage 3: Robot Fleet Selection}{57}{}%
+\contentsline {subsection}{\numberline {4.7.3}Stage 3: Robot Fleet Selection}{59}{}%
 \contentsline {subsection}{\numberline {4.7.4}Stage 4: Latent Chain-of-Thought Integration}{59}{}%
-\contentsline {section}{\numberline {4.8}Dynamic Tiered Memory Management}{60}{}%
-\contentsline {section}{\numberline {4.9}Carbon Footprint Analysis}{61}{}%
-\contentsline {chapter}{\numberline {5}Experiments and Results}{63}{}%
-\contentsline {section}{\numberline {5.1}Experimental Setup}{63}{}%
-\contentsline {subsection}{\numberline {5.1.1}Hardware and Software}{63}{}%
-\contentsline {subsection}{\numberline {5.1.2}Evaluation Protocol}{63}{}%
-\contentsline {subsection}{\numberline {5.1.3}Baseline Models}{63}{}%
-\contentsline {subsection}{\numberline {5.1.4}Robot Selection Dataset}{64}{}%
-\contentsline {section}{\numberline {5.2}Mission-Critical Benchmark Results}{65}{}%
-\contentsline {subsection}{\numberline {5.2.1}Top-N Robot Selection}{65}{}%
-\contentsline {subsection}{\numberline {5.2.2}VERI-Emergency}{67}{}%
-\contentsline {subsection}{\numberline {5.2.3}GEO-Bench-VLM}{68}{}%
-\contentsline {section}{\numberline {5.3}General Multimodal Benchmarks}{69}{}%
-\contentsline {section}{\numberline {5.4}Episodic Memory Ablation}{71}{}%
-\contentsline {section}{\numberline {5.5}Visual Absence Refiner Ablation}{72}{}%
-\contentsline {section}{\numberline {5.6}Edge Deployment Latency Analysis}{74}{}%
-\contentsline {section}{\numberline {5.7}Mechanistic Analysis of Hallucinations}{75}{}%
-\contentsline {chapter}{\numberline {6}Discussion}{76}{}%
-\contentsline {section}{\numberline {6.1}Research Progression: From BitMar to EmberVLM}{76}{}%
-\contentsline {section}{\numberline {6.2}The Case for Episodic Memory at the Edge}{78}{}%
-\contentsline {section}{\numberline {6.3}Hallucination as a Systems Problem}{79}{}%
-\contentsline {section}{\numberline {6.4}Cross-Architecture Transfer of the VA Refiner}{80}{}%
-\contentsline {section}{\numberline {6.5}Sustainable Edge AI}{81}{}%
-\contentsline {section}{\numberline {6.6}Limitations}{81}{}%
-\contentsline {paragraph}{Fixed episodic memory capacity.}{82}{}%
-\contentsline {paragraph}{Architecture-specific VA Refiner.}{82}{}%
-\contentsline {paragraph}{High-resolution visual tasks.}{82}{}%
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{83}{}%
-\contentsline {section}{\numberline {7.1}Conclusions}{83}{}%
-\contentsline {paragraph}{BitMar.}{83}{}%
-\contentsline {paragraph}{EmberVLM.}{84}{}%
-\contentsline {paragraph}{Overall results.}{85}{}%
-\contentsline {section}{\numberline {7.2}Future Work}{86}{}%
-\contentsline {paragraph}{Adaptive and hierarchical episodic memory.}{86}{}%
-\contentsline {paragraph}{Cross-backbone VA Refiner transfer.}{86}{}%
-\contentsline {paragraph}{Multi-agent verification.}{87}{}%
-\contentsline {paragraph}{Larger and more diverse evaluation sets.}{87}{}%
-\contentsline {paragraph}{Post-training quantization for ultra-low-power deployment.}{87}{}%
-\contentsline {chapter}{References}{88}{}%
+\contentsline {section}{\numberline {4.8}Dynamic Tiered Memory Management}{61}{}%
+\contentsline {section}{\numberline {4.9}Carbon Footprint Analysis}{62}{}%
+\contentsline {chapter}{\numberline {5}Experiments and Results}{64}{}%
+\contentsline {section}{\numberline {5.1}Experimental Setup}{64}{}%
+\contentsline {subsection}{\numberline {5.1.1}Hardware and Software}{64}{}%
+\contentsline {subsection}{\numberline {5.1.2}Evaluation Protocol}{64}{}%
+\contentsline {subsection}{\numberline {5.1.3}Baseline Models}{64}{}%
+\contentsline {subsection}{\numberline {5.1.4}Robot Selection Dataset}{65}{}%
+\contentsline {section}{\numberline {5.2}Mission-Critical Benchmark Results}{66}{}%
+\contentsline {subsection}{\numberline {5.2.1}Top-N Robot Selection}{66}{}%
+\contentsline {subsection}{\numberline {5.2.2}VERI-Emergency}{68}{}%
+\contentsline {subsection}{\numberline {5.2.3}GEO-Bench-VLM}{69}{}%
+\contentsline {section}{\numberline {5.3}General Multimodal Benchmarks}{70}{}%
+\contentsline {section}{\numberline {5.4}Episodic Memory Ablation}{72}{}%
+\contentsline {section}{\numberline {5.5}Visual Absence Refiner Ablation}{73}{}%
+\contentsline {section}{\numberline {5.6}Edge Deployment Latency Analysis}{75}{}%
+\contentsline {section}{\numberline {5.7}Mechanistic Analysis of Hallucinations}{76}{}%
+\contentsline {chapter}{\numberline {6}Discussion}{77}{}%
+\contentsline {section}{\numberline {6.1}Research Progression: From BitMar to EmberVLM}{77}{}%
+\contentsline {section}{\numberline {6.2}The Case for Episodic Memory at the Edge}{79}{}%
+\contentsline {section}{\numberline {6.3}Hallucination as a Systems Problem}{80}{}%
+\contentsline {section}{\numberline {6.4}Cross-Architecture Transfer of the VA Refiner}{81}{}%
+\contentsline {section}{\numberline {6.5}Sustainable Edge AI}{82}{}%
+\contentsline {section}{\numberline {6.6}Limitations}{82}{}%
+\contentsline {paragraph}{Fixed episodic memory capacity.}{83}{}%
+\contentsline {paragraph}{Architecture-specific VA Refiner.}{83}{}%
+\contentsline {paragraph}{High-resolution visual tasks.}{83}{}%
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{84}{}%
+\contentsline {section}{\numberline {7.1}Conclusions}{84}{}%
+\contentsline {paragraph}{BitMar.}{84}{}%
+\contentsline {paragraph}{EmberVLM.}{85}{}%
+\contentsline {paragraph}{Overall results.}{86}{}%
+\contentsline {section}{\numberline {7.2}Future Work}{87}{}%
+\contentsline {paragraph}{Adaptive and hierarchical episodic memory.}{87}{}%
+\contentsline {paragraph}{Cross-backbone VA Refiner transfer.}{87}{}%
+\contentsline {paragraph}{Multi-agent verification.}{88}{}%
+\contentsline {paragraph}{Larger and more diverse evaluation sets.}{88}{}%
+\contentsline {paragraph}{Post-training quantization for ultra-low-power deployment.}{88}{}%
+\contentsline {chapter}{References}{89}{}%
