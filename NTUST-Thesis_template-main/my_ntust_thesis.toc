@@ -3,10 +3,10 @@
 \contentsline {chapter}{Abstract in Chinese}{III}{}%
 \contentsline {chapter}{Abstract in English}{IV}{}%
 \contentsline {chapter}{Acknowledgements}{VI}{}%
-\contentsline {chapter}{Contents}{VII}{}%
-\contentsline {chapter}{List of Figures}{XII}{}%
-\contentsline {chapter}{List of Tables}{XVII}{}%
-\contentsline {chapter}{List of Algorithms}{XIX}{}%
+\contentsline {chapter}{Contents}{VIII}{}%
+\contentsline {chapter}{List of Figures}{XIII}{}%
+\contentsline {chapter}{List of Tables}{XVIII}{}%
+\contentsline {chapter}{List of Algorithms}{XX}{}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{}%
 \contentsline {section}{\numberline {1.1}Background and Motivation}{1}{}%
 \contentsline {section}{\numberline {1.2}Research Challenges}{3}{}%

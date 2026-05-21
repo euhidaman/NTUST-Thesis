@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.15)  19 MAY 2026 23:54
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.15)  21 MAY 2026 11:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1729,11 +1729,12 @@ N Robot Selection (Macro-
 
 [4
 
-]) [5] (./000_frontpages/05_ackn.tex) [6
+]) [5] (./000_frontpages/05_ackn.tex [6
 
-] (./my_ntust_thesis.toc [7
+]) [7] (./my_ntust_thesis.toc [8
 
-] [8]
+]
+[9]
 Package microtype Info: Character `textendash ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1770,12 +1771,11 @@ Package microtype Info: Character `textquotedblleft ' is missing
 Package microtype Info: Character `textquotedblright ' is missing
 (microtype)             in font `TU/TimesNewRoman(0)/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
-
-[9] [10])
+ [10] [11])
 \tf@toc=\write5
 \openout5 = `my_ntust_thesis.toc'.
 
- [11] (./my_ntust_thesis.lof [12
+ [12] (./my_ntust_thesis.lof [13
 
 ]
 Overfull \hbox (1.90259pt too wide) in paragraph at lines 12--12
@@ -1783,13 +1783,13 @@ Overfull \hbox (1.90259pt too wide) in paragraph at lines 12--12
 ns and programmatic 
  []
 
-[13]
+[14]
 Overfull \hbox (9.93285pt too wide) in paragraph at lines 14--14
  \TU/TimesNewRoman(0)/m/n/12 CPU-only hardware platforms such as the AMD Ryzen 
 3 4100 (3.80 GHz, 
  []
 
-[14]
+[15]
 Overfull \hbox (10.98167pt too wide) in paragraph at lines 20--20
  \TU/TimesNewRoman(0)/m/n/12 LINE_UPDATE shows stronger per-class recall on the
  Underwater Robot 
@@ -1799,7 +1799,7 @@ Overfull \hbox (10.98167pt too wide) in paragraph at lines 20--20
 \tf@lof=\write6
 \openout6 = `my_ntust_thesis.lof'.
 
- [15] [16] (./my_ntust_thesis.lot [17
+ [16] [17] (./my_ntust_thesis.lot [18
 
 ]
 Overfull \hbox (5.54337pt too wide) in paragraph at lines 22--22
@@ -1811,11 +1811,11 @@ ics. \TU/TimesNewRoman(0)/m/n/12 Per-class sample counts
 \tf@lot=\write7
 \openout7 = `my_ntust_thesis.lot'.
 
- [18] (./my_ntust_thesis.loa)
+ [19] (./my_ntust_thesis.loa)
 \tf@loa=\write8
 \openout8 = `my_ntust_thesis.loa'.
 
- [19
+ [20
 
 ]) (./100_sections/01_introduction.tex
 Chapter 1.
@@ -2677,4 +2677,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  99i,17n,108p,1330b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on my_ntust_thesis.pdf (111 pages).
+Output written on my_ntust_thesis.pdf (112 pages).

@@ -561,6 +561,9 @@ INPUT ../EmberVLM/paper-template-Latest/figures/fig_training_stages.png
 INPUT ../EmberVLM/paper-template-Latest/figures/embervlm_stage_samples.png
 INPUT ../EmberVLM/paper-template-Latest/figures/embervlm_stage_samples.png
 INPUT ../EmberVLM/paper-template-Latest/figures/embervlm_stage_samples.png
+INPUT ./heatmap_stage1.png
+INPUT ./heatmap_stage1.png
+INPUT ./heatmap_stage1.png
 INPUT ../EmberVLM/paper-template-Latest/figures/fig_edge_targets.png
 INPUT ../EmberVLM/paper-template-Latest/figures/fig_edge_targets.png
 INPUT ../EmberVLM/paper-template-Latest/figures/fig_edge_targets.png
